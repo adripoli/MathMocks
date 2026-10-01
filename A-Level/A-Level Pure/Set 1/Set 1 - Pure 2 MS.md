@@ -112,7 +112,7 @@
 | **(a)** | $f(-1.5) = 2.9435..., \quad f(-1) = -0.3678...$ | M1 | 1.1b |
 | | Sign change and continuous $\Rightarrow \alpha$ lies between $-1.5$ and $-1$. | A1 | 2.4 |
 | | | **(2)** | |
-| **(b)** | **(i)** $x_1 = -1 \Rightarrow x_2 = -1.0664... \Rightarrow x_3 = -1.0428$ | B1 | 1.1b |
+| **(b)** | **(i)** $x_1 = -1 \Rightarrow x_2 = -1.0881... \Rightarrow x_3 = -1.0428$ | B1 | 1.1b |
 | | **(ii)** $\alpha = -1.06$ (2 dp) | B1 | 2.2a |
 | | | **(2)** | |
 | **(c)** | $x_2 = 3 - \frac{f(3)}{f'(3)} = 3 - \frac{-1.4189}{-8.3078} = 2.8292... \approx 2.83$ (2 dp) | M1<br>A1 | 1.1b<br>1.1b |
