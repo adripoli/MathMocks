@@ -1,0 +1,249 @@
+@paper AS Core Pure Shadow June 2022
+@level AS-Level
+
+@q 1
+@topic Rectangular matrices and equations
+@marks 7
+@question
+$A$ has rows $(2,-1)$; $(3,1)$; $(-4,6)$, $B$ has rows $(1,3,-2)$; $(-1,4,3)$, and $C$ has rows $(0,2,-7)$; $(2,10,-3)$; $(-10,12,23)$. Given that $I$ is the $3\times3$ identity matrix, \\
+(a)(i) show that there is an integer $k$ for which $AB-C+kI=0$, stating the value of $k$, \\
+(ii) explain why there can be no constant $m$ such that $BA-C+mI=0$. (4) \\
+(b)(i) Show how the matrix $C$ can be used to solve the simultaneous equations $2y-7z=10$, $2x+10y-3z=22$, $-10x+12y+23z=-25$, \\
+(ii) Hence use your calculator to solve these equations. (3)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a)(i) Multiply $A$ by $B$, row by column. \\
+The three rows of $AB$ are $(3,2,-7)$; $(2,13,-3)$; $(-10,12,26)$. \\
+Subtract $C$: $AB-C$ has rows $(3,0,0)$; $(0,3,0)$; $(0,0,3)$. \\
+Thus $AB-C=3I$. \\
+For $AB-C+kI=0$, $3+k=0$, so $k=-3$. \\
+(a)(ii) $B$ is $2\times3$ and $A$ is $3\times2$, so $BA$ is $2\times2$. \\
+$C$ is $3\times3$. Matrices of different sizes cannot be subtracted; no $m$ can make this equation valid. \\
+(b)(i) Write the given equations as $C(x,y,z)=(10,22,-25)$. \\
+Apply $C^{-1}$ to both sides: $(x,y,z)=C^{-1}(10,22,-25)$. \\
+(b)(ii) Calculator evaluation gives $(x,y,z)=(2,\frac{3}{2},-1)$. \\
+Check the first equation: $2(\frac{3}{2})-7(-1)=3+7=10$. \\
+Check the second: $2(2)+10(\frac{3}{2})-3(-1)=4+15+3=22$. \\
+Check the third: $-10(2)+12(\frac{3}{2})+23(-1)=-20+18-23=-25$.
+
+@q 2
+@topic Polar form and shortest distance
+@marks 10
+@question
+(a) Express the complex number $w=2\sqrt{3}-2\mathrm{i}$ in the form $r(\cos\theta+\mathrm{i}\sin\theta)$ where $r>0$ and $-\pi<\theta\leq\pi$. (4) \\
+(b) Show, on a single Argand diagram, (i) the point representing $w$, (ii) the locus of points defined by $\mathrm{arg}(z+6\mathrm{i})=\frac{\pi}{3}$. (3) \\
+(c) Hence determine the minimum distance of $w$ from the locus $\mathrm{arg}(z+6\mathrm{i})=\frac{\pi}{3}$. (3)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) The modulus is $r=\sqrt{(2\sqrt{3})^{2}+(-2)^{2}}$. \\
+$=\sqrt{12+4}=4$. \\
+$\cos\theta=\frac{2\sqrt{3}}{4}=\frac{\sqrt{3}}{2}$ and $\sin\theta=\frac{-2}{4}=-\frac{1}{2}$. \\
+The point is in quadrant four, so $\theta=-\frac{\pi}{6}$. \\
+$w=4(\cos(-\frac{\pi}{6})+\mathrm{i}\sin(-\frac{\pi}{6}))$. \\
+(b) Plot $w$ at $(2\sqrt{3},-2)$. \\
+The locus is the ray from $(0,-6)$ at angle $\frac{\pi}{3}$ above the positive real axis; exclude the starting point. \\
+(c) From the ray's start to $w$ is $(2\sqrt{3},4)$. \\
+A unit direction along the ray is $(\frac{1}{2},\frac{\sqrt{3}}{2})$. \\
+Their scalar product is $\sqrt{3}+2\sqrt{3}=3\sqrt{3}>0$, so the perpendicular foot lies on the ray. \\
+Use the two-dimensional cross-product magnitude: \\
+$d=|2\sqrt{3}\cdot\frac{\sqrt{3}}{2}-4\cdot\frac{1}{2}|$. \\
+$=|3-2|=1$.
+
+@q 3
+@topic Reflection and rotation in space
+@marks 8
+@question
+With respect to the right-hand rule, a rotation through $\theta$ degrees anticlockwise about the $y$-axis is represented by the matrix with rows $(\cos\theta,0,\sin\theta)$; $(0,1,0)$; $(-\sin\theta,0,\cos\theta)$. \\
+The point $P$ has coordinates $(6,1,4)$. The point $Q$ is the image of $P$ under the transformation reflection in the plane $y=0$. \\
+(a) Write down the coordinates of $Q$. (1) \\
+The point $R$ is the image of $P$ under the transformation rotation through 120 degrees anticlockwise about the $y$-axis, with respect to the right-hand rule. \\
+(b) Determine the exact coordinates of $R$. (2) \\
+(c) Hence find $|\text{PR}|$ giving your answer as a simplified surd. (2) \\
+(d) Show that $\text{PR}$ and $\text{PQ}$ are perpendicular. (1) \\
+(e) Hence determine the exact area of triangle $PQR$, giving your answer as a surd in simplest form. (2)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Reflection in $y=0$ changes the sign of the $y$ coordinate. \\
+$Q=(6,-1,4)$. \\
+(b) $\cos120$ degrees $=-\frac{1}{2}$ and $\sin120$ degrees $=\frac{\sqrt{3}}{2}$. \\
+$R_{x}=6(-\frac{1}{2})+4(\frac{\sqrt{3}}{2})=-3+2\sqrt{3}$. \\
+$R_{y}=1$. \\
+$R_{z}=-6(\frac{\sqrt{3}}{2})+4(-\frac{1}{2})=-3\sqrt{3}-2$. \\
+$R=(-3+2\sqrt{3},1,-2-3\sqrt{3})$. \\
+(c) $\text{PR}=R-P=(-9+2\sqrt{3},0,-6-3\sqrt{3})$. \\
+$|\text{PR}|^{2}=(-9+2\sqrt{3})^{2}+(-6-3\sqrt{3})^{2}$. \\
+$=(93-36\sqrt{3})+(63+36\sqrt{3})=156$. \\
+$|\text{PR}|=\sqrt{156}=2\sqrt{39}$. \\
+(d) $\text{PQ}=Q-P=(0,-2,0)$. \\
+$\text{PQ}\cdot\text{PR}=0$, so the two vectors are perpendicular. \\
+(e) $|\text{PQ}|=2$, and the included angle is 90 degrees. \\
+$\mathrm{Area}=\frac{1}{2}(2)(2\sqrt{39})=2\sqrt{39}$ square units.
+
+@q 4
+@topic Quartic roots and Vieta formulas
+@marks 9
+@question
+The roots of the quartic equation $2x^{4}+3x^{3}-5x+7=0$ are $\alpha$, $\beta$, $\gamma$ and $\delta$. Making your method clear and without solving the equation, determine the exact value of \\
+(i) $\alpha^{2}+\beta^{2}+\gamma^{2}+\delta^{2}$ (3) \\
+(ii) $\frac{3}{\alpha}+\frac{3}{\beta}+\frac{3}{\gamma}+\frac{3}{\delta}$ (3) \\
+(iii) $(2-\alpha)(2-\beta)(2-\gamma)(2-\delta)$. (3)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+By Vieta's formula, the sum of roots is $-\frac{3}{2}$, pairwise product sum is 0, triple product sum is $\frac{5}{2}$, and product of all four roots is $\frac{7}{2}$. \\
+(i) Square the sum of roots: \\
+$(\alpha+\beta+\gamma+\delta)^{2}=\alpha^{2}+\beta^{2}+\gamma^{2}+\delta^{2}+2(0)$. \\
+Thus the requested value is $(-\frac{3}{2})^{2}=\frac{9}{4}$. \\
+(ii) The sum of reciprocals is the triple product sum divided by the four-root product. \\
+$\frac{1}{\alpha}+\frac{1}{\beta}+\frac{1}{\gamma}+\frac{1}{\delta}=\frac{5/2}{7/2}=\frac{5}{7}$. \\
+Multiply by 3: $\frac{15}{7}$. \\
+(iii) The polynomial is $2(x-\alpha)(x-\beta)(x-\gamma)(x-\delta)$. \\
+Set $x=2$: \\
+$2(2-\alpha)(2-\beta)(2-\gamma)(2-\delta)=2(16)+3(8)-5(2)+7$. \\
+$=32+24-10+7=53$. \\
+Divide by 2: the requested product is $\frac{53}{2}$.
+
+@q 5
+@topic Summation and trigonometric cycles
+@marks 12
+@question
+(a) Use the standard summation formulae to show that, for $n\in\mathbb{N}$, $\sum_{r=1}^{n}(3r^{2}-31r+17)=n(n^{2}+An+B)$, where $A$ and $B$ are integers to be determined. (4) \\
+(b) Explain why, for all $k\in\mathbb{N}$, $\sum_{r=1}^{3k}r\tan(120r)$ degrees $=k\sqrt{3}$. (2) \\
+Using the results from part (a) and part (b) and showing all your working, \\
+(c) determine any value of $n$ that satisfies $[\sum_{r=4}^{n}(3r^{2}-31r+17)]+56n^{2}=31[\sum_{r=4}^{3n}r\tan(120r)\text{ degrees}]^{2}$. (6)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Use $\sum r^{2}=\frac{n(n+1)(2n+1)}{6}$ and $\sum r=\frac{n(n+1)}{2}$. \\
+$\sum(3r^{2}-31r+17)=\frac{n(n+1)(2n+1)}{2}-\frac{31n(n+1)}{2}+17n$. \\
+Factor $n$: \\
+$=n[\frac{(n+1)(2n+1-31)}{2}+17]$. \\
+$=n[(n+1)(n-15)+17]$. \\
+$=n[n^{2}-14n-15+17]$. \\
+$=n(n^{2}-14n+2)$. \\
+Thus $A=-14$ and $B=2$. \\
+(b) The tangent values repeat every three integers: \\
+$\tan120$ degrees $=-\sqrt{3}$, $\tan240$ degrees $=\sqrt{3}$, $\tan360$ degrees $=0$. \\
+For a block starting at $r=3j+1$, the weighted sum is $-(3j+1)\sqrt{3}+(3j+2)\sqrt{3}+0=\sqrt{3}$. \\
+There are $k$ blocks, so the full sum is $k\sqrt{3}$. \\
+(c) Let $F(n)=n(n^{2}-14n+2)$. \\
+$F(3)=3(9-42+2)=-93$. \\
+Thus $\sum_{r=4}^{n}(3r^{2}-31r+17)=F(n)-F(3)=n(n^{2}-14n+2)+93$. \\
+By part (b), $\sum_{r=1}^{3n}r\tan(120r)$ degrees $=n\sqrt{3}$. \\
+The first three terms sum to $\sqrt{3}$, so $\sum_{r=4}^{3n}r\tan(120r)$ degrees $=(n-1)\sqrt{3}$. \\
+Substitute in the equation: \\
+$n(n^{2}-14n+2)+93+56n^{2}=31[(n-1)\sqrt{3}]^{2}$. \\
+$n^{3}+42n^{2}+2n+93=93(n-1)^{2}$. \\
+$n^{3}+42n^{2}+2n+93=93n^{2}-186n+93$. \\
+$n^{3}-51n^{2}+188n=0$. \\
+$n(n^{2}-51n+188)=0$. \\
+$n(n-4)(n-47)=0$. \\
+Since the sum starts at 4, $n\geq4$. \\
+$n=4$ or $n=47$.
+
+@q 6
+@topic Parametric path and ground angle
+@marks 13
+@question
+The surface of a horizontal rugby pitch is modelled as part of a horizontal plane, with the origin on the ground at the centre of the pitch, and $\mathbf{i}$ and $\mathbf{j}$ are unit vectors directed across the width and length of the pitch respectively, $\mathbf{k}$ is a unit vector directed vertically upwards, and units are metres. \\
+After being kicked, a rugby ball, modelled as a particle, moves along the path $\mathbf{r}=(4.1+19\lambda-1.3\lambda^{2})\mathbf{i}+(-1.25+25\lambda)\mathbf{j}+(2.88+4.8\lambda-6\lambda^{2})\mathbf{k}$ where $\lambda\geq0$. \\
+Assuming the rugby ball continues on this path until it hits the ground, \\
+(a) find the value of $\lambda$ at the point where the ball hits the ground. (2) \\
+The direction in which the rugby ball is moving at a general point on its path is given by $(19-2.6\lambda)\mathbf{i}+25\mathbf{j}+(4.8-12\lambda)\mathbf{k}$. \\
+(b) Write down a vector in the same direction as that in which the rugby ball is moving as it hits the ground. (1) \\
+(c) Hence find the acute angle at which the rugby ball hits the ground, giving your answer in degrees to one decimal place. (4) \\
+A goal of the rugby pitch lies in the plane $\mathbf{r}\cdot\mathbf{j}=0$. \\
+(d) Find the position of the rugby ball at the point where it is in the same plane as this goal. (3) \\
+The maximum height above the ground of the crossbar of the goal is 3.0 m. Modelling the crossbar as a horizontal straight line, \\
+(e) state whether the rugby ball will pass over the crossbar according to the model, giving a reason for your answer. (1) \\
+With reference to the model \\
+(f) decide whether the rugby ball will actually pass over the crossbar or not, fully justifying your answer. (2)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) At the ground, the $\mathbf{k}$ component is zero. \\
+$2.88+4.8\lambda-6\lambda^{2}=0$. \\
+Divide by $-6$: $\lambda^{2}-0.8\lambda-0.48=0$. \\
+Factor: $(\lambda-1.2)(\lambda+0.4)=0$. \\
+Since $\lambda\geq0$, $\lambda=1.2$. \\
+(b) Substitute $\lambda=1.2$ into the direction vector. \\
+$(19-2.6(1.2),25,4.8-12(1.2))=(15.88,25,-9.6)$. \\
+(c) The horizontal component has magnitude $\sqrt{15.88^{2}+25^{2}}$. \\
+The vertical component has magnitude $9.6$. \\
+Use $\tan\theta=\frac{9.6}{\sqrt{15.88^{2}+25^{2}}}$. \\
+$\theta=17.959414...$ degrees. \\
+$\theta=18.0$ degrees (1 dp). \\
+(d) The goal plane has $\mathbf{j}$ component zero. \\
+$-1.25+25\lambda=0$, so $\lambda=0.05$. \\
+$x=4.1+19(0.05)-1.3(0.05)^{2}=5.04675$. \\
+$y=0$. \\
+$z=2.88+4.8(0.05)-6(0.05)^{2}=3.105$. \\
+The position is $5.04675\mathbf{i}+3.105\mathbf{k}$ metres. \\
+(e) Since $3.105>3.0$, the ball passes above the modelled crossbar. \\
+(f) The model treats the ball as a particle, ignoring its radius. The predicted clearance is only $0.105$ m, so a real ball could strike the crossbar. Its path may also deviate from the model. We cannot decide with certainty that it will pass over.
+
+@q 7
+@topic Matrix power by induction
+@marks 6
+@question
+Prove by mathematical induction that, for $n\in\mathbb{N}$, the $n$th power of the matrix with rows $(3,-4)$; $(1,-1)$ has rows $(2n+1,-4n)$; $(n,1-2n)$. (6)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+Let $M$ have rows $(3,-4)$; $(1,-1)$. \\
+For $n=1$, the claimed rows are $(3,-4)$; $(1,-1)$, exactly $M$. \\
+Assume $M^{k}$ has rows $(2k+1,-4k)$; $(k,1-2k)$. \\
+Then $M^{k+1}=M^{k}M$. \\
+Upper-left entry $=3(2k+1)-4k=2k+3=2(k+1)+1$. \\
+Upper-right entry $=-4(2k+1)+4k=-4k-4=-4(k+1)$. \\
+Lower-left entry $=3k+(1-2k)=k+1$. \\
+Lower-right entry $=-4k-(1-2k)=-2k-1=1-2(k+1)$. \\
+Thus $M^{k+1}$ has the required form. \\
+The base case and induction step prove the result for every positive integer $n$.
+
+@q 8
+@topic Competing models of a solid
+@marks 15
+@question
+Figure 1 shows a sketch of an 18 cm tall mould for an ornament which has a flat circular base with diameter 9 cm and a circular opening of diameter 9 cm at the top. A student measures the circular cross-section halfway up the mould to be 9 cm in diameter. The student models the shape of the mould by rotating a curve, shown in Figure 2, through 360 degrees about the $x$-axis. \\
+(Diagram: The base is at $x=-9$, the centre at $x=0$, and the top at $x=9$. The curve passes through $(-9,a)$, $(0,a)$ and $(9,a)$.) \\
+(a) State the value of $a$ that should be used when setting up the model. (1) \\
+Two possible equations are suggested for the curve in the model: Model A $y=a-3\sin(20x\text{ degrees})$; Model B $y=a+\frac{x(x-9)(x+9)}{100}$. For each model, \\
+(b)(i) find the distance from the base at which the widest part of the mould occurs, (ii) find the diameter of the mould at this widest point. (7) \\
+The widest part of the vase has diameter 14.8 cm and is just under 4 cm from the base. \\
+(c) Using this information and making your reasoning clear, suggest which model is more appropriate. (1) \\
+(d) Using algebraic integration, find the volume for the mould predicted by Model B. You must make your method clear. (5) \\
+The student pours moulding gel from three full 500 ml jugs into the mould and finds that there is 100 ml left in the third jug when the mould is full. \\
+(e) Comment on the suitability of Model B in light of this information. (1)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) The diameter is 9 cm at the base, middle and top, so the radius is $a=4.5$ cm. \\
+(b)(i) For Model A, maximum $y$ occurs when $\sin(20x\text{ degrees})=-1$. \\
+Within $-9\leq x\leq9$, this is at $20x=-90$ degrees, so $x=-4.5$. \\
+The distance from the base at $x=-9$ is $-4.5-(-9)=4.5$ cm. \\
+(b)(ii) Model A has maximum radius $4.5+3=7.5$ cm, so diameter $=15$ cm. \\
+For Model B, $y=4.5+\frac{x^{3}-81x}{100}$. \\
+Differentiate: $\frac{dy}{dx}=\frac{3x^{2}-81}{100}$. \\
+Set this to zero: $3x^{2}=81$, so $x=\pm3\sqrt{3}$. \\
+The maximum is at $x=-3\sqrt{3}$. \\
+Distance from base $=9-3\sqrt{3}=3.804...$ cm. \\
+Substitute $x=-3\sqrt{3}$: \\
+$y=4.5+\frac{(-3\sqrt{3})(27-81)}{100}$. \\
+$=4.5+\frac{81\sqrt{3}}{50}=7.305922...$ cm. \\
+Diameter $=2y=14.611844...$ cm. \\
+(c) Model B predicts a widest point at about 3.80 cm from the base, close to just under 4 cm, and a diameter about 14.6 cm, closer to 14.8 cm than Model A's 15 cm. Choose Model B. \\
+(d) Use discs about the $x$-axis: $V=\pi\int_{-9}^{9}y^{2}\,dx$. \\
+Let $g(x)=\frac{x^{3}-81x}{100}$, so $y=\frac{9}{2}+g(x)$. \\
+$y^{2}=\frac{81}{4}+9g(x)+g(x)^{2}$. \\
+The term $g(x)$ is odd, so its integral from $-9$ to 9 is zero. \\
+$\int_{-9}^{9}\frac{81}{4}\,dx=\frac{729}{2}$. \\
+$g(x)^{2}=\frac{x^{6}-162x^{4}+6561x^{2}}{10000}$. \\
+$\int_{-9}^{9}g(x)^{2}\,dx=\frac{1594323}{21875}$. \\
+$V=\pi(\frac{729}{2}+\frac{1594323}{21875})$. \\
+$=\frac{19135521\pi}{43750}$ cubic centimetres. \\
+$\approx1374.08$ cubic centimetres. \\
+(e) The actual capacity is $3(500)-100=1400$ ml $=1400$ cubic centimetres. Model B predicts about 1374, only about 1.9% lower; it is a reasonable estimate.

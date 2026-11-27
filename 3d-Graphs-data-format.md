@@ -103,15 +103,7 @@ Any other `@word` is an error.
 | Original question and scheme sources | the `… QP.md` and `… MS.md` files in the same folders |
 | Backups | `~/markscheme.bak-*` |
 
-**Coverage today (2026-10-04):** 1,012 questions in 77 papers: 739 `A-Level` and 273 `AS-Level`. 952 have model answers; only the 60 IAL questions have none. The AS-Level set is the 60 IAL questions plus 213 from the 14 Edexcel UK AS Pure 1 papers (June 2018, 2019, 2022-2025, October 2020 and 2021, Mock Sets 1-4, Sample, Specimen), each worth 100 marks.
 
-**Update, 2026-10-04 (later):** the IAL and P3 papers have since been removed, and 8 Edexcel UK AS Pure 1 Shadow papers (`AS1 Shadow June 2018/2019/2022-2025`, `AS1 Shadow October 2020/2021`; 121 questions, `data/p1-as-shadow-*.txt`, `AS-Level`) were added. The database is now 1,007 questions, all with model answers. These shadow papers have **no mark scheme**: every `@scheme` is the single placeholder line "No mark scheme for this question. See the Model tab (F3) for the full worked answer." Their MA and QP files are in `Desktop\MathMocks\AS-Level\Pure\Shadow\`.
-
-**Update, 2026-10-04 (latest):** the June 2025 Edexcel Shadow papers were added: `P1 Shadow June 2025` (16 questions, `data/p1-shadow-june-2025.txt`) and `P2 Shadow June 2025` (15 questions, `data/p2-shadow-june-2025.txt`), both `A-Level`, 100 marks each. Like the other shadow papers they have **no mark scheme** (the source PDFs are question papers only, and Paper 1's PDF has someone's handwriting on it, which was ignored): every `@scheme` is the placeholder line, and every question has a full-step model answer. The database is now 1,060 questions, all with model answers. MA files: `Shadow Papers\2025\Shadow 2025 June - Pure 1 MA.md` and `- Pure 2 MA.md`. The "show detailed reasoning" lines were dropped along with the "show all stages / calculator technology" notices.
-
-**Update, 2026-10-05:** `P2 June 2026` was added (15 questions, `data/p2-june-2026.txt`, `A-Level`, 100 marks). The source PDF is a scan of the question paper only, so, like the other shadow papers, every `@scheme` is the placeholder line and every question has a full-step model answer. The "show all stages / calculator technology" notices and the "show detailed reasoning" line were dropped. The database is now 1,077 questions, all with model answers. MA file: `A-Level Pure\2026\June 2026 - Pure 2 MA.md`.
-
-**ROM budget:** scheme and model text is LZ-packed against a shared 48 KB dictionary that `gen_db.py` builds from the content itself (about 2.8 MB of text packs to 1.06 MB, dictionary included). The `.g3a` is 1.77 MB. Every content change rebuilds the dictionary, so `gen_db.py` takes about 25 seconds now. If the build ever says `region 'rom' overflowed`, that is the budget talking.
 
 ---
 
@@ -259,7 +251,7 @@ A1: Correct answer only of 2.73
 
 ## 8. Model answers: format and standards
 
-A model answer is **the exact written working a student would produce to earn full marks**, not a summary and not just a final answer. It appears on the `F3` tab. Model answers are not searched and don't appear in the results list.
+A model answer is **the exact written working a student would produce to earn full marks**, not a summary and not just a final answer. Put yourself into the shoes of an a student doing the exam who would get full marks. The model answers are not there to explain the question, simply to show the workings of an A* student. Do not skip massive steps in algebra and show all working, but it does not have to be explained. 
 
 ### 8.1 The model-answer file
 

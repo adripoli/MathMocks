@@ -1,0 +1,281 @@
+@paper AS Core Pure Shadow June 2024
+@level AS-Level
+
+@q 1
+@topic Cubic roots and symmetric sums
+@marks 9
+@question
+The cubic equation $3x^{3}+4x^{2}-2x+5=0$ has roots $\alpha$, $\beta$ and $\gamma$. \\
+Without solving the equation, determine the exact value of \\
+(i) $3\alpha^{2}+3\beta^{2}+3\gamma^{2}$ (3) \\
+(ii) $\frac{2}{\alpha}+\frac{2}{\beta}+\frac{2}{\gamma}$ (3) \\
+(iii) $(3-\alpha)(3-\beta)(3-\gamma)$. (3)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+By Vieta's formula, $\alpha+\beta+\gamma=-\frac{4}{3}$. \\
+Also $\alpha\beta+\beta\gamma+\gamma\alpha=-\frac{2}{3}$ and $\alpha\beta\gamma=-\frac{5}{3}$. \\
+(i) Use $(\alpha+\beta+\gamma)^{2}=\alpha^{2}+\beta^{2}+\gamma^{2}+2(\alpha\beta+\beta\gamma+\gamma\alpha)$. \\
+$\alpha^{2}+\beta^{2}+\gamma^{2}=\frac{16}{9}-2(-\frac{2}{3})$ \\
+$=\frac{16}{9}+\frac{12}{9}=\frac{28}{9}$ \\
+$3\alpha^{2}+3\beta^{2}+3\gamma^{2}=\frac{28}{3}$. \\
+(ii) Use the reciprocal sum $\frac{1}{\alpha}+\frac{1}{\beta}+\frac{1}{\gamma}=\frac{\alpha\beta+\beta\gamma+\gamma\alpha}{\alpha\beta\gamma}$. \\
+$=\frac{-2/3}{-5/3}=\frac{2}{5}$ \\
+Multiplying by 2 gives $\frac{4}{5}$. \\
+(iii) Since $3x^{3}+4x^{2}-2x+5=3(x-\alpha)(x-\beta)(x-\gamma)$, set $x=3$. \\
+$3(3-\alpha)(3-\beta)(3-\gamma)=3(27)+4(9)-2(3)+5$ \\
+$=81+36-6+5=116$ \\
+$(3-\alpha)(3-\beta)(3-\gamma)=\frac{116}{3}$.
+
+@q 2
+@topic Rotation and reflection matrices
+@marks 10
+@question
+With respect to the right-hand rule, a rotation through $\theta$ degrees anticlockwise about the $y$-axis is represented by the matrix with rows $(\cos\theta,0,\sin\theta)$; $(0,1,0)$; $(-\sin\theta,0,\cos\theta)$. \\
+Given that the matrix $M$ has rows $(-\frac{\sqrt{3}}{2},0,\frac{1}{2})$; $(0,1,0)$; $(-\frac{1}{2},0,-\frac{\sqrt{3}}{2})$ and represents a rotation through $\alpha$ degrees anticlockwise about the $y$-axis with respect to the right-hand rule, \\
+(a) determine the value of $\alpha$. (1) \\
+(b) Hence determine the smallest possible positive integer value of $k$ for which $M^{k}=I$. (2) \\
+The $3\times3$ matrix $N$ represents a reflection in the plane with equation $z=0$. \\
+(c) Write down the matrix $N$. (1) \\
+The point $A$ has coordinates $(2,-1,4)$. The point $B$ is the image of $A$ under the transformation represented by matrix $N$ followed by the transformation represented by matrix $M$. \\
+(d) Show that the coordinates of $B$ are $(-2-\sqrt{3},-1,-1+2\sqrt{3})$. (2) \\
+Given that $O$ is the origin, \\
+(e) show that, to 3 significant figures, the size of angle $AOB$ is $80.7$ degrees. (2) \\
+(f) Hence determine the area of triangle $AOB$, giving your answer to 3 significant figures. (2)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Compare matrix entries: $\cos\alpha=-\frac{\sqrt{3}}{2}$ and $\sin\alpha=\frac{1}{2}$. \\
+Both signs place $\alpha$ in the second quadrant. \\
+$\alpha=150$ degrees. \\
+(b) Each use of $M$ adds a rotation of 150 degrees. \\
+For $M^{k}=I$, $150k$ must be a multiple of 360. \\
+Divide by 30: $5k$ must be a multiple of 12. \\
+The least positive $k$ is $12$. \\
+(c) Reflecting in $z=0$ changes only the sign of $z$. \\
+$N$ has rows $(1,0,0)$; $(0,1,0)$; $(0,0,-1)$. \\
+(d) First $N(2,-1,4)=(2,-1,-4)$. \\
+Then multiply by $M$. \\
+$x=-\frac{\sqrt{3}}{2}(2)+\frac{1}{2}(-4)=-\sqrt{3}-2$. \\
+$y=-1$. \\
+$z=-\frac{1}{2}(2)-\frac{\sqrt{3}}{2}(-4)=-1+2\sqrt{3}$. \\
+$B=(-2-\sqrt{3},-1,-1+2\sqrt{3})$ as required. \\
+(e) Use the scalar product $\text{OA}\cdot\text{OB}=|\text{OA}||\text{OB}|\cos\phi$. \\
+$\text{OA}\cdot\text{OB}=2(-2-\sqrt{3})+(-1)(-1)+4(-1+2\sqrt{3})$ \\
+$=-7+6\sqrt{3}$. \\
+Both transformations preserve length, so $|\text{OA}|=|\text{OB}|=\sqrt{2^{2}+(-1)^{2}+4^{2}}=\sqrt{21}$. \\
+$\cos\phi=\frac{-7+6\sqrt{3}}{21}$. \\
+$\phi=80.7$ degrees (3 sf), as required. \\
+(f) Use the triangle area formula $\frac{1}{2}ab\sin C$. \\
+$\mathrm{Area}=\frac{1}{2}(\sqrt{21})(\sqrt{21})\sin\phi$ \\
+$=\frac{21}{2}\sin\phi=10.362097...$ \\
+$\mathrm{Area}=10.4$ square units (3 sf).
+
+@q 3
+@topic Summations over a variable interval
+@marks 10
+@question
+(a) Use the standard results for summations to show that, for all positive integers $n$, $\sum_{r=1}^{n}r^{2}(r+1)=\frac{1}{12}n(n+1)(n+2)(an+b)$ where $a$ and $b$ are integers to be determined. (4) \\
+(b) Hence show that, for all positive integers $k$, $\sum_{r=3k+1}^{9k}r^{2}(r+1)=k(9k+1)(Ak^{2}+Bk+C)$ where $A$, $B$ and $C$ are integers to be determined. (3) \\
+(c) Hence, using algebra and making your method clear, determine the value of $k$ for which $9\sum_{r=3k+1}^{9k}r^{2}(r+1)=1756k^{3}(9k+1)$. (3)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Expand $r^{2}(r+1)=r^{3}+r^{2}$. \\
+Use $\sum_{r=1}^{n}r^{3}=\frac{n^{2}(n+1)^{2}}{4}$ and $\sum_{r=1}^{n}r^{2}=\frac{n(n+1)(2n+1)}{6}$. \\
+$\sum_{r=1}^{n}r^{2}(r+1)=\frac{n^{2}(n+1)^{2}}{4}+\frac{n(n+1)(2n+1)}{6}$ \\
+$=\frac{n(n+1)}{12}[3n(n+1)+2(2n+1)]$ \\
+$=\frac{n(n+1)}{12}(3n^{2}+7n+2)$ \\
+$=\frac{n(n+1)(n+2)(3n+1)}{12}$ \\
+Thus $a=3$ and $b=1$. \\
+(b) Write $F(n)=\frac{n(n+1)(n+2)(3n+1)}{12}$. \\
+The requested sum is $F(9k)-F(3k)$. \\
+$F(9k)=\frac{9k(9k+1)(9k+2)(27k+1)}{12}$. \\
+$F(3k)=\frac{3k(3k+1)(3k+2)(9k+1)}{12}$. \\
+Factor $\frac{k(9k+1)}{12}$ from their difference. \\
+The remaining bracket is $9(9k+2)(27k+1)-3(3k+1)(3k+2)$. \\
+Expand: $9(243k^{2}+63k+2)-3(9k^{2}+9k+2)$. \\
+$=2187k^{2}+567k+18-27k^{2}-27k-6$. \\
+$=2160k^{2}+540k+12$. \\
+Divide by 12: $F(9k)-F(3k)=k(9k+1)(180k^{2}+45k+1)$. \\
+Thus $A=180$, $B=45$ and $C=1$. \\
+(c) Substitute the result from part (b): \\
+$9k(9k+1)(180k^{2}+45k+1)=1756k^{3}(9k+1)$. \\
+As $k$ is positive, divide by $k(9k+1)$: \\
+$9(180k^{2}+45k+1)=1756k^{2}$. \\
+$1620k^{2}+405k+9=1756k^{2}$. \\
+$136k^{2}-405k-9=0$. \\
+Factor: $(k-3)(136k+3)=0$. \\
+Since $k$ is positive, $k=3$.
+
+@q 4
+@topic Matrix inverse and simultaneous equations
+@marks 8
+@question
+$A$ has rows $(1,-2,7)$; $(3,k,-2)$; $(-1,1,5)$ and $B$ has rows $(5k+2,17,4-7k)$; $(-13,12,23)$; $(3+k,1,k+6)$, where $k$ is a constant. \\
+(a) Determine the value of the constant $c$ for which $AB=(12k+c)I$. (2) \\
+(b) Hence determine the value of $k$ for which $A^{-1}$ does not exist. (2) \\
+Given that $A^{-1}$ does exist, \\
+(c) write down $A^{-1}$ in terms of $k$. (1) \\
+(d) Use the answer to part (c) to solve the simultaneous equations $x-2y+7z=2$, $3x+ky-2z=1$, $-x+y+5z=-3$, giving the values of $x$, $y$ and $z$ in simplest form in terms of $k$. (3)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Calculate the top-left entry of $AB$. \\
+$1(5k+2)+(-2)(-13)+7(3+k)$ \\
+$=5k+2+26+21+7k$ \\
+$=12k+49$ \\
+The other diagonal entries agree and off-diagonal entries are zero. \\
+Therefore $c=49$. \\
+(b) The inverse fails when $12k+49=0$. \\
+$12k=-49$ \\
+$k=-\frac{49}{12}$. \\
+(c) From $AB=(12k+49)I$, divide by $12k+49$. \\
+$A^{-1}=\frac{1}{12k+49}B$, for $k\neq-\frac{49}{12}$. \\
+(d) Write the equations as $A(x,y,z)=(2,1,-3)$. \\
+Apply $A^{-1}$ to both sides: \\
+$(x,y,z)=\frac{1}{12k+49}B(2,1,-3)$. \\
+First component $=2(5k+2)+17-3(4-7k)$. \\
+$=10k+4+17-12+21k=31k+9$. \\
+Second component $=2(-13)+12-3(23)=-83$. \\
+Third component $=2(3+k)+1-3(k+6)$. \\
+$=6+2k+1-3k-18=-k-11$. \\
+$x=\frac{31k+9}{12k+49}$, $y=\frac{-83}{12k+49}$, $z=\frac{-k-11}{12k+49}$.
+
+@q 5
+@topic Argand circle and segment area
+@marks 10
+@question
+Given that on an Argand diagram the locus of points defined by $|z+7-24\mathrm{i}|=14$ is a circle, \\
+(a) write down (i) the coordinates of the centre of this circle, (ii) the radius of this circle. (2) \\
+(b) Show, by shading on an Argand diagram, the set of points defined by $|z+7-24\mathrm{i}|\leq14$. (1) \\
+(c) For the set of points defined in part (b), determine the maximum value of $|z|$. (3) \\
+The set of points $A$ is defined by $\{z:0\leq\mathrm{arg}(z+7-35\mathrm{i})\leq\pi\}$ intersected with $\{z:|z+7-24\mathrm{i}|\leq14\}$. \\
+(d) Determine the area of the region defined by $A$, giving your answer to 3 significant figures. (4)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Compare $|z-c|=r$ with the given equation. \\
+$z+7-24\mathrm{i}=z-(-7+24\mathrm{i})$. \\
+Centre $=(-7,24)$ and radius $=14$. \\
+(b) Draw the circle centred at $(-7,24)$ with radius 14. Shade the full interior, including its boundary. \\
+(c) The centre is distance $\sqrt{(-7)^{2}+24^{2}}$ from the origin. \\
+$=\sqrt{49+576}=25$. \\
+The farthest point is one radius further out. \\
+$|z|_{\mathrm{max}}=25+14=39$. \\
+(d) The argument condition selects the half-plane above the horizontal line through $(-7,35)$. \\
+Its intersection with the disc is the circular cap above $y=35$. \\
+The centre is at height 24, so the line is distance $d=35-24=11$ above it. \\
+Let $r=14$. The area of the circular segment is $r^{2}\cos^{-1}(d/r)-d\sqrt{r^{2}-d^{2}}$. \\
+Substitute: $196\cos^{-1}(\frac{11}{14})-11\sqrt{196-121}$. \\
+$=196\cos^{-1}(\frac{11}{14})-11\sqrt{75}$. \\
+$=35.458689...$ square units. \\
+$\mathrm{Area}=35.5$ square units (3 sf).
+
+@q 6
+@topic Three-dimensional lines and distance
+@marks 12
+@question
+The drainage system for a sports field consists of underground pipes. This situation is modelled with respect to a fixed origin $O$. \\
+According to the model, the surface of the sports field is a plane with equation $z=0$; the pipes are straight lines; one pipe, $P_{1}$, passes through the points $A(4,3,-3)$ and $B(-5,-7,-4)$; a different pipe, $P_{2}$, has equation $\frac{x-2}{3}=\frac{y-1}{4}=\frac{z+3}{-1}$; and the units are metres. \\
+(a) Determine a vector equation of the line representing the pipe $P_{1}$. (2) \\
+(b) Determine the coordinates of the point at which the pipe $P_{1}$ meets the surface of the playing field, according to the model. (2) \\
+Determine, according to the model, \\
+(c) the acute angle between pipes $P_{1}$ and $P_{2}$, giving your answer in degrees to 3 significant figures, (3) \\
+(d) the shortest distance between pipes $P_{1}$ and $P_{2}$. (5)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Direction of $P_{1}$ is $\text{AB}=(-5-4,-7-3,-4-(-3))$. \\
+$=(-9,-10,-1)$. \\
+Thus $P_{1}$ is $\mathbf{r}=(4,3,-3)+t(-9,-10,-1)$. \\
+(b) At the surface $z=0$. \\
+$-3-t=0$ so $t=-3$. \\
+Substitute into the line: \\
+$(x,y,z)=(4,3,-3)-3(-9,-10,-1)$ \\
+$=(31,33,0)$. \\
+(c) The direction of $P_{2}$ is $\mathbf{v}=(3,4,-1)$. \\
+For $P_{1}$, take $\mathbf{u}=(-9,-10,-1)$. \\
+Use the scalar product: $\mathbf{u}\cdot\mathbf{v}=(-9)(3)+(-10)(4)+(-1)(-1)=-66$. \\
+$|\mathbf{u}|=\sqrt{81+100+1}=\sqrt{182}$. \\
+$|\mathbf{v}|=\sqrt{9+16+1}=\sqrt{26}$. \\
+For the acute angle, $\cos\theta=\frac{66}{\sqrt{182}\sqrt{26}}$. \\
+$\theta=16.372723...$ degrees. \\
+$\theta=16.4$ degrees (3 sf). \\
+(d) A point on $P_{2}$ is $Q=(2,1,-3)$. \\
+Use the skew-line distance formula $d=\frac{|\text{AQ}\cdot(\mathbf{u}\times\mathbf{v})|}{|\mathbf{u}\times\mathbf{v}|}$. \\
+$\text{AQ}=Q-A=(-2,-2,0)$. \\
+$\mathbf{u}\times\mathbf{v}=(14,-12,-6)$. \\
+Check the components: $10+4=14$, $-9-3=-12$, $-36+30=-6$. \\
+$\text{AQ}\cdot(\mathbf{u}\times\mathbf{v})=(-2)(14)+(-2)(-12)=-4$. \\
+$|\mathbf{u}\times\mathbf{v}|=\sqrt{14^{2}+(-12)^{2}+(-6)^{2}}=2\sqrt{94}$. \\
+$d=\frac{4}{2\sqrt{94}}=\frac{2}{\sqrt{94}}$. \\
+$d=0.206284...$ m.
+
+@q 7
+@topic Two induction proofs
+@marks 10
+@question
+(i) Prove by induction that, for all positive integers $n$, $\sum_{r=1}^{n}\frac{2}{(r+1)(r+2)}=\frac{n}{n+2}$. (5) \\
+(ii) Prove by induction that, for all positive integers $n$, $f(n)=3^{2n+1}+2^{n+2}$ is divisible by 7. (5)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(i) Base case $n=1$: left side $=\frac{2}{2\cdot3}=\frac{1}{3}$, and right side $=\frac{1}{1+2}=\frac{1}{3}$. \\
+Assume $\sum_{r=1}^{k}\frac{2}{(r+1)(r+2)}=\frac{k}{k+2}$. \\
+Add the term for $r=k+1$: \\
+$\sum_{r=1}^{k+1}\frac{2}{(r+1)(r+2)}=\frac{k}{k+2}+\frac{2}{(k+2)(k+3)}$. \\
+Use a common denominator: \\
+$=\frac{k(k+3)+2}{(k+2)(k+3)}$. \\
+$=\frac{k^{2}+3k+2}{(k+2)(k+3)}$. \\
+$=\frac{(k+1)(k+2)}{(k+2)(k+3)}$. \\
+$=\frac{k+1}{k+3}$, the formula for $n=k+1$. \\
+Hence the formula holds for all positive integers. \\
+(ii) Base case $n=1$: $f(1)=3^{3}+2^{3}=27+8=35=7(5)$. \\
+Assume $f(k)=3^{2k+1}+2^{k+2}$ is divisible by 7. \\
+Calculate the next value: \\
+$f(k+1)=3^{2k+3}+2^{k+3}$. \\
+$=9\cdot3^{2k+1}+2\cdot2^{k+2}$. \\
+Rewrite 9 as $2+7$: \\
+$=2(3^{2k+1}+2^{k+2})+7\cdot3^{2k+1}$. \\
+$=2f(k)+7\cdot3^{2k+1}$. \\
+Both terms are divisible by 7, so $f(k+1)$ is divisible by 7. \\
+By induction, $f(n)$ is divisible by 7 for all positive integers.
+
+@q 8
+@topic Volume of revolution model
+@marks 11
+@question
+Figure 1 shows the central vertical cross-section, $OABCDEO$, of the design for a solid glass ornament. Figure 2 shows the finite region $R$, which is bounded by the $y$-axis, the horizontal line $CB$, the vertical line $BA$, and the curve $AO$. The ornament is formed by rotating the region $R$ through 360 degrees about the $y$-axis. \\
+The curve $AO$ is modelled by the equation $x=ky^{2}+3\sqrt{y}$, $0\leq y\leq4$, where $k$ is a constant. \\
+The point $A$ has coordinates $(2.8,4)$ and the point $B$ has coordinates $(2.8,4.5)$. The units are centimetres. \\
+(Diagram: From $y=0$ to $y=4$, the radius is the $x$ value of the curve. From $y=4$ to $y=4.5$, the radius is 2.8 cm.) \\
+(a) Determine the value of $k$ according to this model. (2) \\
+(b) Use algebraic integration to determine the exact volume of glass that would be required to make the ornament, according to the model. (7) \\
+(c) State a limitation of the model. (1) \\
+When the ornament was manufactured, 126 cubic centimetres of glass was required. \\
+(d) Use this information and your answer to part (b) to evaluate the model, explaining your reasoning. (1)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) At $A$, $y=4$ and $x=2.8$. \\
+$2.8=k(4)^{2}+3\sqrt{4}$. \\
+$2.8=16k+6$. \\
+$16k=-3.2$. \\
+$k=-\frac{1}{5}$. \\
+(b) The curved part has radius $x=3\sqrt{y}-\frac{y^{2}}{5}$. \\
+Use the disc method $V=\pi\int x^{2}\,dy$. \\
+$x^{2}=(3\sqrt{y}-\frac{y^{2}}{5})^{2}$. \\
+Expand: $x^{2}=9y-\frac{6}{5}y^{5/2}+\frac{1}{25}y^{4}$. \\
+Integrate from $y=0$ to $y=4$: \\
+$V_{\mathrm{curved}}=\pi[\frac{9}{2}y^{2}-\frac{12}{35}y^{7/2}+\frac{1}{125}y^{5}]_{0}^{4}$. \\
+At 4, $4^{7/2}=128$ and $4^{5}=1024$. \\
+$V_{\mathrm{curved}}=\pi(72-\frac{1536}{35}+\frac{1024}{125})$. \\
+The neck is a cylinder with radius 2.8 and height $4.5-4=0.5$. \\
+$V_{\mathrm{neck}}=\pi(2.8)^{2}(0.5)=\frac{98\pi}{25}$. \\
+Add the two volumes: \\
+$V=\pi(72-\frac{1536}{35}+\frac{1024}{125}+\frac{98}{25})$. \\
+$=\frac{35198\pi}{875}$ cubic centimetres. \\
+$\approx126.375$ cubic centimetres. \\
+(c) The actual glass shape may not exactly follow the modelled curve. \\
+(d) The model predicts about 126.375 cubic centimetres, close to the actual 126; it is a good estimate, slightly high by about 0.375 cubic centimetres.

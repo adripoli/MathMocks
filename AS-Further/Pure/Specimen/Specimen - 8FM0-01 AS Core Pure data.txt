@@ -1,0 +1,409 @@
+@paper AS Core Pure Specimen
+@level AS-Level
+
+@q 1
+@topic Reflection and invariant points
+@marks 5
+@question
+$P$ is half the matrix with rows $(1,\sqrt{3})$; $(-\sqrt{3},1)$ and $Q$ has rows $(-1,0)$; $(0,1)$. The matrices $P$ and $Q$ represent linear transformations of the plane. The linear transformation $M$ is formed by first applying $P$ and then applying $Q$. \\
+(a) Find the matrix $M$ that represents the linear transformation $M$. (2) \\
+(b) Show that the invariant points of the linear transformation $M$ form a line in the plane, stating the equation of this line. (3)
+@scheme
+(a) $M=QP$ M1 1.1a \\
+$M$ has rows $(-\frac{1}{2},-\frac{\sqrt{3}}{2})$; $(-\frac{\sqrt{3}}{2},\frac{1}{2})$ A1 1.1b (2) \\
+(b) Set $M(x,y)=(x,y)$ M1 3.1a \\
+$-\frac{1}{2}x-\frac{\sqrt{3}}{2}y=x$, $-\frac{\sqrt{3}}{2}x+\frac{1}{2}y=y$ M1 1.1b \\
+Both equations give $y=-\sqrt{3}x$, so the invariant points form this line. A1ft 2.1 (3) \\
+Notes: \\
+(a) M1: Multiplies the matrices in the correct order. \\
+A1: Correct matrix. \\
+(b) M1: Extracts simultaneous equations. \\
+M1: Gathers terms. \\
+A1ft: Shows the equations agree and states the line.
+@model
+(a) First apply $P$, then $Q$, so multiply in the order $M=QP$. \\
+Multiplying $Q$ changes the sign of the first row of $P$. \\
+$M$ has rows $(-\frac{1}{2},-\frac{\sqrt{3}}{2})$; $(-\frac{\sqrt{3}}{2},\frac{1}{2})$. \\
+(b) An invariant point $(x,y)$ satisfies $M(x,y)=(x,y)$. \\
+First component: $-\frac{1}{2}x-\frac{\sqrt{3}}{2}y=x$. \\
+Multiply by 2: $-x-\sqrt{3}y=2x$. \\
+$-\sqrt{3}y=3x$. \\
+$y=-\sqrt{3}x$. \\
+Second component: $-\frac{\sqrt{3}}{2}x+\frac{1}{2}y=y$. \\
+Multiply by 2: $-\sqrt{3}x+y=2y$. \\
+$y=-\sqrt{3}x$. \\
+Both equations define the same line, so every point on $y=-\sqrt{3}x$ is invariant.
+
+@q 2
+@topic Argand disc and sector
+@marks 6
+@question
+(a) Sketch, on an Argand diagram, the set of points $X=\{z\in\mathbb{C}:|z-4-2\mathrm{i}|<3\}$ intersected with $\{z\in\mathbb{C}:0\leq\mathrm{arg}(z)\leq\frac{\pi}{4}\}$. On your diagram shade the part included in the set, using solid lines for included boundaries and dashed lines for excluded boundaries. (3) \\
+(b) Show that the complex number $z=5+4\mathrm{i}$ is in the set $X$. (3)
+@scheme
+(a) Draw the circle with centre $(4,2)$ and radius 3, with excluded arc. B1 1.1b \\
+Draw the included sector between arguments 0 and $\frac{\pi}{4}$. B1 1.1b \\
+Shade the intersection, with dashed circular boundary and solid ray boundaries. B1ft 1.1b (3) \\
+(b) $|5+4\mathrm{i}-4-2\mathrm{i}|^{2}=|1+2\mathrm{i}|^{2}=5<9$ M1 1.1b \\
+$0\leq\mathrm{arg}(5+4\mathrm{i})=\tan^{-1}(\frac{4}{5})=0.6747...\leq\frac{\pi}{4}$ M1 2.2a \\
+It lies in both sets, so $5+4\mathrm{i}\in X$. A1 2.1 (3) \\
+Notes: \\
+(a) B1: Correct open disc. \\
+B1: Correct closed sector. \\
+B1: Correct shaded intersection and boundaries. \\
+(b) M1: Compares the distance with 3. \\
+M1: Checks the argument. \\
+A1: Concludes membership of the intersection.
+@model
+(a) $|z-(4+2\mathrm{i})|<3$ is the open disc centred at $(4,2)$ with radius 3. \\
+Draw its circle dashed because equality is excluded. \\
+The argument range is the sector from the positive real axis up to the ray $y=x$ in the first quadrant. \\
+Draw both rays solid, because the inequalities include their boundaries. \\
+Shade only the part inside both the open disc and this closed sector. \\
+(b) Subtract the centre from $z=5+4\mathrm{i}$: \\
+$(5+4\mathrm{i})-(4+2\mathrm{i})=1+2\mathrm{i}$. \\
+Its squared modulus is $1^{2}+2^{2}=5<9=3^{2}$. \\
+The point is inside the disc. \\
+It has positive real and imaginary parts, and $4<5$, so its angle is between 0 and $\frac{\pi}{4}$. \\
+Equivalently $\mathrm{arg}(5+4\mathrm{i})=\tan^{-1}(\frac{4}{5})=0.6747...<0.7854...$. \\
+It belongs to both sets, hence to $X$.
+
+@q 3
+@topic Determinant and sheaf of planes
+@marks 8
+@question
+(a) Find, in terms of the real constant $k$, the determinant of the matrix $M$ with rows $(3,2,1)$; $(2,3,-1)$; $(1,k,2)$. (2) \\
+Three distinct planes, Pi1, Pi2 and Pi3, are defined by $\mathbf{r}\cdot(3,2,1)=4$; $\mathbf{r}=(1,2,3)+\lambda(1,-1,-1)+\mu(1,0,2)$; and $x+ky+2z=-1$ respectively. \\
+(b) Find an equation in Cartesian form for (i) Pi1, (ii) Pi2. (4) \\
+Given that the three planes form a sheaf, \\
+(c) use the answer to part (a) to explain why $k=-1$. (2)
+@scheme
+(a) $\mathrm{det}(M)=3(3\cdot2+k)-2(2\cdot2+1)+(2k-3)$ M1 1.1b \\
+$\mathrm{det}(M)=5k+5$ A1 1.1b (2) \\
+(b)(i) $3x+2y+z=4$ B1 1.1b \\
+(ii) The direction vectors give normal $(2,3,-1)$. M1 1.1b \\
+Through $(1,2,3)$, $2x+3y-z=5$. M1 1.1b, A1 1.1b (4) \\
+(c) A sheaf means the three planes share a common line; their coefficient matrix must be singular. B1 3.1a \\
+$5k+5=0$, so $k=-1$. B1 2.3 (2) \\
+Notes: \\
+(a) M1: Attempts the determinant. \\
+A1: $5k+5$. \\
+(b) B1: Pi1 equation. \\
+M1: Finds normal to Pi2. \\
+M1: Uses a point to find the constant. \\
+A1: Correct Pi2 equation. \\
+(c) B1: Links the planes to the matrix. \\
+B1: Uses singularity to find $k$.
+@model
+(a) Expand the determinant along the first row. \\
+$\mathrm{det}(M)=3[3(2)-(-1)k]-2[2(2)-(-1)(1)]+[2k-3(1)]$. \\
+$=3(6+k)-2(5)+(2k-3)$. \\
+$=18+3k-10+2k-3$. \\
+$=5k+5$. \\
+(b)(i) The dot product gives $3x+2y+z=4$. \\
+(ii) The plane directions are $(1,-1,-1)$ and $(1,0,2)$. \\
+Their cross product is $(-2,-3,1)$, so take the opposite normal $(2,3,-1)$. \\
+Use point $(1,2,3)$: $2(x-1)+3(y-2)-(z-3)=0$. \\
+$2x-2+3y-6-z+3=0$. \\
+$2x+3y-z=5$. \\
+(c) A sheaf of three distinct planes shares a line of intersection. \\
+Their three normal vectors must be linearly dependent, so the coefficient matrix has zero determinant. \\
+$5k+5=0$, hence $k=-1$.
+
+@q 4
+@topic Profit summation model
+@marks 9
+@question
+A company manufacturing radios agreed a 20 year contract with a retailer to supply its radios. In the first year of the contract, 500 radios were supplied to the retailer. In each subsequent year, the number of radios supplied to the retailer was 50 more than in the previous year. \\
+The amount received by the company for each radio during year $n$ of the contract was $20+\frac{n^{2}}{45}$ pounds. The total cost of producing the radios during year $n$ was modelled as $1000+10n^{2}$ pounds. \\
+(a) Show that, according to the model, the profit made by the company in year $n$, $P_{n}$ pounds, is $P_{n}=\frac{10}{9}(n^{3}+900n+7200)$. (2) \\
+(b) Use the standard results for summations to show that the total profit made by the company in the first $N$ years of the contract, $T_{N}$ pounds, is given by $T_{N}=aN(N^{3}+bN^{2}+cN+d)$, where $a$, $b$, $c$ and $d$ are constants to be found. (5) \\
+At the end of the 20 years, the company found that its total profit made from this contract just exceeded 500000 pounds. \\
+(c) Assess the model in light of this information. (2)
+@scheme
+(a) $P_{n}=(450+50n)(20+\frac{n^{2}}{45})-(1000+10n^{2})$ M1 2.1 \\
+$P_{n}=\frac{10}{9}(n^{3}+900n+7200)$ A1* 1.1b (2) \\
+(b) $T_{N}=\frac{10}{9}(\sum_{n=1}^{N}n^{3}+900\sum_{n=1}^{N}n+7200N)$ M1 1.1a \\
+$=\frac{10}{9}(\frac{N^{2}(N+1)^{2}}{4}+450N(N+1)+7200N)$ A1 1.1b, B1 1.1b \\
+$=\frac{5N}{18}(N^{3}+2N^{2}+1801N+30600)$ M1 2.1, A1 1.1b (5) \\
+(c) $T_{20}=419000$ pounds M1 3.4 \\
+The model substantially underestimates a profit just over 500000 pounds, so it is not a good fit. A1ft 3.5a (2) \\
+Notes: \\
+(a) M1: Forms revenue less cost. \\
+A1: Correct year profit. \\
+(b) M1: Uses standard summation. \\
+A1: Correct formulae. \\
+B1: Includes the constant sum. \\
+M1: Expands and factors. \\
+A1: Correct total. \\
+(c) M1: Evaluates at 20. \\
+A1ft: Compares with the actual figure.
+@model
+(a) Radios sold in year $n$: $500+50(n-1)=450+50n$. \\
+Revenue is $(450+50n)(20+\frac{n^{2}}{45})$. \\
+Profit is revenue minus cost: \\
+$P_{n}=(450+50n)(20+\frac{n^{2}}{45})-(1000+10n^{2})$. \\
+Expand: $9000+1000n+10n^{2}+\frac{10}{9}n^{3}-1000-10n^{2}$. \\
+$=8000+1000n+\frac{10}{9}n^{3}$. \\
+$=\frac{10}{9}(n^{3}+900n+7200)$ as required. \\
+(b) Sum from $n=1$ to $N$: \\
+$T_{N}=\frac{10}{9}[\sum n^{3}+900\sum n+7200N]$. \\
+Use $\sum n^{3}=\frac{N^{2}(N+1)^{2}}{4}$ and $\sum n=\frac{N(N+1)}{2}$. \\
+$T_{N}=\frac{10}{9}[\frac{N^{2}(N+1)^{2}}{4}+450N(N+1)+7200N]$. \\
+Factor $\frac{5N}{18}$: \\
+$T_{N}=\frac{5N}{18}[N(N+1)^{2}+1800(N+1)+28800]$. \\
+Expand the bracket: $N^{3}+2N^{2}+N+1800N+1800+28800$. \\
+$T_{N}=\frac{5N}{18}(N^{3}+2N^{2}+1801N+30600)$. \\
+$a=\frac{5}{18}$, $b=2$, $c=1801$, $d=30600$. \\
+(c) Substitute $N=20$: $T_{20}=419000$ pounds. \\
+Actual profit just exceeds 500000 pounds, so the model underestimates by over 81000 pounds, more than 16% of the actual profit. It is a poor fit for the full contract.
+
+@q 5
+@topic Complex cubic and equilateral roots
+@marks 8
+@question
+$f(z)=8z^{3}+12z^{2}+6z+65$. Given that $\frac{1}{2}-\mathrm{i}\sqrt{3}$ is a root of the equation $f(z)=0$, \\
+(a) write down the other complex root of the equation, (1) \\
+(b) use algebra to solve the equation $f(z)=0$ completely. (3) \\
+(c) Show the roots of $f(z)$ on a single Argand diagram. (2) \\
+(d) Show that the roots of $f(z)$ form the vertices of an equilateral triangle in the complex plane. (2)
+@scheme
+(a) $\frac{1}{2}+\mathrm{i}\sqrt{3}$ B1 1.2 (1) \\
+(b) Conjugate pair gives factor $4z^{2}-4z+13$. M1 1.1b \\
+$f(z)=(4z^{2}-4z+13)(2z+5)$ M1 1.1b \\
+Roots $z=\frac{1}{2}\pm\mathrm{i}\sqrt{3}$ and $z=-\frac{5}{2}$ A1 1.1b (3) \\
+(c) Plot the conjugate pair in the first and fourth quadrants. B1 1.1b \\
+Plot $-\frac{5}{2}$ on the negative real axis. B1ft 1.1b (2) \\
+(d) Distance between the conjugates is $2\sqrt{3}$; each is also $2\sqrt{3}$ from $-\frac{5}{2}$. M1 3.1a \\
+All three sides are equal, so the triangle is equilateral. A1 2.1 (2) \\
+Notes: \\
+(a) B1: Correct conjugate root. \\
+(b) M1: Forms quadratic factor. \\
+M1: Obtains linear factor. \\
+A1: All roots. \\
+(c) B1: Correct complex positions. \\
+B1ft: Correct real root position. \\
+(d) M1: Finds all side lengths or angles. \\
+A1: Complete conclusion.
+@model
+(a) Since $f$ has real coefficients, complex roots come in conjugate pairs. \\
+The other complex root is $\frac{1}{2}+\mathrm{i}\sqrt{3}$. \\
+(b) Their quadratic factor is $(z-\frac{1}{2})^{2}+3$. \\
+$=z^{2}-z+\frac{1}{4}+3=z^{2}-z+\frac{13}{4}$. \\
+Multiply by 4: $4z^{2}-4z+13$. \\
+Divide $f(z)$ by this factor: $f(z)=(4z^{2}-4z+13)(2z+5)$. \\
+Thus the third root is $z=-\frac{5}{2}$. \\
+All roots are $\frac{1}{2}-\mathrm{i}\sqrt{3}$, $\frac{1}{2}+\mathrm{i}\sqrt{3}$ and $-\frac{5}{2}$. \\
+(c) Plot points $(\frac{1}{2},-\sqrt{3})$, $(\frac{1}{2},\sqrt{3})$ and $(-\frac{5}{2},0)$. \\
+(d) Vertical separation of the conjugates is $2\sqrt{3}$. \\
+From the real root to either complex root, horizontal separation is 3 and vertical separation is $\sqrt{3}$. \\
+By Pythagoras, the distance is $\sqrt{3^{2}+(\sqrt{3})^{2}}=\sqrt{12}=2\sqrt{3}$. \\
+All three side lengths are equal, so the triangle is equilateral.
+
+@q 6
+@topic Induction, divisibility by five
+@marks 9
+@question
+(a) Prove by induction that, for all positive integers $n$, $f(n)=n^{5}+4n$ is divisible by 5. (6) \\
+(b) Show that $f(-x)=-f(x)$ for all real $x$. (1) \\
+(c) Hence prove that $f(n)$ is divisible by 5 for all integers $n$. (2)
+@scheme
+(a) $f(1)=1^{5}+4(1)=5$, divisible by 5. B1 2.2a \\
+Assume $f(k)=k^{5}+4k$ is divisible by 5. M1 2.4 \\
+$f(k+1)=(k+1)^{5}+4(k+1)$ M1 2.1 \\
+$=k^{5}+5k^{4}+10k^{3}+10k^{2}+5k+1+4k+4$ A1 1.1b \\
+$=f(k)+5(k^{4}+2k^{3}+2k^{2}+k+1)$ A1 1.1b \\
+Therefore $f(k+1)$ is divisible by 5, and induction proves the claim for all positive integers. A1 2.4 (6) \\
+(b) $f(-x)=(-x)^{5}+4(-x)=-x^{5}-4x=-f(x)$ B1 2.5 (1) \\
+(c) For negative integer $n$, $-n$ is positive, so $f(-n)$ is divisible by 5 by part (a); part (b) gives $f(n)=-f(-n)$. M1 2.1 \\
+Also $f(0)=0$. Hence $f(n)$ is divisible by 5 for all integers. A1 2.4 (2) \\
+Notes: \\
+(a) B1: Checks the base case. \\
+M1: Assumes the claim for $k$. \\
+M1: Expands $f(k+1)$. \\
+A1: Correct expansion. \\
+A1: Shows the factor 5. \\
+A1: Complete induction. \\
+(b) B1: Correct odd-function proof. \\
+(c) M1: Uses positive case and oddness. \\
+A1: Includes zero and concludes.
+@model
+(a) Base case $n=1$: $f(1)=1^{5}+4(1)=5$, divisible by 5. \\
+Assume $f(k)=k^{5}+4k$ is divisible by 5. \\
+For $k+1$, expand with the binomial theorem: \\
+$f(k+1)=(k+1)^{5}+4(k+1)$. \\
+$=k^{5}+5k^{4}+10k^{3}+10k^{2}+5k+1+4k+4$. \\
+Group the assumed expression: \\
+$=(k^{5}+4k)+5(k^{4}+2k^{3}+2k^{2}+k+1)$. \\
+$=f(k)+5(k^{4}+2k^{3}+2k^{2}+k+1)$. \\
+Both terms are divisible by 5, so $f(k+1)$ is divisible by 5. \\
+The base case and induction step establish the result for all positive integers. \\
+(b) $f(-x)=(-x)^{5}+4(-x)=-x^{5}-4x=-(x^{5}+4x)=-f(x)$. \\
+(c) If $n<0$, then $-n>0$, and part (a) says $f(-n)$ is divisible by 5. \\
+Part (b) gives $f(n)=-f(-n)$, also divisible by 5. \\
+For $n=0$, $f(0)=0$, divisible by 5. \\
+Thus the claim holds for all integers.
+
+@q 7
+@topic Population transition matrix
+@marks 13
+@question
+The population of Zebu cattle in a particular country is modelled by two sub-populations, adults and juveniles. The only factors affecting population are birth and survival rates. Adult birth and survival rates are 0.23 and 0.97; juvenile birth and survival rates are 0 and 0.87. One third of surviving juveniles become adults each year. \\
+Let $A_{n}$ and $J_{n}$ be the respective populations, in millions, $n$ years after 1 January 2018. The adult population satisfies $A_{n+1}=0.97A_{n}+0.29J_{n}$. \\
+(a) Form the corresponding equation for the juvenile population in year $n+1$, justifying your values. (2) \\
+The total population on 1 January 2018 was estimated as 1.5 million, with 1.2 million adults. \\
+(b) Find $p$ and the matrix $M$ such that $(A_{0},J_{0})=(1.2,p)$ and $(A_{n+1},J_{n+1})=M(A_{n},J_{n})$. Give $p$ to 2 significant figures and each entry of $M$ to 2 decimal places. (3) \\
+Using the model from part (b), find to 3 significant figures, \\
+(c)(i) the total Zebu population present on 1 January 2017, (ii) the predicted juvenile Zebu population on 1 January 2025. (5) \\
+It is decided that the country will export 15000 juveniles at the end of each year. \\
+(d) Adapt the model from 2018 onwards to include this export. (2) \\
+(e) State one limitation of this model. (1)
+@scheme
+(a) New juveniles $=0.23A_{n}$; surviving juveniles staying juvenile $=\frac{2}{3}(0.87)J_{n}$. B1 2.4 \\
+$J_{n+1}=0.23A_{n}+0.58J_{n}$ B1 1.1b (2) \\
+(b) $p=0.30$ B1 3.3 \\
+$M$ has rows $(0.97,0.29)$; $(0.23,0.58)$. B1ft 3.3, B1 3.3 (3) \\
+(c)(i) $(A_{-1},J_{-1})=M^{-1}(1.2,0.3)=(1.228...,0.0302...)$ M1 3.4 \\
+Add components to find total population. M1 1.1b \\
+$1.26$ million A1 2.2b \\
+(ii) $(A_{7},J_{7})=M^{7}(1.2,0.3)=(2.117...,0.938...)$ M1 3.4 \\
+Juvenile population $=0.938$ million A1 1.1b (5) \\
+(d) $(A_{n+1},J_{n+1})=M(A_{n},J_{n})-(0,0.015)$ M1 3.5c, A1ft 3.3 (2) \\
+(e) Birth, death or maturation rates may change over time. B1 3.5b (1) \\
+Notes: \\
+(a) B1: Explains the juvenile contributions. \\
+B1: Correct equation. \\
+(b) B1: Correct $p$. \\
+B1ft: Correct matrix row from the model. \\
+B1: Complete matrix. \\
+(c) M1: Applies inverse for 2017 and seventh power for 2025. \\
+A1: Correct predictions. \\
+(d) M1: Adds an export vector. \\
+A1ft: Correct 0.015 million subtraction. \\
+(e) B1: Valid limitation.
+@model
+(a) Adults produce $0.23A_{n}$ million new juveniles. \\
+Of surviving juveniles, two thirds remain juveniles. \\
+Their number is $\frac{2}{3}(0.87)J_{n}=0.58J_{n}$. \\
+$J_{n+1}=0.23A_{n}+0.58J_{n}$. \\
+(b) The juvenile population in 2018 was $1.5-1.2=0.30$ million, so $p=0.30$. \\
+Combine the adult and juvenile equations. \\
+$M$ has first row $(0.97,0.29)$ and second row $(0.23,0.58)$. \\
+(c)(i) One year before 2018 corresponds to $n=-1$. \\
+Apply the inverse: $(A_{-1},J_{-1})=M^{-1}(1.2,0.3)$. \\
+$=(1.228070...,0.030248...)$ million. \\
+Add: $1.228070...+0.030248...=1.258318...$ million. \\
+To 3 significant figures, total $=1.26$ million. \\
+(c)(ii) 2025 is seven years after 2018. \\
+$(A_{7},J_{7})=M^{7}(1.2,0.3)$. \\
+$=(2.117333...,0.938132...)$ million. \\
+Juveniles $=0.938$ million (3 sf). \\
+(d) 15000 juveniles are $0.015$ million. \\
+Subtract this after applying the annual transition: \\
+$(A_{n+1},J_{n+1})=M(A_{n},J_{n})-(0,0.015)$, with $(A_{0},J_{0})=(1.2,0.30)$. \\
+(e) The birth and survival rates are assumed fixed, but they may change.
+
+@q 8
+@topic Revolutions and binomial probability
+@marks 11
+@question
+Figure 1 shows a sketch of the curve $y=x^{2/3}$, $x\geq0$. The curve passes through $A$ with $x$ coordinate 8. The region $R_{1}$ is bounded by the curve, the vertical line through $A$ and the $x$-axis. The region $R_{2}$ is bounded by the curve, the horizontal line through $A$ and the $y$-axis. The solid $V_{1}$ is formed by rotating $R_{1}$ through 360 degrees about the $x$-axis; $V_{2}$ is formed by rotating $R_{2}$ through 360 degrees about the $y$-axis. \\
+(a) Show that the exact volume of $V_{1}$ is $\frac{384\pi}{7}$. (4) \\
+The solids $V_{1}$ and $V_{2}$ are placed in an empty container. A solid is selected at random and replaced in the container. This is carried out 10 times. Given that the probability of selecting each type is proportional to its volume, \\
+(b) find, to 4 decimal places, the probability that $V_{2}$ is selected exactly 8 times. (7)
+@scheme
+(a) $V_{1}=\pi\int_{0}^{8}y^{2}\,dx=\pi\int_{0}^{8}x^{4/3}\,dx$ B1 1.1b \\
+$=\pi[\frac{3x^{7/3}}{7}]_{0}^{8}$ M1 1.1b \\
+$=\pi\frac{3\cdot8^{7/3}}{7}$ M1 1.1b \\
+$=\frac{384\pi}{7}$ A1* 2.1 (4) \\
+(b) $V_{2}=\pi\int_{0}^{4}x^{2}\,dy=\pi\int_{0}^{4}y^{3}\,dy$ M1 3.1a, B1 1.1b \\
+$=\pi[\frac{y^{4}}{4}]_{0}^{4}=64\pi$ M1 1.1b, A1 1.1b \\
+$p=\frac{64\pi}{64\pi+384\pi/7}=\frac{7}{13}$ M1 1.1b \\
+$X$ has binomial distribution with 10 trials and success probability $\frac{7}{13}$. M1 3.1a \\
+$P(X=8)=10C8(\frac{7}{13})^{8}(\frac{6}{13})^{2}=0.0677$ A1 1.1b (7) \\
+Notes: \\
+(a) B1: Correct disc integral. \\
+M1: Integrates. \\
+M1: Applies limits. \\
+A1: Exact result. \\
+(b) M1: Finds volume ratio. \\
+B1: Correct integral for $V_{2}$. \\
+M1: Integrates and applies limits. \\
+A1: $64\pi$. \\
+M1: Finds $p$. \\
+M1: Uses binomial distribution. \\
+A1: $0.0677$.
+@model
+(a) Rotating $R_{1}$ about the $x$-axis gives discs of radius $y=x^{2/3}$. \\
+$V_{1}=\pi\int_{0}^{8}(x^{2/3})^{2}\,dx$. \\
+$=\pi\int_{0}^{8}x^{4/3}\,dx$. \\
+Use the power rule: $\int x^{4/3}dx=\frac{3}{7}x^{7/3}$. \\
+$V_{1}=\pi[\frac{3}{7}x^{7/3}]_{0}^{8}$. \\
+At 8: $8^{7/3}=(\sqrt[3]{8})^{7}=2^{7}=128$. \\
+At 0: the antiderivative is 0. \\
+$V_{1}=\pi\frac{3\cdot128}{7}=\frac{384\pi}{7}$ as required. \\
+(b) At $x=8$, $y=8^{2/3}=4$. \\
+For rotation about the $y$-axis, write $x=y^{3/2}$, so $x^{2}=y^{3}$. \\
+$V_{2}=\pi\int_{0}^{4}y^{3}\,dy=\pi[\frac{y^{4}}{4}]_{0}^{4}$. \\
+$=\pi\frac{4^{4}}{4}=64\pi$. \\
+Probability of $V_{2}$ on one draw: \\
+$p=\frac{V_{2}}{V_{1}+V_{2}}=\frac{64}{64+384/7}$. \\
+$=\frac{448}{832}=\frac{7}{13}$. \\
+Replacement makes 10 independent draws with the same $p$. \\
+Use the binomial formula: \\
+$P(X=8)=10C8(\frac{7}{13})^{8}(\frac{6}{13})^{2}$. \\
+$=0.0677432...=0.0677$ (4 dp).
+
+@q 9
+@topic Comet path and angle in space
+@marks 11
+@question
+A small comet $C$ passes near a planet modelled as a sphere with centre $O$ fixed in space. The planet's diameter is 13000 km. When monitoring begins, the comet is at position $146\mathbf{i}+234\mathbf{j}-85\mathbf{k}$ and moves with vector $-21\mathbf{i}-33\mathbf{j}+13\mathbf{k}$ every hour, where units are thousands of kilometres. Assuming a straight line course, \\
+(a) determine whether or not the comet will collide with the planet. (6) \\
+Satellites $A$ and $B$ have position vectors $\text{OA}=5\mathbf{i}+12\mathbf{k}$ and $\text{OB}=4\mathbf{i}+12\mathbf{j}-3\mathbf{k}$ when monitoring begins. They return to these positions every 4 hours. \\
+(b) Find the expected angle $ACB$ between the comet and the satellites when they first return to their initial positions. Give your answer to the nearest 0.1 degrees. (4) \\
+(c) Give a reason why the answer to part (b) may differ from the true value. (1)
+@scheme
+(a) $\text{OC}=(146,234,-85)+\lambda(-21,-33,13)$ M1 3.1a \\
+For the nearest point, $\text{OC}\cdot(-21,-33,13)=0$ M1 1.1b \\
+$\lambda=7$ A1 1.1b \\
+Minimum distance $=\sqrt{46}$ thousand km $\approx6.782$ thousand km M1 1.1b \\
+The planet's radius is $6.5$ thousand km. M1 3.1b \\
+The comet misses the planet. A1 3.2a (6) \\
+(b) After 4 hours, $C=(62,102,-33)$, and vectors from $C$ to $A$ and $B$ are $(-57,-102,45)$ and $(-58,-90,30)$. M1 3.1a, A1 1.1b \\
+$\cos \theta=\frac{13836}{\sqrt{15678}\sqrt{12364}}$, where $\theta$ is angle $ACB$. M1 1.1b \\
+$\theta=6.4$ degrees (nearest 0.1) A1 1.1b (4) \\
+(c) The comet may not follow a straight line owing to gravity near the planet. B1 3.2b (1) \\
+Notes: \\
+(a) M1: Correct shortest-distance strategy. \\
+M1: Sets up the parameter equation. \\
+A1: Correct parameter. \\
+M1: Finds minimum distance. \\
+M1: Compares with radius in matching units. \\
+A1: Correct conclusion. \\
+(b) M1: Identifies the required direction vectors. \\
+A1: Correct vectors. \\
+M1: Uses scalar product formula. \\
+A1: Correct angle. \\
+(c) B1: Acceptable limitation.
+@model
+(a) Let $t$ be hours after monitoring starts. \\
+$\text{OC}(t)=(146-21t,234-33t,-85+13t)$ in thousands of km. \\
+The closest point on the line has position vector perpendicular to its direction. \\
+$\text{OC}(t)\cdot(-21,-33,13)=0$. \\
+Expand: $-21(146-21t)-33(234-33t)+13(-85+13t)=0$. \\
+$-3066+441t-7722+1089t-1105+169t=0$. \\
+$1699t-11893=0$, so $t=7$ hours. \\
+Substitute: $\text{OC}(7)=(146-147,234-231,-85+91)=(-1,3,6)$. \\
+Minimum distance $=\sqrt{(-1)^{2}+3^{2}+6^{2}}=\sqrt{46}=6.7823...$ thousand km. \\
+The planet radius is $13000/2=6500$ km $=6.5$ thousand km. \\
+Since $6.7823...>6.5$, the comet misses the planet under the model. \\
+(b) After 4 hours $C=(146-84,234-132,-85+52)=(62,102,-33)$. \\
+From $C$ to $A$: $\text{CA}=(5,0,12)-(62,102,-33)=(-57,-102,45)$. \\
+From $C$ to $B$: $\text{CB}=(4,12,-3)-(62,102,-33)=(-58,-90,30)$. \\
+Scalar product $\text{CA}\cdot\text{CB}=(-57)(-58)+(-102)(-90)+45(30)=13836$. \\
+$|\text{CA}|=\sqrt{15678}$ and $|\text{CB}|=\sqrt{12364}$. \\
+$\cos \theta=\frac{13836}{\sqrt{15678}\sqrt{12364}}$, where $\theta$ is angle $ACB$. \\
+$\theta=6.3991...$ degrees. \\
+To nearest 0.1 degree, $6.4$ degrees. \\
+(c) The comet may be deflected by the planet's gravity, so its real position after 4 hours may differ.

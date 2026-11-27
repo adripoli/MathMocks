@@ -1,0 +1,280 @@
+@paper AS Core Pure Shadow June 2023
+@level AS-Level
+
+@q 1
+@topic Matrix equation with constants
+@marks 4
+@question
+The matrix with rows $(a,b)$; $(8,c)$, minus 2 times the matrix with rows $(a,a)$; $(b,b)$, equals $kI$, where $a$, $b$, $c$ and $k$ are constants. \\
+Determine the value of $a$, the value of $b$ and the value of $c$. (4)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+Compare the upper-right entries: $b-2a=0$, so $b=2a$. \\
+Compare the lower-left entries: $8-2b=0$. \\
+$2b=8$ and $b=4$. \\
+Then $4=2a$, so $a=2$. \\
+The top-left entry gives $k=a-2a=-a=-2$. \\
+The bottom-right entry gives $c-2b=k$. \\
+$c-8=-2$. \\
+$c=6$. \\
+Thus $a=2$, $b=4$, $c=6$.
+
+@q 2
+@topic Cubic with complex root
+@marks 7
+@question
+$f(z)=z^{3}+az+b$, where $a$ and $b$ are real constants. Given that $3-\sqrt{5}\mathrm{i}$ is a root of the equation $f(z)=0$, \\
+(a) determine the value of $a$ and the value of $b$. (4) \\
+(b) Show all the roots of the equation $f(z)=0$ on a single Argand diagram. (2) \\
+(c) Write down the roots of the equation $f(z-3)=0$. (1)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Real coefficients give the conjugate root $3+\sqrt{5}\mathrm{i}$. \\
+The coefficient of $z^{2}$ is zero, so the roots sum to zero. \\
+Their sum is 6, so the third root is $-6$. \\
+Form the quadratic factor: \\
+$(z-(3-\sqrt{5}\mathrm{i}))(z-(3+\sqrt{5}\mathrm{i}))$ \\
+$=(z-3)^{2}+5$ \\
+$=z^{2}-6z+14$. \\
+Multiply by $(z+6)$: \\
+$(z^{2}-6z+14)(z+6)$ \\
+$=z^{3}+6z^{2}-6z^{2}-36z+14z+84$ \\
+$=z^{3}-22z+84$. \\
+$a=-22$, $b=84$. \\
+(b) Plot the points $(-6,0)$, $(3,-\sqrt{5})$ and $(3,\sqrt{5})$ in the Argand plane. \\
+(c) If $f(z-3)=0$, then $z-3$ is an original root. \\
+Add 3 to each original root. \\
+$z=-3$, $z=6-\sqrt{5}\mathrm{i}$, $z=6+\sqrt{5}\mathrm{i}$.
+
+@q 3
+@topic Three-dimensional transformations
+@marks 4
+@question
+$A$ has rows $(-\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2},0)$; $(\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2},0)$; $(0,0,1)$. \\
+(a) Describe fully the single geometric transformation represented by the matrix $A$. (2) \\
+$B$ has rows $(\sqrt{2},3\sqrt{2},0)$; $(2\sqrt{2},0,3)$; $(1,2,3)$. The transformation $A$ followed by the transformation $B$ is the transformation $C$, which is represented by the matrix $C$. \\
+(b) Determine the matrix $C$. (2)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Compare the upper-left block with the standard rotation matrix with rows $(\cos\theta,-\sin\theta)$; $(\sin\theta,\cos\theta)$. \\
+$\cos\theta=-\frac{\sqrt{2}}{2}$ and $\sin\theta=\frac{\sqrt{2}}{2}$. \\
+The transformation is a rotation through 135 degrees anticlockwise about the $z$-axis. \\
+(b) Applying $A$ then $B$ gives $C=BA$. \\
+First row of $BA$: $(2,-4,0)$. \\
+Second row: $(-2,-2,3)$. \\
+Third row: $(\frac{\sqrt{2}}{2},-\frac{3\sqrt{2}}{2},3)$. \\
+Thus $C$ has these three rows.
+
+@q 4
+@topic Complex powers and argument
+@marks 8
+@question
+(i)(a) Show that $\frac{2-\sqrt{3}\mathrm{i}}{\sqrt{3}-5\mathrm{i}}=k(\sqrt{3}+\mathrm{i})$ where $k$ is a constant to be determined. (3) \\
+Given that $n$ is a positive integer and $\left(\frac{2-\sqrt{3}\mathrm{i}}{\sqrt{3}-5\mathrm{i}}\right)^{n}$ is a real number, \\
+(i)(b) use the answer to part (a) to write down the smallest possible value of $n$. (1) \\
+(ii) The complex number $z=a+b\mathrm{i}$ where $a$ and $b$ are real constants, and $a>b>0$. Given that $|z^{5}|=32768$ and $\mathrm{arg}(z^{5})=\frac{5\pi}{12}$, determine the value of $a$ and the value of $b$. (4)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(i)(a) Multiply numerator and denominator by the conjugate $\sqrt{3}+5\mathrm{i}$. \\
+$\frac{(2-\sqrt{3}\mathrm{i})(\sqrt{3}+5\mathrm{i})}{(\sqrt{3})^{2}+5^{2}}$ \\
+Expand the top: $2\sqrt{3}+10\mathrm{i}-3\mathrm{i}-5\sqrt{3}\mathrm{i}^{2}$. \\
+Use $\mathrm{i}^{2}=-1$: top $=7\sqrt{3}+7\mathrm{i}$. \\
+Bottom $=3+25=28$. \\
+The fraction is $\frac{1}{4}(\sqrt{3}+\mathrm{i})$, so $k=\frac{1}{4}$. \\
+(i)(b) The number $\sqrt{3}+\mathrm{i}$ has argument $\frac{\pi}{6}$, and positive $k$ does not change it. \\
+Its $n$th power is real when $n\frac{\pi}{6}$ is a multiple of $\pi$. \\
+The least positive integer is $n=6$. \\
+(ii) Let $z=R(\cos\theta+\mathrm{i}\sin\theta)$. \\
+Since $a>b>0$, $0<\theta<\frac{\pi}{4}$. \\
+$R^{5}=32768=8^{5}$, so $R=8$. \\
+The argument condition gives $5\theta=\frac{5\pi}{12}$ modulo $2\pi$. \\
+Within $0<\theta<\frac{\pi}{4}$, this gives $\theta=\frac{\pi}{12}$. \\
+$a=8\cos(\frac{\pi}{12})=2(\sqrt{6}+\sqrt{2})$. \\
+$b=8\sin(\frac{\pi}{12})=2(\sqrt{6}-\sqrt{2})$.
+
+@q 5
+@topic Volume of revolution estimate
+@marks 9
+@question
+A large vat is constructed to store liquid at a brewery. Figure 1 shows a central vertical cross-section of the vat. The region $R$, shown shaded in Figure 2, is bounded by the $y$-axis, the $x$-axis, the line $x=4$ and part of the curve with equation $x^{2}+2(y-3)^{3}=16$. \\
+The volume of liquid that can be stored in the vat is modelled by the volume of revolution formed when $R$ is rotated through 360 degrees about the $y$-axis. The units are metres. \\
+The volume formed when $R$ is rotated through 360 degrees about the $y$-axis is given by $\pi(\int_{0}^{A}f(y)\,dy+B)$. \\
+(a) State the values of the constants $A$ and $B$ and the function $f(y)$. (4) \\
+(b) Hence obtain an estimate of the volume of liquid that can be stored in the vat. (4) \\
+(c) Give a reason why the volume of liquid that can be stored in the vat may differ from that found in part (b). (1)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) For $0\leq y\leq3$, the cross-section has radius 4. \\
+For the dome, $x^{2}=16-2(y-3)^{3}$. \\
+At the top $x=0$, so $(y-3)^{3}=8$ and $y=5$. \\
+Thus $A=5$. \\
+Choose $f(y)=16-2(y-3)^{3}$ from the curve. \\
+Below $y=3$, this gives too much area; correct by adding $B=\int_{0}^{3}2(y-3)^{3}\,dy$. \\
+$B=[\frac{1}{2}(y-3)^{4}]_{0}^{3}$. \\
+$=0-\frac{81}{2}=-\frac{81}{2}$. \\
+So $A=5$, $f(y)=16-2(y-3)^{3}$, $B=-\frac{81}{2}$. \\
+(b) Integrate algebraically: \\
+$\int_{0}^{5}[16-2(y-3)^{3}]\,dy=[16y-\frac{1}{2}(y-3)^{4}]_{0}^{5}$. \\
+At 5: $80-\frac{16}{2}=72$. \\
+At 0: $0-\frac{81}{2}=-\frac{81}{2}$. \\
+The integral equals $72+\frac{81}{2}=\frac{225}{2}$. \\
+Add $B=-\frac{81}{2}$ to obtain 72. \\
+$V=72\pi\approx226.195$ cubic metres. \\
+(c) The vat may have walls of nonzero thickness, reducing the liquid it holds.
+
+@q 6
+@topic Perpendicular lines and a plane
+@marks 11
+@question
+The line $l_{1}$ has equation $\mathbf{r}=(-4,0,3)+\lambda(-3,2,2)$ where $\lambda$ is a scalar parameter. The line $l_{2}$ is parallel to $(2,-1,4)$. \\
+(a) Show that $l_{1}$ and $l_{2}$ are perpendicular. (2) \\
+The plane Pi contains the line $l_{1}$ and is perpendicular to $(2,-1,4)$. \\
+(b) Determine a Cartesian equation of Pi. (2) \\
+(c) Verify that the point $A(1,2,1)$ lies on Pi. (1) \\
+Given that the point $(5,2,-2)$ lies on $l_{2}$, the point $B(p,q,r)$ lies on $l_{2}$, the distance $AB$ is $3\sqrt{6}$, and $p$, $q$ and $r$ are integers, \\
+(d) determine the coordinates of $B$. (6)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Use the scalar product of the line directions. \\
+$(-3,2,2)\cdot(2,-1,4)=(-3)(2)+2(-1)+2(4)$. \\
+$=-6-2+8=0$. \\
+Their directions are perpendicular, as required. \\
+(b) The plane normal is $(2,-1,4)$ and it passes through $(-4,0,3)$. \\
+Use $\mathbf{n}\cdot(\mathbf{r}-\mathbf{a})=0$. \\
+$2(x+4)-y+4(z-3)=0$. \\
+$2x+8-y+4z-12=0$. \\
+$2x-y+4z=4$. \\
+(c) Substitute $A(1,2,1)$: $2(1)-2+4(1)=4$. \\
+So $A$ lies on Pi. \\
+(d) Write $B=(5,2,-2)+t(2,-1,4)=(5+2t,2-t,-2+4t)$. \\
+$\text{AB}=(4+2t,-t,-3+4t)$. \\
+Apply $|\text{AB}|^{2}=(3\sqrt{6})^{2}=54$: \\
+$(4+2t)^{2}+(-t)^{2}+(-3+4t)^{2}=54$. \\
+Expand: $16+16t+4t^{2}+t^{2}+9-24t+16t^{2}=54$. \\
+$21t^{2}-8t-29=0$. \\
+Factor: $(t+1)(21t-29)=0$. \\
+$t=-1$ or $t=\frac{29}{21}$. \\
+For $t=-1$, $B=(3,3,-6)$, all integer coordinates. \\
+For $t=\frac{29}{21}$, the coordinates are not all integers. \\
+Therefore $B=(3,3,-6)$.
+
+@q 7
+@topic Argand half-plane and arguments
+@marks 9
+@question
+(i) Shade, on an Argand diagram, the set of points for which $|z+5|\leq|z-2\mathrm{i}|$. (3) \\
+(ii) Determine the exact complex number $w$ which satisfies both $\mathrm{arg}(w-4)=\frac{5\pi}{6}$ and $\mathrm{arg}(w+1)=\frac{\pi}{4}$. (6)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(i) Let $z=x+y\mathrm{i}$. \\
+Square both nonnegative moduli: \\
+$(x+5)^{2}+y^{2}\leq x^{2}+(y-2)^{2}$. \\
+Expand: $x^{2}+10x+25+y^{2}\leq x^{2}+y^{2}-4y+4$. \\
+Cancel $x^{2}+y^{2}$: $10x+4y+21\leq0$. \\
+Draw the included boundary line $10x+4y+21=0$ and shade the half-plane below it. \\
+(ii) Let $w=x+y\mathrm{i}$. \\
+From $\mathrm{arg}(w+1)=\frac{\pi}{4}$, the point lies on the ray from $(-1,0)$ with slope 1. \\
+$y=x+1$ and $x>-1$. \\
+From $\mathrm{arg}(w-4)=\frac{5\pi}{6}$, the ray from $(4,0)$ has slope $-\frac{1}{\sqrt{3}}$. \\
+$y=-\frac{x-4}{\sqrt{3}}$ and $x<4$. \\
+Equate the two expressions for $y$: \\
+$x+1=\frac{4-x}{\sqrt{3}}$. \\
+$\sqrt{3}x+\sqrt{3}=4-x$. \\
+$x(1+\sqrt{3})=4-\sqrt{3}$. \\
+Rationalise: $x=\frac{(4-\sqrt{3})(\sqrt{3}-1)}{2}$. \\
+$x=\frac{5\sqrt{3}-7}{2}$. \\
+$y=x+1=\frac{5\sqrt{3}-5}{2}$. \\
+$w=\frac{5\sqrt{3}-7}{2}+\frac{5\sqrt{3}-5}{2}\mathrm{i}$.
+
+@q 8
+@topic Sum of odd cubes
+@marks 8
+@question
+(a) Use the standard results for $\sum_{r=1}^{n}r^{3}$, $\sum_{r=1}^{n}r^{2}$ and $\sum_{r=1}^{n}r$ to show that, for all positive integers $n$, $\sum_{r=1}^{n}(2r-1)^{3}=n^{2}(an^{2}-1)$, where $a$ is a constant to be determined. (5) \\
+(b) Hence determine the sum of the cubes of all positive odd two-digit integers. (3)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(a) Expand the cube: $(2r-1)^{3}=8r^{3}-12r^{2}+6r-1$. \\
+Sum term by term using the standard formulae: \\
+$\sum_{r=1}^{n}(2r-1)^{3}=8[\frac{n(n+1)}{2}]^{2}-12\frac{n(n+1)(2n+1)}{6}+6\frac{n(n+1)}{2}-n$. \\
+$=2n^{2}(n+1)^{2}-2n(n+1)(2n+1)+3n(n+1)-n$. \\
+Expand the first term: $2n^{4}+4n^{3}+2n^{2}$. \\
+Expand the second: $-4n^{3}-6n^{2}-2n$. \\
+Expand the third and fourth: $3n^{2}+3n-n$. \\
+Collect terms: $2n^{4}-n^{2}$. \\
+$=n^{2}(2n^{2}-1)$, so $a=2$. \\
+(b) Odd two-digit positives are $11,13,\ldots,99$. \\
+They correspond to $2r-1$ for $r=6$ through $r=50$. \\
+Let $F(n)=n^{2}(2n^{2}-1)$. \\
+The requested sum is $F(50)-F(5)$. \\
+$F(50)=2500(5000-1)=12,497,500$. \\
+$F(5)=25(50-1)=1,225$. \\
+Subtract: $12,497,500-1,225=12,496,275$.
+
+@q 9
+@topic Singular matrix and transformed distance
+@marks 8
+@question
+(i) $M_{1}$ has rows $(6,3,k)$; $(k,-1,k)$; $(4,2,-2)$, where $k$ is a constant. Find the real values of $k$ for which $M_{1}$ is singular. (3) \\
+(ii) $M_{2}$ has rows $(c,-1)$; $(3,-1)$. The matrix $M_{2}$ represents a linear transformation $T$; $c$ is a constant. Under $T$, the point $P(4,1)$ and the point $Q(3,-5)$ are transformed to the points $P'$ and $Q'$ respectively. Given that the distance $P'Q'$ is 5, determine the possible values of $c$. (5)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(i) A matrix is singular when its determinant is zero. \\
+Expand the determinant along the first row: \\
+$\mathrm{det}(M_{1})=6[(-1)(-2)-2k]-3[k(-2)-4k]+k[2k-(-4)]$. \\
+$=6(2-2k)-3(-6k)+k(2k+4)$. \\
+$=12-12k+18k+2k^{2}+4k$. \\
+$=2k^{2}+10k+12$. \\
+$=2(k+2)(k+3)$. \\
+Set equal to zero: $k=-2$ or $k=-3$. \\
+(ii) The original displacement is $\text{QP}=(4-3,1-(-5))=(1,6)$. \\
+Apply $M_{2}$ to the displacement: \\
+$\text{Q'P'}=M_{2}(1,6)=(c-6,3-6)=(c-6,-3)$. \\
+Use the distance formula: \\
+$(c-6)^{2}+(-3)^{2}=5^{2}$. \\
+$(c-6)^{2}+9=25$. \\
+$(c-6)^{2}=16$. \\
+$c-6=4$ or $c-6=-4$. \\
+$c=10$ or $c=2$.
+
+@q 10
+@topic Transformed cubic and constrained roots
+@marks 12
+@question
+(i) The cubic equation $4z^{3}-21z+k=0$, where $k$ is a real number, has roots $p$, $q$ and $r$. Without solving the equation, determine the cubic equation whose roots are $(2p+1)$, $(2q+1)$ and $(2r+1)$. Give your answer in the form $w^{3}+bw^{2}+cw+d=0$, where $b$, $c$ and $d$ are constants to be found. (5) \\
+(ii) For a particular positive constant $k$, the roots of the cubic equation $4x^{3}-21x+k=0$ are $\alpha$, $2\beta$ and $\alpha-3\beta$. Determine \\
+(a) the values of the roots of the equation, (6) \\
+(b) the value of $k$. (1)
+@scheme
+No mark scheme for this question. See the Model tab (F3) for the full worked answer.
+@model
+(i) Let $w=2z+1$, so $z=\frac{w-1}{2}$. \\
+Substitute into the original cubic: \\
+$4(\frac{w-1}{2})^{3}-21(\frac{w-1}{2})+k=0$. \\
+Multiply by 2: $(w-1)^{3}-21(w-1)+2k=0$. \\
+Expand the cube: $w^{3}-3w^{2}+3w-1-21w+21+2k=0$. \\
+Collect terms: $w^{3}-3w^{2}-18w+20+2k=0$. \\
+$b=-3$, $c=-18$, $d=20+2k$. \\
+(ii)(a) By Vieta's formula, the sum of the roots is zero. \\
+$\alpha+2\beta+(\alpha-3\beta)=0$. \\
+$2\alpha-\beta=0$, so $\beta=2\alpha$. \\
+The three roots are $\alpha$, $4\alpha$, $-5\alpha$. \\
+Their pairwise product sum is $\frac{-21}{4}$. \\
+$4\alpha^{2}-5\alpha^{2}-20\alpha^{2}=-\frac{21}{4}$. \\
+$-21\alpha^{2}=-\frac{21}{4}$. \\
+$\alpha=\frac{1}{2}$ or $\alpha=-\frac{1}{2}$. \\
+The product is $-\frac{k}{4}$. \\
+$\alpha(4\alpha)(-5\alpha)=-20\alpha^{3}=-\frac{k}{4}$. \\
+$k=80\alpha^{3}$. \\
+Since $k>0$, $\alpha>0$, so $\alpha=\frac{1}{2}$. \\
+The roots are $\frac{1}{2}$, $2$ and $-\frac{5}{2}$. \\
+(ii)(b) $k=80(\frac{1}{2})^{3}=10$.

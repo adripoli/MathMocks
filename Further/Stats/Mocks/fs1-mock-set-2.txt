@@ -1,0 +1,395 @@
+@paper FS1 Mock Set 2
+@level A-Level
+
+@q 1
+@topic Binomial Poisson approximation error
+@marks 4
+@question
+The random variable $X$ has probability distribution binomial with $n=120$ and $p=0.1$. \\
+Show that use of the Poisson approximation to estimate $P(X<10)$ gives an error of $0.0138$ to 3 significant figures. (4)
+@scheme
+Using the binomial distribution, $P(X<10)=P(X\leq9)=0.2285916\ldots$. B1 1.1b \\
+Approximate $X$ with a Poisson distribution of mean $120(0.1)=12$. B1 3.1a \\
+The approximation gives $P(X<10)=P(X\leq9)=0.2423921\ldots$. M1 1.1b \\
+Error $=0.2423921\ldots-0.2285916\ldots=0.0138005\ldots=0.0138$ to 3 significant figures. A1* 1.1b (4) \\
+Notes: \\
+B1: Exact binomial probability about $0.23$. B1: Poisson mean $12$. M1: Approximate probability. A1: Correct error.
+@model
+For the exact calculation, $X$ has a binomial distribution with $n=120$, $p=0.1$. \\
+$P(X<10)=P(X\leq9)$ \\
+$=\sum_{k=0}^{9}120Ck(0.1)^k(0.9)^{120-k}$ \\
+$=0.2285916228\ldots$. \\
+For the Poisson approximation, use mean $np=120(0.1)=12$. \\
+Let $Y$ have a Poisson distribution of mean $12$. \\
+$P(Y<10)=P(Y\leq9)$ \\
+$=\sum_{k=0}^{9}e^{-12}\frac{12^k}{k!}$ \\
+$=0.2423921617\ldots$. \\
+Take the absolute difference: \\
+$0.2423921617\ldots-0.2285916228\ldots$ \\
+$=0.0138005388\ldots$ \\
+$=0.0138$ to 3 significant figures, as required.
+
+@q 2
+@topic Probability generating function
+@marks 8
+@question
+The discrete random variable $X$ has probability generating function $G_X(t)=\frac{t^3}{k}((1+t)^2+2t^4)$. \\
+(a) Find the value of the constant $k$. (2) \\
+(b) Showing your working, find $P(4\leq X\leq6.6)$. (5) \\
+Given that $X_1$ and $X_2$ are independent observations of the random variable $X$, \\
+(c) write down the probability generating function of the random variable $W=X_1+X_2$. (1)
+@scheme
+(a) $G_X(1)=\frac{1^3}{k}((1+1)^2+2(1)^4)=\frac{6}{k}=1$. M1 1.1b \\
+$k=6$. A1 1.1b (2) \\
+(b) $G_X(t)=\frac{t^3}{6}(1+2t+t^2+2t^4)$. M1 3.1a \\
+$=\frac{t^3}{6}+\frac{t^4}{3}+\frac{t^5}{6}+\frac{t^7}{3}$. M1 1.1b \\
+Hence $P(X=4)=\frac{1}{3}$ and $P(X=5)=\frac{1}{6}$; there is no $t^6$ term. A1 1.1b \\
+$P(4\leq X\leq6.6)=P(X=4)+P(X=5)$. M1 3.4 \\
+$=\frac{1}{3}+\frac{1}{6}=\frac{1}{2}$. A1 1.1b (5) \\
+(c) By independence, $G_W(t)=[G_X(t)]^2=\frac{t^6}{36}((1+t)^2+2t^4)^2$. B1ft 1.2 (1) \\
+Notes: \\
+(a) M1: Use $G_X(1)=1$. A1: $k=6$. \\
+(b) M1: Expand. M1: Identify coefficients. A1: Correct probabilities. M1: Sum relevant probabilities. A1: $\frac{1}{2}$. \\
+(c) B1ft: Square the generating function.
+@model
+(a) A probability generating function has $G_X(1)=1$. \\
+Substitute $t=1$: \\
+$\frac{1}{k}((1+1)^2+2(1)^4)=1$. \\
+Evaluate the bracket: $\frac{4+2}{k}=1$. \\
+Thus $\frac{6}{k}=1$ and $k=6$. \\
+(b) Substitute $k=6$ and expand the square: \\
+$G_X(t)=\frac{t^3}{6}(1+2t+t^2+2t^4)$. \\
+Multiply by $t^3$: \\
+$G_X(t)=\frac{t^3}{6}+\frac{2t^4}{6}+\frac{t^5}{6}+\frac{2t^7}{6}$. \\
+Simplify coefficients: \\
+$G_X(t)=\frac{t^3}{6}+\frac{t^4}{3}+\frac{t^5}{6}+\frac{t^7}{3}$. \\
+The coefficient of $t^x$ is $P(X=x)$. \\
+The values in $4\leq X\leq6.6$ are $4$, $5$, and $6$. \\
+$P(X=4)=\frac{1}{3}$, $P(X=5)=\frac{1}{6}$, $P(X=6)=0$. \\
+Add them: $\frac{1}{3}+\frac{1}{6}+0=\frac{1}{2}$. \\
+(c) Independent sums have the product of their generating functions. \\
+$G_W(t)=G_{X_1}(t)G_{X_2}(t)$ \\
+$=[G_X(t)]^2$ \\
+$=\frac{t^6}{36}((1+t)^2+2t^4)^2$.
+
+@q 3
+@topic Independent binomial and Poisson
+@marks 8
+@question
+Jack and Gill have an argument about which one of them is best at bringing back buckets of water from the well at the top of the hill. Jack claims that he can successfully bring back more buckets of water from the well in one hour than Gill can. \\
+Jack consistently makes 3 journeys to the well and back each hour and the journeys are independent of each other. On each journey the probability that he is unsuccessful in bringing back a bucket of water is 0.4, because he falls over and loses the water. \\
+The number of successful journeys that Gill can make in one hour, $Y$, is modelled by a Poisson distribution with mean $2.1$. The number of successful journeys that Jack makes is independent of the number of successful journeys that Gill makes. \\
+Showing your working, calculate the probability that in one hour, \\
+(a) Jack and Gill each successfully bring back 3 buckets of water from the well, (3) \\
+(b) Jack successfully brings back more buckets of water from the well than Gill. (4) \\
+(c) Explain why the Poisson distribution may not be a reasonable model for the number of successful journeys that Gill can make in one hour. (1)
+@scheme
+(a) Let $X$ be Jack's successes. $X$ has binomial distribution with $n=3$, $p=0.6$; $Y$ has Poisson mean $2.1$. B1 3.3 \\
+$P(X=3)=0.216$ and $P(Y=3)=0.189011\ldots$. M1 3.4 \\
+By independence $P(X=3\text{ and }Y=3)=0.216(0.189011\ldots)=0.040826\ldots$. A1 1.1b (3) \\
+(b) $P(X>Y)=P(X=1)P(Y=0)+P(X=2)P(Y\leq1)+P(X=3)P(Y\leq2)$. M1 2.1 \\
+$=0.288(0.122456\ldots)+0.432(0.379615\ldots)+0.216(0.649631\ldots)$. A1 1.1b, A1 1.1b \\
+$=0.339581\ldots$, about $0.340$. A1 1.1b (4) \\
+(c) Gill's successful journeys may not occur at a constant rate: she could get tired, or cannot make journeys very close together. B1 3.5b (1) \\
+Notes: \\
+(a) B1: Correct distribution for Jack. M1: Both probabilities. A1: About $0.0408$. \\
+(b) M1: All cases. A1: At least one correct calculation. A1: All calculations correct. A1: About $0.339$ or $0.340$. \\
+(c) B1: Reasonable point in context.
+@model
+(a) Jack succeeds on a journey with probability $1-0.4=0.6$. \\
+Let $X$ count Jack's successes in three independent journeys. \\
+$X$ has a binomial distribution with $n=3$, $p=0.6$. \\
+$P(X=3)=(0.6)^3=0.216$. \\
+Gill's count $Y$ has Poisson mean $2.1$. \\
+$P(Y=3)=e^{-2.1}\frac{2.1^3}{3!}$ \\
+$=0.189011\ldots$. \\
+The counts are independent, so multiply: \\
+$P(X=3\text{ and }Y=3)=0.216(0.189011\ldots)$ \\
+$=0.04082648\ldots\approx0.0408$. \\
+(b) Jack can bring back at most three buckets. \\
+List the cases where Jack has more: $(X,Y)=(1,0)$, $X=2$ with $Y\leq1$, or $X=3$ with $Y\leq2$. \\
+$P(X=1)=3(0.6)(0.4)^2=0.288$. \\
+$P(X=2)=3(0.6)^2(0.4)=0.432$. \\
+$P(X=3)=(0.6)^3=0.216$. \\
+$P(Y=0)=e^{-2.1}=0.122456\ldots$. \\
+$P(Y\leq1)=e^{-2.1}(1+2.1)=0.379615\ldots$. \\
+$P(Y\leq2)=e^{-2.1}(1+2.1+\frac{2.1^2}{2})=0.649631\ldots$. \\
+Use independence in each case and add: \\
+$P(X>Y)=0.288(0.122456\ldots)+0.432(0.379615\ldots)$ \\
+$+0.216(0.649631\ldots)$ \\
+$=0.33958147\ldots\approx0.340$. \\
+(c) Gill may tire while climbing the hill, so her rate of successful journeys may fall during the hour.
+
+@q 4
+@topic Geometric distribution and CLT
+@marks 14
+@question
+Bob's hobby is using his metal detector to look for objects in the ground. The local farmer, Diane, lets him look in a large field. When the metal detector signals a find to Bob he digs it up and classifies it as either interesting or rubbish. Only 10% of finds are classified as interesting. \\
+Bob looks for objects in the large field every day for 5 consecutive days. He decides that he will keep going each day until he has found one interesting object and then he will stop. \\
+(a) State an assumption Bob must make to model the number of objects he digs up in a day with a geometric distribution. (1) \\
+Using this assumption, calculate the probability that \\
+(b) he digs up 7 objects on the first day, (3) \\
+(c) he digs up more than 7 objects on the first day, (3) \\
+(d) he digs up fewer than 7 objects each day on 3 out of the 5 days. (3) \\
+Over the summer Bob looks for objects in the large field for a total of 80 days. \\
+(e) Estimate the probability that the mean number of objects which Bob digs up each day is fewer than 9. (4)
+@scheme
+(a) Assume an effectively unlimited supply of objects, or that interesting objects are evenly distributed in the field. B1 3.5b (1) \\
+(b) Let $X$ be finds until an interesting one; $X$ has geometric distribution with $p=0.1$. M1 3.3 \\
+$P(X=7)=0.1(0.9)^6$. M1 3.4 \\
+$=0.0531441$, about $0.0531$. A1 1.1b (3) \\
+(c) $P(X>7)=P(X\geq8)$. M1 3.4 \\
+$=\frac{0.1(0.9)^7}{1-0.9}=(0.9)^7$. M1 1.1b \\
+$=0.4782969$, about $0.478$. A1 1.1b (3) \\
+(d) $P(X<7)=1-P(X=7)-P(X\geq8)=0.468559$. M1 3.1b \\
+The number of these days in five has binomial distribution with $n=5$, $p=0.468559$. dM1 3.4 \\
+$P(\text{exactly 3})=5C3(0.468559)^3(1-0.468559)^2=0.290538\ldots$, about $0.291$. A1 1.1b (3) \\
+(e) $E(X)=1/0.1=10$ and $\mathrm{Var}(X)=(1-0.1)/0.1^2=90$. M1 3.3, A1 1.1b \\
+By the central limit theorem, the sample mean is approximately normal with mean $10$ and variance $90/80$. M1 2.1 \\
+$P(\text{sample mean}<9)=0.172889\ldots$, about $0.173$. A1 1.1b (4) \\
+Notes: \\
+(a) B1: Appropriate contextual assumption. \\
+(b) M1: Geometric model. M1: Correct probability. A1: About $0.0531$. \\
+(c) M1: Correct tail method. M1: Infinite geometric series or seven initial failures. A1: About $0.478$. \\
+(d) M1: Correct daily probability. dM1: Binomial model. A1: About $0.291$. \\
+(e) M1: Attempt mean and variance. A1: Both correct. M1: Central limit theorem. A1: About $0.173$.
+@model
+(a) Each find must have the same $0.1$ probability of being interesting, with finds independent; for example, interesting objects are evenly spread through a large field. \\
+(b) Let $X$ count the finds up to and including the first interesting object. \\
+$X$ has a geometric distribution with success probability $p=0.1$. \\
+To have $X=7$, the first six finds are rubbish and the seventh interesting. \\
+$P(X=7)=(0.9)^6(0.1)$ \\
+$=0.0531441\approx0.0531$. \\
+(c) More than seven means the first seven finds are rubbish. \\
+$P(X>7)=(0.9)^7$ \\
+$=0.4782969\approx0.478$. \\
+(d) Fewer than seven means $X\leq6$. \\
+$q=P(X\leq6)=1-P(X>6)$ \\
+$=1-(0.9)^6$ \\
+$=0.468559$. \\
+Let $D$ count such days among five independent days. \\
+$D$ has a binomial distribution with $n=5$, $p=0.468559$. \\
+$P(D=3)=5C3(0.468559)^3(1-0.468559)^2$ \\
+$=10(0.468559)^3(0.531441)^2$ \\
+$=0.2905380\ldots\approx0.291$. \\
+(e) For one day, $E(X)=\frac{1}{p}=\frac{1}{0.1}=10$. \\
+Its variance is $\mathrm{Var}(X)=\frac{1-p}{p^2}$. \\
+$=\frac{0.9}{(0.1)^2}=90$. \\
+For 80 independent days, use the central limit theorem. \\
+The sample mean is approximately normal with mean $10$ and variance $\frac{90}{80}=1.125$. \\
+Its standard deviation is $\sqrt{1.125}=1.060660\ldots$. \\
+Standardise $9$: $z=\frac{9-10}{\sqrt{1.125}}=-0.942809\ldots$. \\
+$P(\text{sample mean}<9)\approx P(Z<-0.942809\ldots)$ \\
+$=0.172889\ldots\approx0.173$.
+
+@q 5
+@topic Biased random walk variance
+@marks 11
+@question
+A robot is programmed to perform a random walk along a number line. In each minute it moves either $+1$ along the number line with probability $\frac{2}{3}$, or $-1$ along the number line with probability $\frac{1}{3}$, each move being independent of all previous moves. \\
+Given that the robot starts at position 0 and that the random variable $Y$ represents its position after 3 moves, \\
+(a) show that $P(Y=1)=\frac{4}{9}$. (2) \\
+(b) showing each stage of your working, calculate the variance of $Y$. (6) \\
+If the random variable $D$ represents its distance from position 0 after 3 moves, \\
+(c) explain whether $\mathrm{Var}(D)$ is the same, greater than or less than $\mathrm{Var}(Y)$. (3)
+@scheme
+(a) $Y=1$ requires two $+1$ moves and one $-1$ move, in any order. M1 2.1 \\
+$P(Y=1)=3\left(\frac{2}{3}\right)^2\left(\frac{1}{3}\right)=\frac{12}{27}=\frac{4}{9}$. A1 1.1b (2) \\
+(b) The possible values of $Y$ are $-3,-1,1,3$. B1 3.1b \\
+Their probabilities are $\frac{1}{27},\frac{6}{27},\frac{12}{27},\frac{8}{27}$. B1 1.1b, B1 1.1b \\
+$E(Y)=(-3)\frac{1}{27}+(-1)\frac{6}{27}+1\frac{12}{27}+3\frac{8}{27}=1$. M1 3.4 \\
+$E(Y^2)=9\frac{1}{27}+1\frac{6}{27}+1\frac{12}{27}+9\frac{8}{27}=\frac{11}{3}$. dM1 1.1b \\
+$\mathrm{Var}(Y)=E(Y^2)-[E(Y)]^2=\frac{11}{3}-1=\frac{8}{3}$. A1 1.1b (6) \\
+(c) $D=|Y|$; its probabilities are unchanged, but negative values become positive. B1 2.1 \\
+$E(D)>E(Y)$ and $E(D^2)=E(Y^2)$. M1 2.4 \\
+Therefore $\mathrm{Var}(D)<\mathrm{Var}(Y)$; in fact $\mathrm{Var}(D)=\frac{8}{9}$. A1 2.2a (3) \\
+Notes: \\
+(a) M1: Clear method. A1: Full correct solution. \\
+(b) B1: Sample space. B1: Extreme probabilities. B1: All probabilities. M1: Mean. dM1: Second moment. A1: $\frac{8}{3}$. \\
+(c) B1: $D=|Y|$. M1: Compare moments. A1: Correct conclusion or $\frac{8}{9}$.
+@model
+(a) To end at position $1$ after three moves, exactly two moves are $+1$ and one is $-1$. \\
+There are $3C1=3$ possible orders for the $-1$ move. \\
+$P(Y=1)=3\left(\frac{2}{3}\right)^2\left(\frac{1}{3}\right)$ \\
+$=3\frac{4}{9}\frac{1}{3}$ \\
+$=\frac{12}{27}=\frac{4}{9}$, as required. \\
+(b) The possible positions are $-3,-1,1,3$. \\
+$P(Y=-3)=(1/3)^3=1/27$. \\
+$P(Y=-1)=3(2/3)(1/3)^2=6/27$. \\
+$P(Y=1)=12/27$ from part (a). \\
+$P(Y=3)=(2/3)^3=8/27$. \\
+Check: $(1+6+12+8)/27=1$. \\
+Use $E(Y)=\sum yP(Y=y)$. \\
+$E(Y)=(-3)\frac{1}{27}+(-1)\frac{6}{27}+1\frac{12}{27}+3\frac{8}{27}$ \\
+$=\frac{-3-6+12+24}{27}$ \\
+$=1$. \\
+Use $E(Y^2)=\sum y^2P(Y=y)$. \\
+$E(Y^2)=9\frac{1}{27}+1\frac{6}{27}+1\frac{12}{27}+9\frac{8}{27}$ \\
+$=\frac{9+6+12+72}{27}$ \\
+$=\frac{99}{27}=\frac{11}{3}$. \\
+Now $\mathrm{Var}(Y)=E(Y^2)-[E(Y)]^2$. \\
+$=\frac{11}{3}-1^2$ \\
+$=\frac{8}{3}$. \\
+(c) Distance is $D=|Y|$. \\
+$P(D=1)=P(Y=-1)+P(Y=1)=\frac{18}{27}=\frac{2}{3}$. \\
+$P(D=3)=P(Y=-3)+P(Y=3)=\frac{9}{27}=\frac{1}{3}$. \\
+$E(D)=1\frac{2}{3}+3\frac{1}{3}=\frac{5}{3}$. \\
+$E(D^2)=1^2\frac{2}{3}+3^2\frac{1}{3}=\frac{11}{3}$. \\
+$\mathrm{Var}(D)=\frac{11}{3}-\left(\frac{5}{3}\right)^2$ \\
+$=\frac{8}{9}$. \\
+Since $\frac{8}{9}<\frac{8}{3}$, the variance of $D$ is less.
+
+@q 6
+@topic Poisson goodness of fit, modelling
+@marks 11
+@question
+At a seaside town, one tourist attraction is a whale watching boat trip. The owner claims that on afternoon trips, which each have a duration of four hours, there have been an average of 2.4 whale sightings per trip. \\
+A rival business doubts this claim and sends some employees to monitor whale sightings on 60 afternoon trips. The results are shown in the table below. \\
+Number of sightings: $0,1,2,3,4,5,6$ or more. Number of trips: $4,18,20,8,6,3,1$. \\
+The number of whale sightings per trip is modelled by a Poisson distribution. \\
+(a) Test the owner's claim at the 10% significance level. Show your working, including the expected frequencies, the test statistic and the critical value, and state your hypotheses clearly. (9) \\
+During one of the trips the only sighting was a single group of 8 whales. \\
+(b) With reference to the model, state, giving a reason, how this sighting should have been recorded. (2)
+@scheme
+(a) $H_0$: a Poisson distribution with mean $2.4$ suitably models sightings per trip. $H_1$: it does not. B1 2.5 \\
+Under $H_0$, expected frequency $E_i=60e^{-2.4}\frac{2.4^i}{i!}$. M1 3.4 \\
+For $0,1,2,3,4,5,6+$, expected frequencies are $5.443,13.063,15.676,12.541,7.525,3.612,2.140$. A1 1.1b \\
+Combine $5$ and $6+$: observed frequencies $4,18,20,8,6,4$ and expected $5.443,13.063,15.676,12.541,7.525,5.752$. M1 2.1 \\
+Degrees of freedom $=6-1=5$. B1ft 1.1b \\
+The 10% critical value is $9.236$. B1ft 1.1a \\
+Test statistic $=\sum\frac{(O_i-E_i)^2}{E_i}=\frac{(4-5.443)^2}{5.443}+\frac{(18-13.063)^2}{13.063}+\cdots$ M1 1.1b \\
+$=5.927545\ldots$, about $5.9$. A1 1.1b \\
+The statistic is not in the critical region; there is no significant evidence against the owner's claim. A1 3.5a (9) \\
+(b) Record the group as one sighting. B1 2.4 \\
+The Poisson model treats sightings as individual events occurring singly. B1 3.5b (2) \\
+Notes: \\
+(a) B1: Both hypotheses include $2.4$. M1: Poisson expected frequencies. A1: All correct to one decimal place. M1: Combine groups. B1ft: Degrees of freedom. B1ft: Critical value. M1: At least two statistic terms. A1: About $5.9$. A1: Correct contextual conclusion. \\
+(b) B1: Record one sighting. B1: Poisson event assumption.
+@model
+(a) Let $X$ count whale sightings on one four-hour trip. \\
+Under $H_0$, $X$ has a Poisson distribution with mean $2.4$. \\
+Under $H_1$, that distribution is not a suitable model. \\
+For $i=0,\ldots,5$, $E_i=60P(X=i)=60e^{-2.4}\frac{2.4^i}{i!}$. \\
+$E_0=60e^{-2.4}=5.443077\ldots$. \\
+$E_1=60e^{-2.4}(2.4)=13.063385\ldots$. \\
+$E_2=60e^{-2.4}\frac{2.4^2}{2!}=15.676062\ldots$. \\
+$E_3=60e^{-2.4}\frac{2.4^3}{3!}=12.540850\ldots$. \\
+$E_4=60e^{-2.4}\frac{2.4^4}{4!}=7.524510\ldots$. \\
+$E_5=60e^{-2.4}\frac{2.4^5}{5!}=3.611765\ldots$. \\
+$E_{6+}=60-\sum_{i=0}^{5}E_i=2.140350\ldots$. \\
+Combine the last two groups because their expected frequencies are below $5$. \\
+For $5+$, $O=3+1=4$ and $E=3.611765\ldots+2.140350\ldots=5.752115\ldots$. \\
+There are six groups and no estimated parameter, so degrees of freedom $=6-1=5$. \\
+At 10%, the upper critical value is $9.236$. \\
+Use the chi-square statistic $\sum\frac{(O-E)^2}{E}$. \\
+$=\frac{(4-5.443077)^2}{5.443077}+\frac{(18-13.063385)^2}{13.063385}$ \\
+$+\frac{(20-15.676062)^2}{15.676062}+\frac{(8-12.540850)^2}{12.540850}$ \\
+$+\frac{(6-7.524510)^2}{7.524510}+\frac{(4-5.752115)^2}{5.752115}$ \\
+$=5.927545\ldots$. \\
+Since $5.927545\ldots<9.236$, do not reject $H_0$. \\
+There is no significant evidence at 10% against the owner's claim. \\
+(b) Record the group of eight whales as one sighting. \\
+The Poisson model counts a sighting as one event; whales arriving together are not eight separate independent sightings.
+
+@q 7
+@topic Geometric critical region, Type II error
+@marks 10
+@question
+The random variable $X$ has a geometric distribution with parameter $p$. \\
+A test is to be carried out using the hypotheses $H_0:p=0.4$ and $H_1:p<0.4$. \\
+Given that the probability of a Type I error is to be as close as possible to 5%, \\
+(a) find the critical region for the test. Show your working clearly. (6) \\
+Given that actually $p=\beta$ and that the probability of a Type II error for this test is 0.5, \\
+(b) find the value of $\beta$ giving your answer to 3 significant figures. (4)
+@scheme
+(a) For an upper critical region $X\geq c$, the Type I error probability is approximately $0.05$. M1 3.1a \\
+Under $p=0.4$, $P(X\geq c)=\sum_{i=c}^{\infty}0.4(0.6)^{i-1}$. M1 2.1 \\
+By the geometric series, $P(X\geq c)=\frac{0.4(0.6)^{c-1}}{1-0.6}=(0.6)^{c-1}$. M1 1.1b \\
+Solve $(0.6)^{c-1}=0.05$: $c-1=\frac{\log 0.05}{\log 0.6}=5.86\ldots$, so $c=6.86\ldots$. M1 1.1b, A1 1.1b \\
+For $c=6$, size $=0.07776$; for $c=7$, size $=0.046656$. The critical region closest to $0.05$ is $X\geq7$. A1 2.2a (6) \\
+(b) A Type II error is $X<7$ when $p=\beta$. M1 2.1 \\
+$P(X<7)=\sum_{r=1}^{6}\beta(1-\beta)^{r-1}=1-(1-\beta)^6=0.5$. A1ft 1.1b \\
+Thus $(1-\beta)^6=0.5$. M1 1.1b \\
+$\beta=1-(0.5)^{1/6}=0.109101\ldots$, about $0.109$ to 3 significant figures. A1 1.1b (4) \\
+Notes: \\
+(a) M1: Define Type I error. M1: Geometric series. M1: Sum the series. M1: Solve with logs. A1: About $6.9$. A1: Compare $6$ and $7$ and choose $7$. \\
+(b) M1: Correct Type II event. A1ft: Geometric sum. M1: Solve for $\beta$. A1: $0.109$.
+@model
+(a) A smaller $p$ makes long waits more likely, so use an upper-tail region $X\geq c$. \\
+Under $H_0$, $p=0.4$ and $1-p=0.6$. \\
+The size is $P(X\geq c\text{ when } p=0.4)$. \\
+By the geometric probability formula, \\
+$P(X\geq c)=\sum_{i=c}^{\infty}0.4(0.6)^{i-1}$. \\
+Sum the geometric series: \\
+$P(X\geq c)=\frac{0.4(0.6)^{c-1}}{1-0.6}$ \\
+$=(0.6)^{c-1}$. \\
+Set this equal to $0.05$ to locate $c$: \\
+$(0.6)^{c-1}=0.05$. \\
+Take logarithms: $(c-1)\log(0.6)=\log(0.05)$. \\
+Divide by $\log(0.6)$: $c-1=5.864\ldots$. \\
+Thus $c=6.864\ldots$ lies between $6$ and $7$. \\
+Check $c=6$: $P(X\geq6)=0.6^5=0.07776$. \\
+Check $c=7$: $P(X\geq7)=0.6^6=0.046656$. \\
+Since $0.046656$ is closer to $0.05$, the critical region is $X\geq7$. \\
+(b) A Type II error means not rejecting $H_0$ when $p=\beta$. \\
+Thus $P(X<7\text{ when } p=\beta)=0.5$. \\
+For geometric $X$, $P(X\geq7)=(1-\beta)^6$. \\
+Use the complement: $1-(1-\beta)^6=0.5$. \\
+Subtract $1$: $-(1-\beta)^6=-0.5$. \\
+Therefore $(1-\beta)^6=0.5$. \\
+Take the positive sixth root: $1-\beta=(0.5)^{1/6}$. \\
+$\beta=1-(0.5)^{1/6}$ \\
+$=0.10910128\ldots$ \\
+$=0.109$ to 3 significant figures.
+
+@q 8
+@topic Negative binomial and geometric
+@marks 9
+@question
+Jo and Keith are carrying out an experiment. A bag contains a large number of counters, some of which are green. Keith randomly draws a counter from the bag, records its colour and then replaces it before drawing the next counter. He continues until he has drawn two green counters. \\
+The random variable $X$ represents the number of draws up to and including the second green counter. The random variable $Y$ represents the number of draws up to and including the first green counter. \\
+On each occasion Jo records the value of $x$ and the value of $y$. They repeat this process a large number of times. \\
+(a) State an appropriate distribution to model the random variable $Y$. (1) \\
+Looking at the data, Jo suggests that the variance of $X$ might be equal to the square of the mean of $X$. \\
+(b) Given that $X$ may be modelled by the negative binomial distribution, explain why Jo's suggestion cannot be true for the underlying distribution. (3) \\
+Jo uses the data and estimates that the variance of $Y$ is 20. \\
+(c) Calculate an estimate of the proportion of green counters in the bag. (3) \\
+In a different bag 40% of the counters are green and the rest are red. \\
+(d) For this bag, calculate the probability that the second green counter occurs on the 5th draw, given that the first green counter occurred on the 2nd draw. (2)
+@scheme
+(a) $Y$ has a geometric distribution. B1 1.2 (1) \\
+(b) For negative binomial $X$ with two successes, $E(X)=\frac{2}{p}$ and $\mathrm{Var}(X)=\frac{2(1-p)}{p^2}$. M1 2.1 \\
+Equality would give $\frac{2(1-p)}{p^2}=\left(\frac{2}{p}\right)^2$, so $1-p=2$ and $p=-1$. A1 1.1b \\
+This is impossible because $p$ is a probability. A1 2.4 (3) \\
+(c) For geometric $Y$, $20=\frac{1-p}{p^2}$. M1 3.1b \\
+$20p^2+p-1=0$, giving $p=0.2$ or $p=-0.25$. A1 1.1b \\
+Reject the negative root; the estimated green proportion is $p=0.2$. A1 2.2a (3) \\
+(d) Given a first green on draw 2, the second is on draw 5 when draws 3 and 4 are red and draw 5 green. M1 3.1b \\
+$P=0.6^2(0.4)=0.144$. A1 1.1b (2) \\
+Notes: \\
+(b) M1: Correct formulae. A1: Negative $p$. A1: Reason impossible. \\
+(c) M1: Variance equation. A1: Quadratic. A1: Positive root only. \\
+(d) M1: Two red then green after draw 2. A1: $0.144$.
+@model
+(a) $Y$ counts draws to the first green counter with replacement, so it has a geometric distribution. \\
+(b) Let $p$ be the probability of green on a draw. \\
+For the negative binomial count to two greens, $E(X)=\frac{2}{p}$. \\
+Its variance is $\mathrm{Var}(X)=\frac{2(1-p)}{p^2}$. \\
+Suppose $\mathrm{Var}(X)=[E(X)]^2$. \\
+Then $\frac{2(1-p)}{p^2}=\frac{4}{p^2}$. \\
+Multiply by $p^2>0$: $2(1-p)=4$. \\
+Divide by $2$: $1-p=2$. \\
+So $p=-1$, which cannot be a probability. \\
+Therefore Jo's proposed equality cannot hold. \\
+(c) For geometric $Y$, $\mathrm{Var}(Y)=\frac{1-p}{p^2}$. \\
+Set the estimated variance to $20$: $\frac{1-p}{p^2}=20$. \\
+Multiply by $p^2$: $1-p=20p^2$. \\
+Rearrange: $20p^2+p-1=0$. \\
+Factor: $(5p-1)(4p+1)=0$. \\
+Thus $p=\frac{1}{5}=0.2$ or $p=-\frac{1}{4}$. \\
+Reject $-\frac{1}{4}$ because a probability cannot be negative. \\
+The estimated green proportion is $0.2$, or $20\%$. \\
+(d) Replacement makes each later draw independent of the first two. \\
+After the first green on draw 2, draws 3 and 4 must be red and draw 5 green. \\
+$P=(0.6)(0.6)(0.4)$ \\
+$=0.144$.

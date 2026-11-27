@@ -1,0 +1,373 @@
+@paper FS1 Mock Set 1
+@level A-Level
+
+@q 1
+@topic Chi-square independence, sampling error
+@marks 7
+@question
+In a survey, a large number of people were asked whether or not they recycle plastics. In each case the distance, in metres, from their home to the nearest plastic recycling point was measured and recorded. The results are shown in Table 1. \\
+Observed frequencies (Yes, No): less than 500 m (64, 42); 500-1000 m (32, 22); more than 1000 m (14, 26). \\
+The Council's Environment Officer, Barbara, believes that whether or not people recycle plastics is independent of the distance to the nearest recycling point. Barbara decides to test if the data from the survey supports her belief. Her expected frequencies are shown in Table 2. \\
+Expected frequencies (Yes, No): less than 500 m (58.3, 47.7); 500-1000 m (29.7, 24.3); more than 1000 m (22, 18). \\
+(a) Carry out a hypothesis test, at the 5% significance level, to see if the data from the survey support Barbara's belief. State your hypotheses and the critical value used in this test. (5) \\
+Barbara explains her results to her assistant, Bill. The data were collected by Bill, who now confesses to Barbara that he actually only collected data from 100 people and then doubled all his results. \\
+(b) With reference to the test statistic and critical value, explain whether or not Barbara's conclusions are still valid. (2)
+@scheme
+(a) $H_0$: recycling plastics and distance to the nearest recycling point are independent; $H_1$: they are not independent. B1 1.2 \\
+Degrees of freedom $=(3-1)(2-1)=2$; 5% critical value $=5.991$. B1 3.1b \\
+Test statistic $=\sum \frac{(O_i-E_i)^2}{E_i}=\frac{(64-58.3)^2}{58.3}+\frac{(42-47.7)^2}{47.7}+\frac{(32-29.7)^2}{29.7}+\cdots$ M1 1.1b \\
+$=8.0988\ldots$, about $8.10$. A1 1.1b \\
+In the critical region, so there is sufficient evidence to reject $H_0$. The data do not support Barbara's belief at the 5% significance level. A1 3.2a (5) \\
+(b) The test statistic is halved; the critical value stays the same. B1 2.4 \\
+$8.0988\ldots/2=4.0494\ldots<5.991$, so the result is no longer in the critical region. Barbara's original conclusion is not valid; the data suggest independence. dB1 2.3 (2) \\
+Notes: \\
+(a) B1: Accept "no association" and "association", but the context must be stated. \\
+B1: Must have two degrees of freedom and critical value about $5.99$. \\
+M1: At least two terms if A1 is not awarded. \\
+A1: About $8.10$; accept $p$ about $0.0174$. \\
+A1: Correct conclusion in context. \\
+(b) B1: Valid reason why the statistic is halved. \\
+dB1: Dependent on the first B1.
+@model
+(a) Under $H_0$, recycling and distance are independent. \\
+Under $H_1$, recycling and distance are associated. \\
+There are three distance groups and two recycling groups. \\
+Degrees of freedom $=(3-1)(2-1)=2$. \\
+At 5%, the upper critical value for two degrees of freedom is $5.991$. \\
+Use the chi-square statistic $\sum \frac{(O-E)^2}{E}$. \\
+$=\frac{(64-58.3)^2}{58.3}+\frac{(42-47.7)^2}{47.7}$ \\
+$+\frac{(32-29.7)^2}{29.7}+\frac{(22-24.3)^2}{24.3}$ \\
+$+\frac{(14-22)^2}{22}+\frac{(26-18)^2}{18}$ \\
+$=8.098878\ldots$. \\
+Since $8.098878\ldots>5.991$, reject $H_0$. \\
+At the 5% level, the data do not support Barbara's belief that recycling is independent of distance. \\
+(b) Both observed and expected frequencies were doubled. \\
+For the actual sample, each $O$ and $E$ is half the value used in part (a). \\
+Each contribution becomes $\frac{(O/2-E/2)^2}{E/2}=\frac{1}{2}\frac{(O-E)^2}{E}$. \\
+The corrected statistic is $8.098878\ldots/2=4.049439\ldots$. \\
+The degrees of freedom and critical value remain $2$ and $5.991$. \\
+Since $4.049439\ldots<5.991$, do not reject $H_0$. \\
+Barbara's original conclusion is no longer valid; this sample does not show an association.
+
+@q 2
+@topic Sampling without replacement, variance
+@marks 10
+@question
+A bag contains 10 tokens, 3 are red and 7 are green. Tokens are removed, one at a time, without replacement until a red token is removed or until 4 tokens have been removed, whichever occurs first. \\
+The discrete random variable $X$ represents the number of tokens removed. \\
+(a) Show that $P(X=4)=\frac{7}{24}$. (2) \\
+The probability distribution of $X$ is given in the table below. \\
+$x$: $1,2,3,4$; $P(X=x)$: $\frac{3}{10},\frac{7}{30},\frac{7}{40},\frac{7}{24}$. \\
+(b) Showing your working clearly, find $\mathrm{Var}(X)$. (4) \\
+The same bag of 10 tokens is now used again. This time a token is removed, the colour is noted and the token is replaced. This procedure is repeated until a red token is removed. \\
+The discrete random variable $Y$ represents the number of green tokens removed. \\
+(c) Showing your working clearly, find $\mathrm{Var}(Y)$. (4)
+@scheme
+(a) $P(X=4)=\frac{7}{10}\times\frac{6}{9}\times\frac{5}{8}=\frac{210}{720}=\frac{7}{24}$. M1 2.1, A1* 1.1b (2) \\
+(b) $E(X)=1\frac{3}{10}+2\frac{7}{30}+3\frac{7}{40}+4\frac{7}{24}=\frac{59}{24}$. M1 3.1b \\
+$E(X^2)=1^2\frac{3}{10}+2^2\frac{7}{30}+3^2\frac{7}{40}+4^2\frac{7}{24}=\frac{299}{40}$. A1 1.1b \\
+$\mathrm{Var}(X)=E(X^2)-[E(X)]^2=\frac{299}{40}-\left(\frac{59}{24}\right)^2$ M1 1.1b \\
+$=\frac{4123}{2880}=1.43159\ldots$, about $1.43$. A1 1.1b (4) \\
+(c) Let $T$ be the number of tokens drawn. $T$ has geometric distribution with $p=0.3$. B1 3.3 \\
+$Y=T-1$. B1 3.1b \\
+$\mathrm{Var}(Y)=\mathrm{Var}(T)$. M1 3.4 \\
+$\mathrm{Var}(Y)=\frac{1-p}{p^2}=\frac{0.7}{0.3^2}=\frac{70}{9}=7.777\ldots$. A1 1.1b (4) \\
+Notes: \\
+(a) M1: Use $P(GGG)$ or the two possibilities $GGGR$ and $GGGG$. A1: Full correct solution. \\
+(b) M1: Correct method for $E(X)$ or $E(X^2)$. A1: Both correct. M1: Full method for variance. A1: About $1.43$. \\
+(c) B1: Use the geometric distribution for number drawn. B1: Link $Y$ and $T$. M1: Same variance. A1: About $7.78$.
+@model
+(a) Four tokens are removed precisely when the first three are green. \\
+$P(X=4)=P(GGG)$ \\
+$=\frac{7}{10}\times\frac{6}{9}\times\frac{5}{8}$ \\
+$=\frac{210}{720}$ \\
+$=\frac{7}{24}$, as required. \\
+(b) Use $E(X)=\sum xP(X=x)$. \\
+$E(X)=1\frac{3}{10}+2\frac{7}{30}+3\frac{7}{40}+4\frac{7}{24}$ \\
+$=\frac{3}{10}+\frac{7}{15}+\frac{21}{40}+\frac{7}{6}$ \\
+$=\frac{59}{24}$. \\
+Use $E(X^2)=\sum x^2P(X=x)$. \\
+$E(X^2)=1^2\frac{3}{10}+2^2\frac{7}{30}+3^2\frac{7}{40}+4^2\frac{7}{24}$ \\
+$=\frac{3}{10}+\frac{14}{15}+\frac{63}{40}+\frac{14}{3}$ \\
+$=\frac{299}{40}$. \\
+Now $\mathrm{Var}(X)=E(X^2)-[E(X)]^2$. \\
+$=\frac{299}{40}-\left(\frac{59}{24}\right)^2$ \\
+$=\frac{4123}{2880}$ \\
+$=1.431597\ldots\approx1.43$. \\
+(c) Let $T$ count all draws up to and including the first red token. \\
+With replacement, each draw has red probability $p=\frac{3}{10}$. \\
+Thus $T$ has a geometric distribution with parameter $p=\frac{3}{10}$. \\
+The green draws precede the red draw, so $Y=T-1$. \\
+Subtracting a constant does not change variance. \\
+$\mathrm{Var}(Y)=\mathrm{Var}(T)=\frac{1-p}{p^2}$ \\
+$=\frac{7/10}{(3/10)^2}$ \\
+$=\frac{70}{9}$ \\
+$=7.777\ldots\approx7.78$.
+
+@q 3
+@topic Poisson probabilities and test power
+@marks 10
+@question
+The discrete random variable $X$ has a Poisson distribution with mean $10.8$. \\
+(a)(i) Find the probability that $X=9$. \\
+(ii) Find the probability that $X$ is at least $9$. (3) \\
+Charlie has a mobile phone. His parents claim that on average he looks at his mobile phone no more than 3 times every 30 minutes. Charlie's teacher suspects that this may not be true and that Charlie looks at his mobile phone more frequently than 3 times every 30 minutes. She decides to carry out a hypothesis test of her belief, at a 5% significance level. \\
+She observes Charlie during a 1-hour revision class and notes the number of times that he looks at his mobile phone. \\
+If Charlie actually looks at his mobile phone at an average rate of 5 times every 30 minutes, \\
+(b) find the power of the teacher's hypothesis test, stating her hypotheses. (6) \\
+(c) State an assumption the teacher needs to make in order for this test to be valid. (1)
+@scheme
+(a)(i) $P(X=9)=0.11237\ldots$. B1 1.1b \\
+(ii) $P(X\geq9)=1-P(X\leq8)$ M1 1.1b \\
+$=1-0.250228\ldots=0.749771\ldots$, about $0.750$. A1 1.1b (3) \\
+(b) Let $X$ count looks in one hour. Under $H_0$, the Poisson mean is $6$; under $H_1$, it is greater than $6$. M1 3.3 \\
+Under $H_0$, $P(X\leq10)=0.957379\ldots$, so $P(X\geq11)=0.04262\ldots$. M1 3.4 \\
+The critical region is $X\geq11$. A1 1.1b \\
+When the mean is $10$, the power is $P(X\geq11)=1-P(X\leq10)$. dM1 3.1b, A1ft 1.1b \\
+$=1-0.583039\ldots=0.416960\ldots$, about $0.417$. A1 1.1b (6) \\
+(c) Charlie looks at his phone independently at a constant rate, or randomly. B1 3.5b (1) \\
+Notes: \\
+(a) B1: About $0.112$. M1: Complement for $X\geq9$. A1: About $0.750$. \\
+(b) M1: Correct hypotheses and Poisson mean $6$. M1: Upper-tail critical region under mean $6$. A1: $X\geq11$. dM1: Strategy for power. A1ft: Use mean $10$. A1: About $0.417$. \\
+(c) B1: Assumption must mention Charlie's phone use.
+@model
+(a)(i) For a Poisson variable with mean $10.8$, $P(X=k)=e^{-10.8}\frac{10.8^k}{k!}$. \\
+Put $k=9$: \\
+$P(X=9)=e^{-10.8}\frac{10.8^9}{9!}$ \\
+$=0.112375\ldots\approx0.112$. \\
+(ii) "At least 9" means $X\geq9$. \\
+Use the complement $X\leq8$: \\
+$P(X\geq9)=1-P(X\leq8)$ \\
+$=1-0.250228882\ldots$ \\
+$=0.749771\ldots\approx0.750$. \\
+(b) Let $X$ be Charlie's number of looks during the one-hour class. \\
+Under the parents' claim, the one-hour mean is $2(3)=6$. \\
+State $H_0$: the rate is at most $6$ per hour. \\
+State $H_1$: the rate is greater than $6$ per hour. \\
+Use the boundary value $6$ to find the upper critical region. \\
+For a Poisson mean of $6$, $P(X\geq10)=0.083924\ldots>0.05$. \\
+$P(X\geq11)=0.0426209\ldots<0.05$. \\
+Therefore reject $H_0$ when $X\geq11$. \\
+At the actual rate, the one-hour mean is $2(5)=10$. \\
+Power is the probability of rejecting $H_0$ when the mean is $10$. \\
+$P(X\geq11\text{ when }\mathrm{mean}=10)=1-P(X\leq10\text{ when }\mathrm{mean}=10)$ \\
+$=1-0.58303975\ldots$ \\
+$=0.41696025\ldots\approx0.417$. \\
+(c) Charlie's looks at the phone must occur independently at a constant average rate.
+
+@q 4
+@topic Geometric goodness of fit
+@marks 13
+@question
+Desmond believes that a particular six-sided die is biased. He decides to count the number of rolls required until he first rolls a 5 or a 6. He carries out this experiment 100 times. His results are summarised in the table below. \\
+Number of rolls to first 5 or 6: $1,2,3,4,5,6,7$ or more. \\
+Observed frequency: $39,17,17,10,3,3,11$. \\
+(a) Stating your hypotheses clearly, test, at the 5% significance level, whether or not these results provide evidence that the die is biased. You should show your working clearly, including the expected frequencies and the critical value used. (10) \\
+Mai suggests recording the results of rolling the die 100 times and using a goodness of fit test for a discrete uniform distribution. \\
+(b)(i) Give 2 reasons why Mai might think that her test is better than Desmond's test. \\
+(ii) Give a reason why Desmond might think that his test is better than Mai's test. (3)
+@scheme
+(a) $H_0$: a geometric distribution with $p=\frac{1}{3}$ is a suitable model for rolls to the first 5 or 6. $H_1$: it is not suitable. B1 2.5 \\
+Under $H_0$, for $i=1,\ldots,6$, expected frequency $E_i=100\frac{1}{3}\left(\frac{2}{3}\right)^{i-1}$. M1 3.4 \\
+For $i=1,2,3,4,5,6,7$ or more, the expected frequencies are $33.333,22.222,14.815,9.877,6.584,4.390,8.779$. A1 1.1b, A1 1.1b \\
+Combine the last two groups: observed $39,17,17,10,3,14$ and expected $33.333,22.222,14.815,9.877,6.584,13.169$. M1 2.1 \\
+Degrees of freedom $=6-1=5$. B1ft 1.1b \\
+The 5% critical value is $11.070$. B1ft 1.1a \\
+Test statistic $=\sum\frac{(O_i-E_i)^2}{E_i}=\frac{(39-33.333)^2}{33.333}+\frac{(17-22.222)^2}{22.222}+\cdots$ M1 1.1b \\
+$=4.518125\ldots$, about $4.5$. A1 1.1b \\
+It is not in the critical region, so there is insufficient evidence at 5% that the die is biased. A1 3.5a (10) \\
+(b)(i) Mai's test includes frequencies for all six possible scores; Desmond's does not. B1 3.5b \\
+Mai's test requires a fixed number of rolls, while Desmond's requires an unknown number. B1 3.5b \\
+(ii) Desmond's test is likely to collect more data. B1 3.5b (3) \\
+Notes: \\
+(a) B1: Correct geometric parameter. M1: Geometric expected frequencies. A1: At least three expected frequencies. A1: All expected frequencies. M1: Combine the last two groups only. B1ft: Degrees of freedom. B1ft: Critical value. M1: At least two statistic terms. A1: About $4.5$. A1: Contextual conclusion. \\
+(b) B1: Limitation of Desmond's test. B1: Number of rolls. B1: Amount of data.
+@model
+(a) For a fair die, $P(5\text{ or }6)=\frac{2}{6}=\frac{1}{3}$. \\
+Under $H_0$, rolls to the first 5 or 6 have a geometric distribution with $p=\frac{1}{3}$. \\
+Under $H_1$, that geometric distribution is unsuitable. \\
+For $i=1,\ldots,6$, $P(X=i)=\frac{1}{3}\left(\frac{2}{3}\right)^{i-1}$. \\
+Multiply each probability by $100$ for expected frequency. \\
+$E_1=100/3=33.333333\ldots$. \\
+$E_2=100(1/3)(2/3)=22.222222\ldots$. \\
+$E_3=100(1/3)(2/3)^2=14.814815\ldots$. \\
+$E_4=100(1/3)(2/3)^3=9.876543\ldots$. \\
+$E_5=100(1/3)(2/3)^4=6.584362\ldots$. \\
+$E_6=100(1/3)(2/3)^5=4.389575\ldots$. \\
+$E_{7+}=100(2/3)^6=8.779150\ldots$. \\
+The sixth expected frequency is below $5$; combine groups $6$ and $7+$: \\
+$O_{6+}=3+11=14$. \\
+$E_{6+}=4.389575\ldots+8.779150\ldots=13.168724\ldots$. \\
+There are six groups and no estimated parameters, so degrees of freedom $=6-1=5$. \\
+The 5% upper critical value is $11.070$. \\
+Use $\sum\frac{(O-E)^2}{E}$ for the six combined groups. \\
+$=\frac{(39-33.333333)^2}{33.333333}+\frac{(17-22.222222)^2}{22.222222}$ \\
+$+\frac{(17-14.814815)^2}{14.814815}+\frac{(10-9.876543)^2}{9.876543}$ \\
+$+\frac{(3-6.584362)^2}{6.584362}+\frac{(14-13.168724)^2}{13.168724}$ \\
+$=4.518125\ldots$. \\
+Since $4.518125\ldots<11.070$, do not reject $H_0$. \\
+There is insufficient evidence at the 5% level that the die is biased. \\
+(b)(i) Mai records all six faces, so her test can reveal bias between faces 1 to 4 that Desmond's test misses. \\
+Mai knows in advance that she needs exactly 100 rolls; Desmond may need many more. \\
+(ii) Desmond's repeated experiment is likely to use more than 100 rolls and hence gather more data.
+
+@q 5
+@topic Binomial and Poisson approximation
+@marks 10
+@question
+A laboratory checks soil samples for evidence of lead contamination. Past records suggest that 0.5% of samples test positive for lead contamination. \\
+As part of a new contract the laboratory receives batches of 1000 independent soil samples. The random variable $X$ represents the number of soil samples that test positive for lead contamination out of a batch of 1000 independent soil samples. \\
+Ushma wants to calculate the probability that at least 10 soil samples will test positive for lead contamination out of a batch of 1000 independent soil samples. \\
+(a)(i) State the distribution of $X$. \\
+(ii) Calculate the percentage error if Ushma uses a Poisson distribution to estimate this probability. (6) \\
+Ushma decides to use $X\geq9$ as the critical region to test the hypotheses $H_0:p=0.005$ against $H_1:p>0.005$, where $p$ is the probability that a randomly selected soil sample tests positive for lead contamination. \\
+Ushma's colleague Javed suggests an alternative test of size 8%. Their manager Chris wants to minimise the probability of a Type I error. Given no further information about Javed's test, \\
+(b) explain which of these tests you would advise Chris to use. Give a reason for your answer. (4)
+@scheme
+(a)(i) $X$ has a binomial distribution with $n=1000$ and $p=0.005$. B1 3.3 \\
+(ii) $P(X\geq10)=1-P(X\leq9)=1-0.96853476\ldots=0.03146523\ldots$. M1 2.1 \\
+Use a Poisson approximation with mean $1000(0.005)=5$. M1 3.3 \\
+$P(Y\geq10)=1-P(Y\leq9)=1-0.96817194\ldots=0.03182806\ldots$. A1 1.1b \\
+Percentage error $=\frac{0.03182806-0.03146523}{0.03146523}\times100$. M1 1.1b \\
+$=1.1530\ldots\%$, about $1.15\%$. A1 1.1b (6) \\
+(b) Size of Ushma's test $=P(X\geq9\text{ when } p=0.005)=1-P(X\leq8)$. M1 2.1 \\
+$=0.067602\ldots$. A1 1.1b \\
+The size is the probability of a Type I error, and $0.067602\ldots<0.08$. B1 2.4 \\
+Advise Chris to use Ushma's test. dB1ft 2.2b (4) \\
+Notes: \\
+(a) B1: Correct binomial parameters. M1: Binomial tail. M1: Poisson mean $5$ and tail. A1: Both probabilities correct to three significant figures. M1: Percentage error relative to the binomial probability. A1: About $1.15\%$. \\
+(b) M1: Binomial or Poisson calculation for $P(X\geq9)$. A1: About $0.0676$ (or $0.0681$ using the approximation). B1: Link test size to Type I error. dB1ft: Choose smaller size.
+@model
+(a)(i) Each of the $1000$ independent samples tests positive with probability $0.005$. \\
+Therefore $X$ has a binomial distribution with $n=1000$ and $p=0.005$. \\
+(ii) Use the exact binomial distribution first. \\
+$P(X\geq10)=1-P(X\leq9)$ \\
+$=1-0.9685347615\ldots$ \\
+$=0.0314652385\ldots$. \\
+For the Poisson approximation, the mean is $np=1000(0.005)=5$. \\
+Let $Y$ have a Poisson distribution with mean $5$. \\
+$P(Y\geq10)=1-P(Y\leq9)$ \\
+$=1-0.9681719427\ldots$ \\
+$=0.0318280573\ldots$. \\
+Use the exact probability as the denominator for percentage error. \\
+Percentage error $=\frac{0.0318280573-0.0314652385}{0.0314652385}\times100$ \\
+$=1.153078\ldots\%$ \\
+$\approx1.15\%$. \\
+(b) A Type I error is rejection of $H_0$ when $p=0.005$. \\
+For Ushma's critical region, test size $=P(X\geq9\text{ when } p=0.005)$. \\
+$=1-P(X\leq8\text{ when } p=0.005)$ \\
+$=0.067602974\ldots$, or $6.7603\ldots\%$. \\
+Javed's size is $8\%$. \\
+Since $6.7603\ldots\%<8\%$, Ushma's test has the lower Type I error probability. \\
+Advise Chris to use Ushma's test.
+
+@q 6
+@topic Negative binomial and central limit
+@marks 10
+@question
+Malik is a circus clown. As a part of his act he throws darts at a modified dartboard whilst blindfolded. He knows that there is a probability of 0.8 that each dart misses the bullseye. \\
+In rehearsals, Malik throws darts at the dartboard whilst blindfolded until his assistant tells him he has hit the bullseye 3 times. \\
+(a)(i) Calculate how many darts Malik should expect to throw in order to hit the bullseye 3 times. (3) \\
+(ii) State two assumptions that need to be made about Malik's throws of the darts in order for this calculation to be valid. (2) \\
+Malik rehearses once a day for each of 100 days. Given that the assumptions in part (a) are true, \\
+(b) calculate an estimate of the probability that the mean number of throws required is at least 16. (5)
+@scheme
+(a)(i) Use a negative binomial distribution with $r=3$ and $p=0.2$. B1 3.3 \\
+Mean $=\frac{r}{p}=\frac{3}{0.2}$. M1 3.4 \\
+$=15$. A1 1.1b (3) \\
+(ii) Each throw's success is independent of previous throws. B1 2.4 \\
+The probability of hitting the bullseye stays the same on each throw. B1 2.4 (2) \\
+(b) Variance of number of throws $=\frac{r(1-p)}{p^2}=\frac{3(0.8)}{0.2^2}=60$. B1 1.1b \\
+By the central limit theorem, the sample mean is approximately normal with mean $15$ and variance $\frac{60}{100}=0.6$. M1 3.1b, A1 1.1b \\
+$P(\text{sample mean}\geq16)=P\left(Z\geq\frac{16-15}{\sqrt{0.6}}\right)$. dM1 3.4 \\
+$=0.0983528\ldots$, about $0.0984$. A1 1.1b (5) \\
+Notes: \\
+(a) B1: Negative binomial with correct parameters. M1: Mean formula. A1: $15$. B1: Independent throws. B1: Constant hit probability. \\
+(b) B1: Variance $60$. M1: Normal approximation for sample mean. A1: Mean $15$ and variance $0.6$. dM1: Standardisation. A1: About $0.0984$.
+@model
+(a)(i) A hit has probability $p=1-0.8=0.2$. \\
+Let $T$ be the number of throws needed for $r=3$ hits. \\
+$T$ has a negative binomial distribution with $r=3$ and $p=0.2$. \\
+Its mean is $E(T)=\frac{r}{p}$. \\
+$=\frac{3}{0.2}$ \\
+$=15$ throws. \\
+(ii) The throws must be independent. \\
+The probability of a hit must remain $0.2$ on every throw. \\
+(b) For the same negative binomial variable, $\mathrm{Var}(T)=\frac{r(1-p)}{p^2}$. \\
+$=\frac{3(0.8)}{0.2^2}$ \\
+$=\frac{2.4}{0.04}$ \\
+$=60$. \\
+For $100$ independent rehearsals, use the central limit theorem. \\
+The sample mean is approximately normal with mean $15$. \\
+Its variance is $\frac{60}{100}=0.6$. \\
+Its standard deviation is $\sqrt{0.6}=0.774596\ldots$. \\
+Standardise $16$: $z=\frac{16-15}{\sqrt{0.6}}=1.290994\ldots$. \\
+$P(\text{sample mean}\geq16)\approx P(Z\geq1.290994\ldots)$ \\
+$=0.0983528\ldots$ \\
+$\approx0.0984$.
+
+@q 7
+@topic Probability generating functions
+@marks 15
+@question
+A discrete random variable $X$ has probability generating function $G_X(t)=e^{\lambda(t-1)}$ where $\lambda$ is a positive constant. \\
+(a) Use calculus to show that $E(X)=\lambda$. (3) \\
+A discrete random variable $Y$ has probability generating function $G_Y(t)=\left(\frac{t^2}{a}+b\right)^n$ where $a$ and $b$ are both positive and $n$ is a positive integer. \\
+(b) Show that $b=1-\frac{1}{a}$. (2) \\
+(c) Hence find the range of possible values of $a$. (2) \\
+(d) In the case where $n=4$, use calculus to show that $\mathrm{Var}(Y)=\frac{16}{a^2}(a-1)$. (8)
+@scheme
+(a) $G'_X(t)=\lambda e^{\lambda(t-1)}$. M1 2.1, A1 1.1b \\
+$E(X)=G'_X(1)=\lambda e^0=\lambda$. A1* 1.1b (3) \\
+(b) $G_Y(1)=1$ gives $\left(\frac{1}{a}+b\right)^n=1$. M1 3.1a \\
+Since $\frac{1}{a}+b>0$, $\frac{1}{a}+b=1$ and $b=1-\frac{1}{a}$. A1* 1.1b (2) \\
+(c) $b>0$ gives $1-\frac{1}{a}>0$. M1 3.1a \\
+Since $a>0$, this gives $a>1$. A1 1.1b (2) \\
+(d) For $n=4$, $G'_Y(t)=\frac{8t}{a}\left(\frac{t^2}{a}+b\right)^3$. M1 2.1 \\
+$E(Y)=G'_Y(1)=\frac{8}{a}\left(\frac{1}{a}+b\right)^3=\frac{8}{a}$. M1 1.1b \\
+$G''_Y(t)=\frac{48t^2}{a^2}\left(\frac{t^2}{a}+b\right)^2+\frac{8}{a}\left(\frac{t^2}{a}+b\right)^3$. M1 2.1 \\
+$E(Y^2)-E(Y)=G''_Y(1)=\frac{48}{a^2}+\frac{8}{a}$. M1 1.1b, A1 1.1b \\
+$\mathrm{Var}(Y)=G''_Y(1)+G'_Y(1)-[G'_Y(1)]^2$. M1 1.2 \\
+$=\frac{48}{a^2}+\frac{8}{a}+\frac{8}{a}-\frac{64}{a^2}$. M1 2.1 \\
+$=\frac{16}{a}-\frac{16}{a^2}=\frac{16}{a^2}(a-1)$. A1* 1.1b (8) \\
+Notes: \\
+(a) M1: Differentiate the generating function. A1: Correct derivative. A1: Use $t=1$. \\
+(b) M1: Use $G_Y(1)=1$. A1: Derive the printed value of $b$. \\
+(c) M1: Use positivity of $b$. A1: $a>1$. \\
+(d) M1: First derivative. M1: Mean. M1: Second derivative. M1: Use $G''_Y(1)$. A1: Correct values. M1: Variance identity. M1: Substitute $\frac{1}{a}+b=1$. A1: Printed result.
+@model
+(a) For a probability generating function, $E(X)=G'_X(1)$. \\
+Differentiate $G_X(t)=e^{\lambda(t-1)}$ by the chain rule. \\
+The derivative of the exponent is $\lambda$. \\
+$G'_X(t)=\lambda e^{\lambda(t-1)}$. \\
+Put $t=1$: $G'_X(1)=\lambda e^{\lambda(1-1)}$. \\
+$=\lambda e^0$ \\
+$=\lambda$. \\
+Therefore $E(X)=\lambda$, as required. \\
+(b) Every probability generating function satisfies $G_Y(1)=1$. \\
+Thus $\left(\frac{1}{a}+b\right)^n=1$. \\
+As $a>0$, $b>0$ and $n$ is positive, the base is positive. \\
+Taking the positive $n$th root gives $\frac{1}{a}+b=1$. \\
+Subtract $\frac{1}{a}$ from both sides: \\
+$b=1-\frac{1}{a}$, as required. \\
+(c) Since $b>0$, $1-\frac{1}{a}>0$. \\
+Thus $1>\frac{1}{a}$. \\
+Multiply by $a>0$: $a>1$. \\
+The range is $a>1$. \\
+(d) Put $n=4$ and let $u=\frac{t^2}{a}+b$. \\
+Then $G_Y(t)=u^4$ and $u'=\frac{2t}{a}$. \\
+Use the chain rule: $G'_Y(t)=4u^3u'$. \\
+$=\frac{8t}{a}\left(\frac{t^2}{a}+b\right)^3$. \\
+By part (b), $\frac{1}{a}+b=1$. \\
+So $E(Y)=G'_Y(1)=\frac{8}{a}(1)^3=\frac{8}{a}$. \\
+Differentiate $G'_Y(t)$ with the product and chain rules: \\
+$G''_Y(t)=\frac{8}{a}u^3+\frac{8t}{a}(3u^2)\frac{2t}{a}$. \\
+$=\frac{8}{a}u^3+\frac{48t^2}{a^2}u^2$. \\
+Put $t=1$ and $u=1$: \\
+$G''_Y(1)=\frac{8}{a}+\frac{48}{a^2}$. \\
+Use $G''_Y(1)=E[Y(Y-1)]=E(Y^2)-E(Y)$. \\
+Hence $\mathrm{Var}(Y)=G''_Y(1)+E(Y)-[E(Y)]^2$. \\
+$=\frac{8}{a}+\frac{48}{a^2}+\frac{8}{a}-\left(\frac{8}{a}\right)^2$ \\
+$=\frac{16}{a}+\frac{48}{a^2}-\frac{64}{a^2}$ \\
+$=\frac{16}{a}-\frac{16}{a^2}$ \\
+$=\frac{16}{a^2}(a-1)$, as required.

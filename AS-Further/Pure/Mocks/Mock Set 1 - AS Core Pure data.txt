@@ -1,0 +1,370 @@
+@paper AS Core Pure Mock Set 1
+@level AS-Level
+
+@q 1
+@topic Transformed roots of a cubic
+@marks 5
+@question
+The cubic equation $3x^3+5x^2-2x+6=0$ has roots $\alpha$, $\beta$ and $\gamma$. Without solving the equation, find the cubic equation whose roots are $(2\alpha-1)$, $(2\beta-1)$ and $(2\gamma-1)$, giving your answer in the form $pw^3+qw^2+rw+s=0$, where $p$, $q$, $r$ and $s$ are integers. (5)
+@scheme
+$w=2x-1$, so $x=\frac{w+1}{2}$. B1 3.1a \\
+Substitute $x=\frac{w+1}{2}$ into the original cubic. M1 3.1a \\
+$\frac{3}{8}(w+1)^3+\frac{5}{4}(w+1)^2-(w+1)+6=0$. M1 1.1b \\
+Expand and collect coefficients; at least two of the three non-leading coefficients correct. A1 1.1b \\
+$3w^3+19w^2+21w+53=0$. A1 1.1b (5) \\
+Notes: \\
+B1: Connects $x$ and $w$. \\
+M1: Substitutes into the cubic. \\
+M1: Expands to a cubic in $w$. \\
+A1: At least two coefficients correct. \\
+A1: Fully correct equation in $w$.
+@model
+Let $w=2x-1$ for any of the original roots. \\
+Then $x=\frac{w+1}{2}$. \\
+Substitute this in $3x^3+5x^2-2x+6=0$: \\
+$3(\frac{w+1}{2})^3+5(\frac{w+1}{2})^2-2(\frac{w+1}{2})+6=0$. \\
+Multiply through by 8: \\
+$3(w+1)^3+10(w+1)^2-8(w+1)+48=0$. \\
+Expand the powers: \\
+$3(w^3+3w^2+3w+1)+10(w^2+2w+1)-8w-8+48=0$. \\
+Collect like terms: \\
+$3w^3+19w^2+21w+53=0$. \\
+Each transformed root therefore satisfies this cubic.
+
+@q 2
+@topic Sums of powers and equations
+@marks 9
+@question
+(a) Use the standard results for summations to show that, for all positive integers $n$, $\sum_{r=1}^{n}r(r-1)^2=\frac{1}{12}n(n+1)(n-1)(an+b)$, where $a$ and $b$ are integers to be determined. (5) \\
+(b) Hence determine the value of $n$ that satisfies $\sum_{r=1}^{n}r(r-1)^2=\sum_{r=1}^{n}5r$. (4)
+@scheme
+(a) $r(r-1)^2=r^3-2r^2+r$. B1 1.1b \\
+Use $\sum r^3=\frac{n^2(n+1)^2}{4}$, $\sum r^2=\frac{n(n+1)(2n+1)}{6}$ and $\sum r=\frac{n(n+1)}{2}$. M1 A1 1.1b \\
+$\sum r(r-1)^2=\frac{n(n+1)}{12}[3n(n+1)-4(2n+1)+6]$. dM1 1.1b \\
+$=\frac{n(n+1)(n-1)(3n-2)}{12}$, so $a=3$, $b=-2$. A1 1.1b (5) \\
+(b) $\frac{n(n+1)(n-1)(3n-2)}{12}=\frac{5n(n+1)}{2}$. M1 1.1b \\
+$3n^2-5n-28=0$. A1 1.1b \\
+$(3n+7)(n-4)=0$. M1 1.1b \\
+As $n$ is positive, $n=4$. A1 2.3 (4) \\
+Notes: \\
+(a) B1: Correct expansion. M1: Uses standard summation formulae. A1: Correct substituted expression. dM1: Factors out $\frac{n(n+1)}{12}$. A1: Printed form with correct $a,b$. \\
+(b) M1: Equates sums. A1: Correct equation. M1: Solves it. A1: Positive integer solution only.
+@model
+(a) First expand the summand: \\
+$r(r-1)^2=r(r^2-2r+1)=r^3-2r^2+r$. \\
+Therefore $\sum_{r=1}^{n}r(r-1)^2=\sum r^3-2\sum r^2+\sum r$. \\
+Using the standard sums, this is \\
+$\frac{n^2(n+1)^2}{4}-\frac{n(n+1)(2n+1)}{3}+\frac{n(n+1)}{2}$. \\
+Take out $\frac{n(n+1)}{12}$: \\
+$\frac{n(n+1)}{12}[3n(n+1)-4(2n+1)+6]$. \\
+Simplify the bracket: $3n^2+3n-8n-4+6=3n^2-5n+2$. \\
+Factor it: $3n^2-5n+2=(n-1)(3n-2)$. \\
+Thus $\sum_{r=1}^{n}r(r-1)^2=\frac{n(n+1)(n-1)(3n-2)}{12}$. \\
+Hence $a=3$ and $b=-2$. \\
+(b) The right side is $\sum_{r=1}^{n}5r=\frac{5n(n+1)}{2}$. \\
+Equate the two sums: $\frac{n(n+1)(n-1)(3n-2)}{12}=\frac{5n(n+1)}{2}$. \\
+Since $n$ is positive, divide by $n(n+1)$: $(n-1)(3n-2)=30$. \\
+Expand: $3n^2-5n+2=30$. \\
+Thus $3n^2-5n-28=0=(3n+7)(n-4)$. \\
+The roots are $n=4$ and $n=-\frac{7}{3}$; only $n=4$ is a positive integer.
+
+@q 3
+@topic Complex loci and Argand region
+@marks 10
+@question
+(a) Determine, in simplest form, a Cartesian equation for (i) the locus of points represented by $|z-3|=3\sqrt{2}$, (ii) the locus of points represented by $|z-2-\mathrm{i}|=|z+4+\mathrm{i}|$. (5) \\
+(b) Find the complex numbers $z$ that satisfy both $|z-3|=3\sqrt{2}$ and $|z-2-\mathrm{i}|=|z+4+\mathrm{i}|$. (3) \\
+The region $R$ is defined by the inequalities $|z-3|\leq 3\sqrt{2}$ and $|z-2-\mathrm{i}|\geq|z+4+\mathrm{i}|$. \\
+(c) On an Argand diagram, shade and label the region $R$. (2)
+@scheme
+(a)(i) Set $z=x+\mathrm{i}y$ and square the modulus. M1 1.1b \\
+$(x-3)^2+y^2=18$. A1 1.1b \\
+(ii) $(x-2)^2+(y-1)^2=(x+4)^2+(y+1)^2$. M1 1.1b \\
+Expand and cancel $x^2,y^2$. M1 1.1b \\
+$y=-3x-3$. A1 1.1b (5) \\
+(b) Substitute $y=-3x-3$ into the circle equation, giving $10x^2+12x=0$. M1 1.1b \\
+$x=0$ or $x=-\frac{6}{5}$, with $y=-3$ or $y=\frac{3}{5}$. A1ft 1.1b \\
+$z=-3\mathrm{i}$ or $z=-\frac{6}{5}+\frac{3}{5}\mathrm{i}$. A1 1.1b (3) \\
+(c) Sketch the circle and intersecting line. M1 3.1a \\
+Shade inside the circle and below $y=-3x-3$, including both boundaries; label $R$. A1 1.1b (2) \\
+Notes: \\
+(a) M1: Substitutes $z=x+\mathrm{i}y$ and squares moduli. A1: Correct equations. \\
+(b) M1: Substitution. A1ft: Coordinates. A1: Both complex numbers. \\
+(c) M1: Circle and line. A1: Correct region.
+@model
+(a)(i) Write $z=x+\mathrm{i}y$. \\
+$|z-3|^2=|(x-3)+\mathrm{i}y|^2=(x-3)^2+y^2$. \\
+As $(3\sqrt{2})^2=18$, the circle is $(x-3)^2+y^2=18$. \\
+(ii) Square both sides of the equal-modulus equation: \\
+$(x-2)^2+(y-1)^2=(x+4)^2+(y+1)^2$. \\
+Expand: $x^2-4x+4+y^2-2y+1=x^2+8x+16+y^2+2y+1$. \\
+Cancel $x^2+y^2$ and collect: $-12x-4y-12=0$. \\
+Thus $3x+y+3=0$, or $y=-3x-3$. \\
+(b) Substitute $y=-3x-3$ into $(x-3)^2+y^2=18$: \\
+$(x-3)^2+(-3x-3)^2=18$. \\
+$x^2-6x+9+9x^2+18x+9=18$. \\
+$10x^2+12x=0=2x(5x+6)$. \\
+Hence $x=0$ or $x=-\frac{6}{5}$. \\
+For $x=0$, $y=-3$; for $x=-\frac{6}{5}$, $y=\frac{3}{5}$. \\
+Therefore $z=-3\mathrm{i}$ or $z=-\frac{6}{5}+\frac{3}{5}\mathrm{i}$. \\
+(c) Draw the circle centred at $(3,0)$ with radius $3\sqrt{2}$ and the line $y=-3x-3$. \\
+The second inequality gives $(x-2)^2+(y-1)^2\geq(x+4)^2+(y+1)^2$, so $3x+y+3\leq0$. \\
+Shade the part inside the circle on or below that line, and label it $R$. \\
+Draw both boundaries as solid curves because equality is included.
+
+@q 4
+@topic Invariant lines and area scales
+@marks 9
+@question
+(i) The transformation $P$ is represented by the matrix with rows $(2,1)$; $(3,4)$. Determine the equation of the line of invariant points of $P$. (1) \\
+(ii) The transformation $Q$ is represented by the matrix with rows $(3,-1)$; $(3,4)$. (a) Prove that, for the transformation $Q$, there are no invariant lines. (4) \\
+The triangle $T$ has vertices at $(k,2)$, $(8,2)$ and $(8,4)$, where $k$ is a constant. Given that $T$ is transformed by $Q$ onto $T'$ and $T'$ has an area of 75, (b) determine the possible values of $k$. (4)
+@scheme
+(i) $P(x,y)=(x,y)$ gives $y=-x$. B1 1.1b (1) \\
+(ii)(a) Let a candidate invariant line have direction $(1,m)$ and apply $Q$. M1 3.1a \\
+$Q(1,m)=(3-m,3+4m)$, so invariance requires $3+4m=m(3-m)$. A1 1.1b \\
+$m^2+m+3=0$. dM1 2.1 \\
+Its discriminant is $1-12=-11<0$, so there is no real invariant direction or line. A1 2.4 (4) \\
+(b) $\mathrm{det}(Q)=3(4)-(-1)(3)=15$. B1 1.1b \\
+The original triangle has area $\frac{1}{2}|8-k|(4-2)=|8-k|$, so $15|8-k|=75$. M1 3.1a \\
+$|8-k|=5$, giving one of $k=3,13$. A1 1.1b \\
+Both $k=3$ and $k=13$. A1 1.1b (4) \\
+Notes: \\
+(i) B1: Correct fixed-point line. \\
+(ii)(a) M1: Applies the matrix to a line direction. A1: Correct equations. dM1: Forms the quadratic. A1: Negative discriminant and conclusion. \\
+(ii)(b) B1: Determinant. M1: Area scale. A1: One solution. A1: Both solutions.
+@model
+(i) A fixed point obeys $P(x,y)=(x,y)$. \\
+The first coordinate gives $2x+y=x$, hence $y=-x$. \\
+The second gives $3x+4y=y$, hence $3x+3y=0$ and again $y=-x$. \\
+So the invariant points form the line $y=-x$. \\
+(ii)(a) Every invariant line would have a real direction preserved by $Q$. \\
+A nonvertical direction may be written $(1,m)$. \\
+$Q(1,m)=(3-m,3+4m)$. \\
+For this to be parallel to $(1,m)$, $3+4m=m(3-m)$. \\
+Rearrange: $m^2+m+3=0$. \\
+Its discriminant is $1^2-4(1)(3)=-11<0$, so it has no real slope. \\
+A vertical direction $(0,1)$ maps to $(-1,4)$, which is not vertical. \\
+Thus no real line is invariant under $Q$. \\
+(ii)(b) The area scale factor is $|\mathrm{det}(Q)|=|3(4)-(-1)(3)|=15$. \\
+The original triangle has base $|8-k|$ and height $4-2=2$. \\
+Its area is $\frac{1}{2}|8-k|(2)=|8-k|$. \\
+The image area is therefore $15|8-k|=75$. \\
+Divide by 15: $|8-k|=5$. \\
+So $8-k=5$ or $8-k=-5$, giving $k=3$ or $k=13$.
+
+@q 5
+@topic Conjugate polynomial roots
+@marks 7
+@question
+$f(z)=z^4+pz^3+qz^2+rz-52$, where $p$, $q$ and $r$ are real constants. The roots of $f(z)=0$ are $\pm\alpha$, $\beta$ and $\gamma$, where $\alpha$ is real and positive. Given that $\beta=3+2\mathrm{i}$, (a) write down the root $\gamma$. (1) \\
+(b) Determine the value of $\alpha$. (3) \\
+(c) Hence determine the values of $p$, $q$ and $r$. (3)
+@scheme
+(a) $\gamma=3-2\mathrm{i}$. B1 1.2 (1) \\
+(b) Product of roots is $-\alpha^2(3+2\mathrm{i})(3-2\mathrm{i})=-52$. M1 3.1a \\
+$13\alpha^2=52$, so $\alpha^2=4$. M1 1.1b \\
+Since $\alpha>0$, $\alpha=2$. A1 2.2a (3) \\
+(c) $f(z)=(z-2)(z+2)(z-3-2\mathrm{i})(z-3+2\mathrm{i})$. M1 3.1a \\
+$=(z^2-4)(z^2-6z+13)=z^4-6z^3+9z^2+24z-52$. A1 1.1b \\
+$p=-6$, $q=9$, $r=24$. A1 1.1b (3) \\
+Notes: \\
+(a) B1: Conjugate root. \\
+(b) M1: Product equation. M1: Solves for $\alpha^2$. A1: Positive value. \\
+(c) M1: Correct factors. A1: At least two coefficients. A1: All coefficients.
+@model
+(a) The coefficients of $f$ are real, so nonreal roots occur in conjugate pairs. \\
+Therefore $\gamma=3-2\mathrm{i}$. \\
+(b) The product of the roots of the monic quartic is its constant term, $-52$. \\
+$(\alpha)(-\alpha)(3+2\mathrm{i})(3-2\mathrm{i})=-52$. \\
+The conjugate product is $3^2+2^2=13$. \\
+Thus $-13\alpha^2=-52$. \\
+Divide by $-13$: $\alpha^2=4$. \\
+As $\alpha$ is positive, $\alpha=2$. \\
+(c) Pair the real roots and conjugate roots: \\
+$f(z)=(z-2)(z+2)(z-3-2\mathrm{i})(z-3+2\mathrm{i})$. \\
+$=(z^2-4)[(z-3)^2+4]$. \\
+$=(z^2-4)(z^2-6z+13)$. \\
+Multiply: $z^4-6z^3+13z^2-4z^2+24z-52$. \\
+Hence $f(z)=z^4-6z^3+9z^2+24z-52$. \\
+Comparing coefficients gives $p=-6$, $q=9$, $r=24$.
+
+@q 6
+@topic Divisibility by induction
+@marks 6
+@question
+Prove by induction that, for $n\in\mathbb{Z}^{+}$, $f(n)=6^{2n-1}+8^{n+1}$ is divisible by 7. (6)
+@scheme
+$f(1)=6+64=70$, divisible by 7. B1 2.2a \\
+Assume $f(k)=6^{2k-1}+8^{k+1}$ is divisible by 7. M1 2.4 \\
+$f(k+1)=36\cdot6^{2k-1}+8\cdot8^{k+1}$. M1 2.1 \\
+$=28\cdot6^{2k-1}+8(6^{2k-1}+8^{k+1})$. A1 1.1b \\
+$f(k+1)=28\cdot6^{2k-1}+8f(k)$ is divisible by 7. A1 1.1b \\
+The base case and induction step prove the result for every positive integer $n$. A1 2.4 (6) \\
+Notes: \\
+B1: Base case. M1: Inductive assumption. M1: Forms $f(k+1)$. A1: Correct rearrangement. A1: Divisibility step. A1: Conclusion.
+@model
+For $n=1$, $f(1)=6^{1}+8^{2}=6+64=70=7(10)$. \\
+So the statement holds at $n=1$. \\
+Assume for some positive integer $k$ that $f(k)=6^{2k-1}+8^{k+1}$ is a multiple of 7. \\
+Now $f(k+1)=6^{2(k+1)-1}+8^{(k+1)+1}$. \\
+$=6^{2k+1}+8^{k+2}$. \\
+$=36\cdot6^{2k-1}+8\cdot8^{k+1}$. \\
+Split $36=28+8$: \\
+$f(k+1)=28\cdot6^{2k-1}+8\cdot6^{2k-1}+8\cdot8^{k+1}$. \\
+$=28\cdot6^{2k-1}+8(6^{2k-1}+8^{k+1})$. \\
+$=28\cdot6^{2k-1}+8f(k)$. \\
+The first term is divisible by 7, and the second is divisible by 7 by the assumption. \\
+Hence $f(k+1)$ is divisible by 7. \\
+By induction, $f(n)$ is divisible by 7 for every positive integer $n$.
+
+@q 7
+@topic Modulus and logarithmic condition
+@marks 5
+@question
+Given that $z=a+b\mathrm{i}$, where $a,b\in\mathbb{R}$, determine the possible complex numbers $z$ such that $|z|=5$ and $b+\log_{5}(zz^*)=2a$. (5)
+@scheme
+$a^2+b^2=25$. B1 1.2 \\
+$zz^*=25$, so $\log_{5}(zz^*)=2$. M1 3.1a \\
+$b+2=2a$. A1 1.1b \\
+Substitute $b=2a-2$ to get $5a^2-8a-21=0$ and solve. dM1 1.1b \\
+$z=3+4\mathrm{i}$ or $z=-\frac{7}{5}-\frac{24}{5}\mathrm{i}$. A1 1.1b (5) \\
+Notes: \\
+B1: Modulus equation. M1: Uses conjugate and logarithm. A1: Linear equation. dM1: Quadratic solution. A1: Both complex numbers.
+@model
+The modulus condition gives $a^2+b^2=|z|^2=25$. \\
+Also $zz^*=(a+b\mathrm{i})(a-b\mathrm{i})=a^2+b^2=25$. \\
+Therefore $\log_{5}(zz^*)=\log_{5}(25)=2$. \\
+The second condition becomes $b+2=2a$, so $b=2a-2$. \\
+Substitute in the first condition: $a^2+(2a-2)^2=25$. \\
+$a^2+4a^2-8a+4=25$. \\
+$5a^2-8a-21=0$. \\
+Factor: $(a-3)(5a+7)=0$. \\
+Thus $a=3$ or $a=-\frac{7}{5}$. \\
+For $a=3$, $b=2(3)-2=4$. \\
+For $a=-\frac{7}{5}$, $b=-\frac{14}{5}-\frac{10}{5}=-\frac{24}{5}$. \\
+Hence $z=3+4\mathrm{i}$ or $z=-\frac{7}{5}-\frac{24}{5}\mathrm{i}$.
+
+@q 8
+@topic Fish population matrix model
+@marks 7
+@question
+The number of fish in a lake is being studied. The lake contains only carp, tench and pike. At the start of the study there were $x$ carp, $y$ tench, $z$ pike, a total of 1400 fish, and 360 more carp than tench. (a) Write down 2 equations to represent this information. (2) \\
+In a model it is assumed that one year after the start of the study the number of carp will increase by 8%, the number of tench will increase by 5%, the number of pike will decrease by 10%, and the total number of fish will increase by 70. (b) Write down another equation connecting $x$, $y$ and $z$. (1) \\
+(c) Hence, by forming and solving a matrix equation, determine how many of each type of fish were in the lake at the start of the study. (4)
+@scheme
+(a) Set up equations from the total and the difference. M1 3.3 \\
+$x+y+z=1400$ and $x-y=360$. A1 1.1b (2) \\
+(b) $0.08x+0.05y-0.10z=70$. B1 1.1b (1) \\
+(c) Form $A(x,y,z)^{T}=(1400,360,70)^{T}$, where $A$ has rows $(1,1,1)$; $(1,-1,0)$; $(0.08,0.05,-0.10)$. M1 3.1b \\
+Correct matrix equation. A1ft 1.1b \\
+Use $A^{-1}$ to obtain the values. dM1 3.4 \\
+At the start there were 800 carp, 440 tench and 160 pike. A1 3.2a (4) \\
+Notes: \\
+(a) M1: Builds equations. A1: Both correct. \\
+(b) B1: Correct change equation. \\
+(c) M1: Forms a matrix equation. A1ft: Correct entries. dM1: Solves by inverse matrix. A1: Interprets all three values.
+@model
+(a) All the fish are of the three named types, so $x+y+z=1400$. \\
+There are 360 more carp than tench, so $x-y=360$. \\
+(b) The net increase is $0.08x+0.05y-0.10z=70$. \\
+(c) The equations form the matrix equation \\
+$\begin{pmatrix}1&1&1\\1&-1&0\\0.08&0.05&-0.10\end{pmatrix}\begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix}1400\\360\\70\end{pmatrix}$. \\
+Let the coefficient matrix be $A$. Since it is invertible, \\
+$\begin{pmatrix}x\\y\\z\end{pmatrix}=A^{-1}\begin{pmatrix}1400\\360\\70\end{pmatrix}=\begin{pmatrix}800\\440\\160\end{pmatrix}$. \\
+Check: $800+440+160=1400$ and $800-440=360$. \\
+The change is $0.08(800)+0.05(440)-0.10(160)=64+22-16=70$. \\
+Thus there were 800 carp, 440 tench and 160 pike initially.
+
+@q 9
+@topic Volume of revolution and mass
+@marks 9
+@question
+Figure 1 shows the curves $C:y=18-2x^2$ and $D:y=12-\frac{1}{2}x^2$. (a) Use algebra to determine the $x$ coordinates of the points of intersection of $C$ and $D$. (2) \\
+The region $R$ is bounded by $C$ and $D$. A silver ring is modelled as the volume of revolution formed when $R$ is rotated through $360 degrees$ about the $x$-axis. Given that the units are in mm and the density of silver is $18\mathrm{\,g/cm^3}$, (b) use algebraic integration to determine the total number of complete rings that can be formed from 1 kg of silver, according to the model. (7)
+@scheme
+(a) $18-2x^2=12-\frac{1}{2}x^2$. M1 1.1b \\
+$x=-2$ and $x=2$. A1 1.1b (2) \\
+(b) $V=\pi\int_{-2}^{2}[(18-2x^2)^2-(12-\frac{1}{2}x^2)^2]\,dx$. B1 1.1a \\
+Expand and integrate a polynomial in $x$. M1 1.1b \\
+$V=\pi[\frac{3}{4}x^5-20x^3+180x]_{-2}^{2}$. A1 1.1b \\
+Evaluate at both limits and subtract. M1 3.4 \\
+$V=448\pi\mathrm{\,mm^3}$. A1 1.1b \\
+Mass per ring is $\frac{448\pi}{1000}\times18=8.064\pi$ grams; divide 1000 grams by this. M1 3.1b \\
+There are 39 complete rings. A1 2.2b (7) \\
+Notes: \\
+(a) M1: Equates curves. A1: Both limits. \\
+(b) B1: Correct washers integral. M1: Integrates. A1: Correct antiderivative. M1: Limits. A1: Volume. M1: Unit and density conversion. A1: Whole ring count.
+@model
+(a) At an intersection the $y$ values agree: $18-2x^2=12-\frac{1}{2}x^2$. \\
+Therefore $6=\frac{3}{2}x^2$, so $x^2=4$. \\
+The two $x$ coordinates are $-2$ and $2$. \\
+(b) Between these values $C$ lies above $D$ and both curves are above the $x$-axis. \\
+Use outer disc minus inner disc: \\
+$V=\pi\int_{-2}^{2}[(18-2x^2)^2-(12-\frac{1}{2}x^2)^2]\,dx$. \\
+Expand the first square: $324-72x^2+4x^4$. \\
+Expand the second: $144-12x^2+\frac{1}{4}x^4$. \\
+Subtract to obtain $180-60x^2+\frac{15}{4}x^4$. \\
+Integrate: $V=\pi[180x-20x^3+\frac{3}{4}x^5]_{-2}^{2}$. \\
+At $x=2$ the bracket is $360-160+24=224$. \\
+At $x=-2$ it is $-360+160-24=-224$. \\
+Thus $V=\pi(224-(-224))=448\pi\mathrm{\,mm^3}$. \\
+Since $1000\mathrm{\,mm^3}=1\mathrm{\,cm^3}$, the mass of one ring is \\
+$18(\frac{448\pi}{1000})=8.064\pi\mathrm{\,g}\approx25.33\mathrm{\,g}$. \\
+$1000/(8.064\pi)\approx39.47$, so 1 kg makes 39 complete rings.
+
+@q 10
+@topic Plane and line distance model
+@marks 13
+@question
+A plane $\text{Pi}$ contains the points $P(3,2,-1)$, $Q(3,0,-2)$ and $R(0,3,0)$ relative to a fixed origin $O$. (a) Determine a vector equation of $\text{Pi}$ in the form $\mathbf{r}=\mathbf{a}+\lambda\mathbf{b}+\mu\mathbf{c}$, where $\lambda,\mu$ are scalar parameters. (3) \\
+(b) Show that the vector $\mathbf{i}-3\mathbf{j}+6\mathbf{k}$ is perpendicular to $\text{Pi}$. (2) \\
+(c) Hence determine a Cartesian equation of $\text{Pi}$. (2) \\
+A children's climbing frame is placed on a lawn. One of the bars is parallel to the lawn. In a model, the lawn is plane $\text{Pi}$, the bar is a straight line through $S(1,-3,-5)$ and $T(-5,7,1)$, and units are metres. (d) Determine a vector equation of the line modelling the bar. (2) \\
+(e) State a limitation of the model. (1) \\
+(f) Determine, according to the model, the shortest distance from the lawn to the middle of the bar, to the nearest cm. (2) \\
+The actual distance is 1.7 m. (g) Use your answer to (f) to evaluate the model, explaining your reasoning. (1)
+@scheme
+(a) $\text{PQ}=(0,-2,-1)$ and $\text{PR}=(-3,1,1)$. M1 3.1a \\
+Use $\mathbf{r}=\mathbf{a}+\lambda\mathbf{b}+\mu\mathbf{c}$. M1 1.1b \\
+$\mathbf{r}=(3,2,-1)+\lambda(0,-2,-1)+\mu(-3,1,1)$. A1 1.1b (3) \\
+(b) $(0,-2,-1)\cdot(1,-3,6)=0$ and $(-3,1,1)\cdot(1,-3,6)=0$. M1 1.1b \\
+The vector is perpendicular to both plane directions, hence to $\text{Pi}$. A1 2.4 (2) \\
+(c) $(x,y,z)\cdot(1,-3,6)=(3,2,-1)\cdot(1,-3,6)$. M1 1.1b \\
+$x-3y+6z=-9$. A1 1.1b (2) \\
+(d) $\text{ST}=(-6,10,6)$. M1 3.3 \\
+$\mathbf{r}=(1,-3,-5)+t(-6,10,6)$. A1 1.1b (2) \\
+(e) The lawn may not be perfectly flat, or the bar may not be straight. B1 3.5b (1) \\
+(f) The midpoint is $(-2,2,-2)$; use point-to-plane distance $\frac{|x-3y+6z+9|}{\sqrt{46}}$. M1 3.4 \\
+$\frac{11}{\sqrt{46}}\mathrm{\,m}\approx1.62\mathrm{\,m}=162\mathrm{\,cm}$. A1 1.1b (2) \\
+(g) The model is reasonably good: 1.62 m is close to 1.7 m, an underestimate of about 0.08 m. B1ft 3.5a (1) \\
+Notes: \\
+(a) M1: Direction vectors. M1: Plane equation form. A1: Correct equation. \\
+(b) M1: Both dot products. A1: Both zero and conclusion. \\
+(c) M1: Normal form. A1: Cartesian equation. \\
+(d) M1: Bar direction. A1: Line equation. \\
+(e) B1: Valid modelling limitation. \\
+(f) M1: Distance from midpoint. A1: Nearest cm. \\
+(g) B1ft: Comparison and supported assessment.
+@model
+(a) Subtract coordinates: $\text{PQ}=Q-P=(0,-2,-1)$. \\
+Also $\text{PR}=R-P=(-3,1,1)$. \\
+These independent directions span the plane through $P$, so \\
+$\mathbf{r}=(3,2,-1)+\lambda(0,-2,-1)+\mu(-3,1,1)$. \\
+(b) Let $\mathbf{n}=(1,-3,6)$. \\
+$\text{PQ}\cdot\mathbf{n}=0(1)+(-2)(-3)+(-1)(6)=0$. \\
+$\text{PR}\cdot\mathbf{n}=(-3)(1)+1(-3)+1(6)=0$. \\
+Thus $\mathbf{n}=\mathbf{i}-3\mathbf{j}+6\mathbf{k}$ is perpendicular to both spanning directions, and so to $\text{Pi}$. \\
+(c) Use $\mathbf{n}\cdot(\mathbf{r}-P)=0$. \\
+Hence $x-3y+6z=3-3(2)+6(-1)=-9$. \\
+(d) $\text{ST}=T-S=(-5-1,7-(-3),1-(-5))=(-6,10,6)$. \\
+The model line is $\mathbf{r}=(1,-3,-5)+t(-6,10,6)$. \\
+(e) The real lawn may be uneven rather than exactly planar. \\
+(f) The bar's middle is the midpoint of $S,T$: \\
+$M=(\frac{1-5}{2},\frac{-3+7}{2},\frac{-5+1}{2})=(-2,2,-2)$. \\
+The plane is $x-3y+6z+9=0$. \\
+Distance from $M$ is $\frac{|-2-3(2)+6(-2)+9|}{\sqrt{1^2+(-3)^2+6^2}}$. \\
+$=\frac{11}{\sqrt{46}}\mathrm{\,m}\approx1.62186\mathrm{\,m}$. \\
+To the nearest centimetre, this is $1.62\mathrm{\,m}$ or $162\mathrm{\,cm}$. \\
+(g) The actual distance, $1.7\mathrm{\,m}$, exceeds the model value by about $0.08\mathrm{\,m}$. \\
+This is a fairly small difference, so the model gives a reasonable estimate.

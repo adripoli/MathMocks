@@ -1,0 +1,350 @@
+@paper FS1 Specimen
+@level A-Level
+
+@q 1
+@topic Chi-square uniform goodness of fit
+@marks 8
+@question
+In a randomly selected week, a camera recorded the number of speeding drivers on a particular stretch of motorway. \\
+Day: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday. Frequency: $35,30,28,24,40,51,37$. \\
+Jeremy believes drivers are equally likely to be recorded speeding on any day of the week. Carry out a hypothesis test, at the 5% level of significance, to see if the data support Jeremy's belief. You should state your hypotheses, the degrees of freedom and the critical value used for this test. (8)
+@scheme
+$H_0$: Drivers are equally likely to be recorded speeding on each day; $H_1$: they are not equally likely. B1 2.1 \\
+Expected frequency on each day $=(35+30+28+24+40+51+37)/7$. M1 3.4 \\
+$=35$. A1 1.1b \\
+Statistic $=\sum\frac{(O_i-E_i)^2}{E_i}=\frac{(35-35)^2}{35}+\frac{(30-35)^2}{35}+\frac{(28-35)^2}{35}+\cdots$. M1 1.1b \\
+$=13.7142857\ldots$. A1 1.1b \\
+Degrees of freedom $=7-1=6$. B1 1.1b \\
+The 5% upper critical value is $12.592$. B1 1.1a \\
+Since $13.7142857\ldots>12.592$, reject $H_0$; the data do not support Jeremy's belief at 5%. A1 3.5a (8) \\
+Notes: \\
+B1: Both hypotheses in context. M1: Uniform expected frequencies. A1: $35$. M1: Chi-square statistic. A1: About $13.7$. B1: Six degrees of freedom. B1: About $12.6$. A1: Contextual conclusion.
+@model
+Under $H_0$, the seven days have equal speeding frequencies. \\
+Under $H_1$, at least one day has a different probability. \\
+Add the observed counts: \\
+$35+30+28+24+40+51+37=245$. \\
+With seven equally likely days, expected frequency per day is $245/7=35$. \\
+No expected frequency is below five. \\
+Use the chi-square statistic $\sum\frac{(O-E)^2}{E}$. \\
+$=\frac{(35-35)^2}{35}+\frac{(30-35)^2}{35}+\frac{(28-35)^2}{35}$ \\
+$+\frac{(24-35)^2}{35}+\frac{(40-35)^2}{35}+\frac{(51-35)^2}{35}+\frac{(37-35)^2}{35}$ \\
+$=\frac{0+25+49+121+25+256+4}{35}$ \\
+$=\frac{480}{35}=13.7142857\ldots$. \\
+There are seven groups and no fitted parameters, so degrees of freedom $=7-1=6$. \\
+At 5%, the upper critical value is $12.592$. \\
+Since $13.7142857\ldots>12.592$, reject $H_0$. \\
+The observations do not support Jeremy's belief that speeding is equally likely on every day.
+
+@q 2
+@topic Discrete distribution and variance
+@marks 8
+@question
+The discrete random variable $Y$ has probability distribution $y=a,2,7$ with respective probabilities $\frac{1}{2},\frac{3}{10},\frac{1}{5}$, where $a$ is a constant. \\
+Given that $\mathrm{Var}(Y)=28$ and $E(Y)<0$, \\
+(a) find the value of $a$. (6) \\
+(b) Find $E\left(\frac{1}{3-Y}\right)$. (2)
+@scheme
+(a) Use $\mathrm{Var}(Y)=E(Y^2)-[E(Y)]^2$. M1 3.1a \\
+$E(Y)=\frac{1}{2}a+2\frac{3}{10}+7\frac{1}{5}=\frac{1}{2}a+2$. B1 1.1b \\
+$E(Y^2)=\frac{1}{2}a^2+4\frac{3}{10}+49\frac{1}{5}=\frac{1}{2}a^2+11$. B1 2.1 \\
+$28=\frac{1}{2}a^2+11-\left(\frac{1}{2}a+2\right)^2$. M1 1.1b \\
+$\frac{1}{4}a^2-2a-21=0$, with roots $14$ and $-6$. M1 1.1b \\
+Since $E(Y)<0$, choose $a=-6$. A1 2.2a (6) \\
+(b) $E\left(\frac{1}{3-Y}\right)=\frac{1}{2(3+6)}+\frac{3}{10(3-2)}+\frac{1}{5(3-7)}$. M1 2.1 \\
+$=\frac{11}{36}$. A1ft 1.1b (2) \\
+Notes: \\
+(a) M1: Variance formula. B1: Mean. B1: Second moment. M1: Equation. M1: Solve. A1: Negative root only. \\
+(b) M1: Sum transformed values. A1ft: $\frac{11}{36}$.
+@model
+(a) Calculate the mean from the probability table. \\
+$E(Y)=\frac{1}{2}a+\frac{3}{10}(2)+\frac{1}{5}(7)$. \\
+$=\frac{1}{2}a+\frac{3}{5}+\frac{7}{5}$ \\
+$=\frac{1}{2}a+2$. \\
+Calculate the second moment. \\
+$E(Y^2)=\frac{1}{2}a^2+\frac{3}{10}(2^2)+\frac{1}{5}(7^2)$. \\
+$=\frac{1}{2}a^2+\frac{6}{5}+\frac{49}{5}$ \\
+$=\frac{1}{2}a^2+11$. \\
+Use $\mathrm{Var}(Y)=E(Y^2)-[E(Y)]^2=28$. \\
+$28=\frac{1}{2}a^2+11-\left(\frac{1}{2}a+2\right)^2$. \\
+Expand the square: $\left(\frac{1}{2}a+2\right)^2=\frac{1}{4}a^2+2a+4$. \\
+Substitute: $28=\frac{1}{4}a^2-2a+7$. \\
+Subtract $28$: $\frac{1}{4}a^2-2a-21=0$. \\
+Multiply by 4: $a^2-8a-84=0$. \\
+Factor: $(a-14)(a+6)=0$. \\
+Thus $a=14$ or $a=-6$. \\
+For $a=14$, $E(Y)=9>0$, so reject it. \\
+For $a=-6$, $E(Y)=-1<0$. \\
+Therefore $a=-6$. \\
+(b) Substitute each possible $Y$ into $\frac{1}{3-Y}$. \\
+$E\left(\frac{1}{3-Y}\right)=\frac{1}{2}\frac{1}{3-(-6)}+\frac{3}{10}\frac{1}{3-2}+\frac{1}{5}\frac{1}{3-7}$. \\
+$=\frac{1}{18}+\frac{3}{10}-\frac{1}{20}$. \\
+Combine the last two terms: $\frac{3}{10}-\frac{1}{20}=\frac{1}{4}$. \\
+$=\frac{1}{18}+\frac{1}{4}$ \\
+$=\frac{2+9}{36}=\frac{11}{36}$.
+
+@q 3
+@topic Poisson sum and binomial count
+@marks 10
+@question
+Tim and Sue are each typing a manuscript and they make errors at random. On average, Tim makes 0.45 errors per page and Sue makes 0.2 errors per page. \\
+A random sample of $n$ pages of Tim's typing is taken. The probability that these $n$ pages contain no errors is less than $0.05$. \\
+(a) Find the smallest possible value of $n$. (3) \\
+The random variable $X$ represents the total number of errors in a random sample of 5 pages of Tim's typing and 5 pages of Sue's typing. \\
+(b) Find $P(X=2)$, stating a necessary assumption. (3) \\
+Random samples, each consisting of 5 pages of Tim's typing and 5 pages of Sue's typing, are selected. \\
+(c) Find the probability that in 10 of these samples there are at least 2 with no errors. (4)
+@scheme
+(a) The Poisson mean for $n$ Tim pages is $0.45n$. M1 3.1b \\
+$P(\text{no errors})=e^{-0.45n}<0.05$. M1 1.1b \\
+$n>6.65718\ldots$, so the smallest integer is $7$. A1 1.1b (3) \\
+(b) Assuming Tim's and Sue's errors are independent, the total is Poisson with mean $5(0.45)+5(0.2)=3.25$. M1 3.3, B1 3.5b \\
+$P(X=2)=e^{-3.25}\frac{3.25^2}{2!}=0.204776\ldots$, about $0.205$. A1 1.1b (3) \\
+(c) For each sample, $P(X=0)=e^{-3.25}=0.038774\ldots$. M1 3.1b \\
+The count $Y$ of no-error samples in ten is binomial with $n=10$, $p=e^{-3.25}$. M1 3.3 \\
+$P(Y\geq2)=1-P(Y\leq1)$. M1 1.1b \\
+$=0.0550032\ldots$, about $0.0550$. A1 1.1b (4) \\
+Notes: \\
+(a) M1: Poisson mean. M1: Inequality. A1: $7$. \\
+(b) M1: Combined Poisson mean. A1: About $0.205$. B1: Independence. \\
+(c) M1: Zero-error probability. M1: Binomial count. M1: Complement. A1: About $0.055$.
+@model
+(a) Errors on $n$ of Tim's pages have Poisson mean $0.45n$. \\
+The probability of zero errors is $e^{-0.45n}$. \\
+Require $e^{-0.45n}<0.05$. \\
+Take natural logs: $-0.45n<\ln(0.05)$. \\
+Divide by $-0.45$, reversing the inequality: \\
+$n>\frac{-\ln(0.05)}{0.45}=6.6571828\ldots$. \\
+The smallest integer is $n=7$. \\
+(b) Tim's five pages have Poisson mean $5(0.45)=2.25$. \\
+Sue's five pages have Poisson mean $5(0.2)=1$. \\
+Assume their errors occur independently. \\
+Then the combined count $X$ has Poisson mean $2.25+1=3.25$. \\
+$P(X=2)=e^{-3.25}\frac{3.25^2}{2!}$ \\
+$=0.2047762851\ldots\approx0.205$. \\
+(c) For one ten-page sample, the probability of no errors is $q=P(X=0)=e^{-3.25}$. \\
+$=0.0387742078\ldots$. \\
+Let $Y$ count no-error samples among ten independent samples. \\
+$Y$ has a binomial distribution with $n=10$, $p=q$. \\
+$P(Y\geq2)=1-P(Y=0)-P(Y=1)$. \\
+$=1-(1-q)^{10}-10q(1-q)^9$. \\
+$=0.0550031832\ldots\approx0.0550$.
+
+@q 4
+@topic Generating functions and second moments
+@marks 14
+@question
+The discrete random variable $X$ has a binomial distribution with parameters $n,p$ and probability generating function $G_X(t)=(0.4+0.6t)^2$. \\
+(a) Write down the value of $n$ and the value of $p$. (2) \\
+Using the probability generating function, find \\
+(b)(i) $P(X=1)$. (2) \\
+(ii) $E(X)$. (3) \\
+Two independent observations, $X_1$ and $X_2$, are taken from the distribution of $X$. The random variable $Y=X_1+X_2$. \\
+(c) Use calculus to show that $E(Y^2)=6.72$. (7)
+@scheme
+(a) $n=2$ and $p=0.6$. B1 1.1b, B1 1.1b (2) \\
+(b)(i) $G_X(t)=0.16+0.48t+0.36t^2$; $P(X=1)$ is the coefficient of $t$. M1 1.1b \\
+$P(X=1)=0.48$. A1 1.1b (2) \\
+(ii) $E(X)=G'_X(1)$. M1 2.1 \\
+$G'_X(t)=2(0.4+0.6t)(0.6)$. M1 1.1b \\
+$G'_X(1)=1.2$. A1 1.1b (3) \\
+(c) Independence gives $G_Y(t)=G_X(t)^2=(0.4+0.6t)^4$. B1 3.1a \\
+$G'_Y(t)=4(0.4+0.6t)^3(0.6)$; $G'_Y(1)=2.4$. M1 2.1, A1 1.1b \\
+$G''_Y(t)=7.2(0.4+0.6t)^2(0.6)$; $G''_Y(1)=4.32$. M1 2.1, A1 1.1b \\
+$E(Y^2)=G''_Y(1)+G'_Y(1)$. M1 1.1b \\
+$=4.32+2.4=6.72$. A1* 1.1b (7) \\
+Notes: \\
+(a) B1: $n=2$. B1: $p=0.6$. \\
+(b) M1: Expand for coefficient. A1: $0.48$. M1: Mean from derivative. M1: Differentiate. A1: $1.2$. \\
+(c) B1: Product of generating functions. M1: First derivative. A1: $2.4$. M1: Second derivative. A1: $4.32$. M1: Second-moment identity. A1: $6.72$.
+@model
+(a) The binomial generating function is $(1-p+pt)^n$. \\
+Compare $(0.4+0.6t)^2$: $n=2$ and $p=0.6$. \\
+(b)(i) Expand the square: \\
+$G_X(t)=(0.4)^2+2(0.4)(0.6)t+(0.6)^2t^2$. \\
+$=0.16+0.48t+0.36t^2$. \\
+The coefficient of $t^1$ is $P(X=1)=0.48$. \\
+(ii) Use $E(X)=G'_X(1)$. \\
+Differentiate with the chain rule: \\
+$G'_X(t)=2(0.4+0.6t)(0.6)$. \\
+Put $t=1$: $G'_X(1)=2(1)(0.6)=1.2$. \\
+Therefore $E(X)=1.2$. \\
+(c) Independence gives $G_Y(t)=G_{X_1}(t)G_{X_2}(t)$. \\
+$=(0.4+0.6t)^2(0.4+0.6t)^2$ \\
+$=(0.4+0.6t)^4$. \\
+Differentiate: \\
+$G'_Y(t)=4(0.4+0.6t)^3(0.6)$. \\
+$=2.4(0.4+0.6t)^3$. \\
+At $t=1$, $G'_Y(1)=2.4(1)^3=2.4$. \\
+Differentiate again: \\
+$G''_Y(t)=2.4(3)(0.4+0.6t)^2(0.6)$. \\
+$=4.32(0.4+0.6t)^2$. \\
+At $t=1$, $G''_Y(1)=4.32$. \\
+Since $G''_Y(1)=E[Y(Y-1)]=E(Y^2)-E(Y)$, \\
+$E(Y^2)=G''_Y(1)+G'_Y(1)$. \\
+$=4.32+2.4$ \\
+$=6.72$, as required.
+
+@q 5
+@topic Geometric critical region and size
+@marks 9
+@question
+A company claims that the proportion of visitors to its website who make a purchase is 0.03. Nina believes that the proportion of visitors to the website who make a purchase is less than 0.03 and asks the company for some data to test this. \\
+The company tells Nina, for a particular day, the number of visits to its website until a purchase is made. Nina assumes that visits to the website are made independently and that each visitor has the same probability of making a purchase. \\
+(a) Using a 5% level of significance, find the critical region for this test. State your hypotheses clearly. (5) \\
+(b) Find the actual level of significance for this test. (2) \\
+The 94th visitor to the website was the first person to make a purchase. \\
+(c) Test, at the 5% level of significance, whether or not there is evidence that the proportion of visitors who make a purchase is less than 0.03. (2)
+@scheme
+(a) $H_0:p=0.03$; $H_1:p<0.03$. B1 2.5 \\
+Let $X$ count visits up to the first purchase; under $H_0$, it is geometric with $p=0.03$. M1 3.3 \\
+For upper region $X\geq c$, $P(X\geq c)=(0.97)^{c-1}<0.05$. M1 3.4 \\
+$c-1>\frac{\log(0.05)}{\log(0.97)}=98.35\ldots$. M1 1.1b \\
+Critical region $X\geq100$. A1 2.2a (5) \\
+(b) Actual significance is $P(X\geq100)=(0.97)^{99}$. M1 3.4 \\
+$=0.0490232\ldots$, about $0.0490$. A1 1.1b (2) \\
+(c) $94$ is not in the critical region. M1 1.1b \\
+Do not reject $H_0$; insufficient evidence at 5% that the purchase proportion is below $0.03$. A1 2.2b (2) \\
+Notes: \\
+(a) B1: Hypotheses. M1: Geometric model. M1: Upper tail. M1: Solve inequality. A1: Correct region. \\
+(b) M1: Tail probability. A1: About $0.0490$. \\
+(c) M1: Compare $94$ with region. A1: Contextual conclusion.
+@model
+(a) Let $p$ be a visitor's purchase probability. \\
+Use $H_0:p=0.03$ and $H_1:p<0.03$. \\
+Let $X$ count visits up to and including the first purchase. \\
+Under $H_0$, $X$ is geometric with $p=0.03$. \\
+A lower purchase probability makes longer waits more likely, so use $X\geq c$. \\
+The geometric upper tail is $P(X\geq c)=(1-p)^{c-1}$. \\
+Under $H_0$, $P(X\geq c)=0.97^{c-1}$. \\
+Require $0.97^{c-1}<0.05$. \\
+Take logs: $(c-1)\log(0.97)<\log(0.05)$. \\
+Divide by the negative $\log(0.97)$ and reverse the inequality: \\
+$c-1>\frac{\log(0.05)}{\log(0.97)}=98.352\ldots$. \\
+Thus $c>99.352\ldots$ and the smallest integer is $100$. \\
+Check $c=99$: $0.97^{98}=0.05054\ldots>0.05$. \\
+Check $c=100$: $0.97^{99}=0.0490232\ldots<0.05$. \\
+The critical region is $X\geq100$. \\
+(b) Under $H_0$, the actual Type I error probability is the critical tail. \\
+$P(X\geq100)=0.97^{99}$ \\
+$=0.0490232040\ldots\approx0.0490$, or about $4.90\%$. \\
+(c) The observed first purchase was at $X=94$. \\
+Since $94<100$, it is outside the critical region. \\
+Do not reject $H_0$; there is insufficient evidence at 5% that the purchase proportion is below $0.03$.
+
+@q 6
+@topic Normal test power and sample size
+@marks 15
+@question
+The weights of bars of soap are known to be normally distributed. The standard deviation of the weights is 3 grams. A label on the bars of soap states that the mean weight is 120 grams. Gizel believes that the mean weight of the bars of soap is greater than 120 grams. She takes a random sample of 10 bars of soap and finds the mean weight of her sample. Gizel then tests, at the 5% level of significance, whether there is evidence that the bars of soap weigh more than 120 grams. \\
+(a) Write down the probability of a Type I error. (1) \\
+Given that the true mean weight of the bars of soap is 122 grams, \\
+(b) show that the power of Gizel's test is 0.68 to 2 significant figures. (5) \\
+Alex decides to carry out the same test at the 1% level of significance. \\
+(c) Without carrying out the test, compare the power of Alex's test with the power of Gizel's test. Give a reason for your answer. (2) \\
+Joseph decides to increase the sample size and carry out the test at the 5% level of significance. Assuming that the true mean weight of the bars of soap is 122 grams, \\
+(d) calculate the smallest sample size that will produce a power of at least 0.9. (5) \\
+(e) State which of Gizel's and Joseph's tests should be used. Give a reason for your answer. (2)
+@scheme
+(a) Probability of a Type I error is $0.05$. B1 1.2 (1) \\
+(b) For ten bars under $H_0$, sample mean is normal with mean $120$ and variance $3^2/10$. M1 3.1b \\
+Upper 5% critical value satisfies $\frac{c-120}{3/\sqrt{10}}=1.64485\ldots$. M1 3.4 \\
+$c=121.56045\ldots$. A1 1.1b \\
+At true mean $122$, power $=P(\text{sample mean}>c)$. M1 2.1 \\
+$=0.6784366\ldots=0.68$ to 2 significant figures. A1* 1.1b (5) \\
+(c) Alex's 1% test has a smaller rejection region, so its power is lower. B1 2.2a, B1 2.4 (2) \\
+(d) At size 5%, $c_n=120+1.64485\ldots\frac{3}{\sqrt{n}}$. M1 3.4, A1 1.1b \\
+At true mean $122$, require $P(\text{sample mean}>c_n)\geq0.9$. M1 2.1 \\
+This gives $\sqrt{n}\geq\frac{3(1.64485\ldots+1.28155\ldots)}{2}=4.3896\ldots$. M1 1.1b \\
+The smallest whole sample size is $n=20$. A1 1.1b (5) \\
+(e) Both tests have size 5%, but Joseph's larger sample has greater power. M1 2.4 \\
+Recommend Joseph's test. A1 2.2b (2) \\
+Notes: \\
+(a) B1: $0.05$. \\
+(b) M1: Normal sample mean. M1: Upper critical value. A1: Correct value. M1: Power at mean $122$. A1: $0.68$. \\
+(c) B1: Lower power. B1: Smaller rejection region. \\
+(d) M1: Critical rule in $n$. A1: Correct expression. M1: Power condition. M1: Solve. A1: $20$. \\
+(e) M1: Compare power at equal size. A1: Recommend Joseph.
+@model
+(a) A Type I error rejects a true $H_0$. \\
+The 5% test has Type I error probability $0.05$. \\
+(b) Under $H_0$, the sample mean of ten bars is normal with mean $120$ and standard deviation $\frac{3}{\sqrt{10}}$. \\
+Let the critical rule be sample mean $>c$. \\
+For an upper 5% tail, the standard normal critical value is $1.6448536\ldots$. \\
+$\frac{c-120}{3/\sqrt{10}}=1.6448536\ldots$. \\
+Multiply by $3/\sqrt{10}$: \\
+$c=120+1.6448536\ldots\frac{3}{\sqrt{10}}$ \\
+$=121.560445\ldots$. \\
+At true mean $122$, the sample mean still has standard deviation $3/\sqrt{10}$. \\
+Power is $P(\text{sample mean}>121.560445\ldots)$. \\
+Standardise under the true mean: \\
+$z=\frac{121.560445\ldots-122}{3/\sqrt{10}}=-0.46334\ldots$. \\
+$P(Z>-0.46334\ldots)=0.6784366\ldots$. \\
+Therefore the power is $0.68$ to 2 significant figures. \\
+(c) Reducing significance from 5% to 1% raises the upper critical value. \\
+That makes rejection less likely at true mean $122$, so Alex's test has lower power. \\
+(d) For $n$ bars under $H_0$, the sample mean has standard deviation $3/\sqrt{n}$. \\
+At 5%, the upper critical value is $c_n=120+1.6448536\ldots\frac{3}{\sqrt{n}}$. \\
+Under true mean $122$, power is $P(\text{sample mean}>c_n)$. \\
+For power at least $0.9$, require the lower-tail probability at $c_n$ to be at most $0.1$. \\
+The 10% lower standard normal quantile is $-1.2815516\ldots$. \\
+$\frac{c_n-122}{3/\sqrt{n}}\leq-1.2815516\ldots$. \\
+Substitute $c_n$: $\frac{-2+1.6448536\ldots(3/\sqrt{n})}{3/\sqrt{n}}\leq-1.2815516\ldots$. \\
+Rearrange: $\frac{2\sqrt{n}}{3}\geq1.6448536\ldots+1.2815516\ldots$. \\
+$\sqrt{n}\geq4.3896078\ldots$. \\
+Square: $n\geq19.26865\ldots$. \\
+The smallest integer is $n=20$. \\
+Check: at $n=19$, power is below $0.9$; at $n=20$, it is $0.9093185\ldots$. \\
+(e) Both Gizel's and Joseph's tests have size 5%, but Joseph's larger sample reaches power above $0.9$. \\
+Use Joseph's test, because it is less likely to miss a true mean of 122 grams.
+
+@q 7
+@topic Negative binomial count and CLT
+@marks 11
+@question
+A radio station is running a contest each day for 30 days. Each day it awards a prize to each of the first 12 callers who phone in and answer a question correctly. Once 12 prizes are awarded, no more calls are taken that day. It can be assumed that each caller has a $\frac{3}{4}$ chance of answering a question correctly, independently of all other callers. \\
+(a) Find the probability that there are exactly 15 calls taken on the first day. (2) \\
+(b) Find the probability that there are more than 13 calls taken on the first day. (3) \\
+(c) Estimate the probability that the mean number of calls taken over the 30 days is more than 15.5. (6)
+@scheme
+(a) Number of calls to the 12th correct answer has negative binomial parameters $r=12$, $p=\frac{3}{4}$. M1 3.3 \\
+$P(X=15)=14C11\left(\frac{3}{4}\right)^{12}\left(\frac{1}{4}\right)^3=0.180159\ldots$, about $0.180$. A1 1.1b (2) \\
+(b) $P(X>13)=1-[P(X=12)+P(X=13)]$. B1 3.1b \\
+$=1-\left[\left(\frac{3}{4}\right)^{12}+12\left(\frac{3}{4}\right)^{12}\frac{1}{4}\right]$. M1 1.1b \\
+$=0.8732946\ldots$, about $0.873$. A1 1.1b (3) \\
+(c) For negative binomial $X$, $E(X)=\frac{12}{3/4}=16$. M1 3.1b \\
+$\mathrm{Var}(X)=\frac{12(1/4)}{(3/4)^2}=\frac{16}{3}$. A1 1.1b \\
+By the central limit theorem, the 30-day mean is approximately normal with mean $16$ and variance $\frac{16/3}{30}=\frac{8}{45}$. M1 3.1b, A1ft 1.1b \\
+$P(\text{sample mean}>15.5)\approx P\left(Z>\frac{15.5-16}{\sqrt{8/45}}\right)$. M1 3.4 \\
+$=0.882160\ldots$, about $0.882$. A1 1.1b (6) \\
+Notes: \\
+(a) M1: Negative binomial model. A1: About $0.180$. \\
+(b) B1: Complement. M1: Both terms. A1: About $0.873$. \\
+(c) M1: Mean. A1: Variance. M1: CLT. A1ft: Sample mean distribution. M1: Standardise. A1: About $0.882$.
+@model
+Let $X$ be the number of calls up to and including the 12th correct answer in a day. \\
+Each call succeeds independently with $p=\frac{3}{4}$, so $X$ has a negative binomial distribution with $r=12$. \\
+(a) To finish on call 15, exactly 11 of the first 14 calls succeed, and call 15 succeeds. \\
+Choose the 11 successful places among the first 14 in $14C11$ ways. \\
+$P(X=15)=14C11\left(\frac{3}{4}\right)^{11}\left(\frac{1}{4}\right)^3\left(\frac{3}{4}\right)$. \\
+$=14C11\left(\frac{3}{4}\right)^{12}\left(\frac{1}{4}\right)^3$. \\
+$=0.1801592521\ldots\approx0.180$. \\
+(b) Use the complement of finishing on call 12 or 13. \\
+$P(X=12)=\left(\frac{3}{4}\right)^{12}$. \\
+For $X=13$, one of the first 12 calls fails, then call 13 succeeds. \\
+$P(X=13)=12\left(\frac{3}{4}\right)^{12}\left(\frac{1}{4}\right)$. \\
+$P(X>13)=1-P(X=12)-P(X=13)$. \\
+$=1-\left(\frac{3}{4}\right)^{12}-12\left(\frac{3}{4}\right)^{12}\left(\frac{1}{4}\right)$. \\
+$=0.8732945919\ldots\approx0.873$. \\
+(c) For a negative binomial count to $r$ successes, $E(X)=r/p$. \\
+$E(X)=\frac{12}{3/4}=16$. \\
+Use $\mathrm{Var}(X)=\frac{r(1-p)}{p^2}$. \\
+$=\frac{12(1/4)}{(3/4)^2}$ \\
+$=\frac{3}{9/16}=\frac{16}{3}$. \\
+For 30 independent days, use the central limit theorem. \\
+The sample mean is approximately normal with mean $16$. \\
+Its variance is $\frac{16/3}{30}=\frac{8}{45}$. \\
+Its standard deviation is $\sqrt{8/45}=0.421637\ldots$. \\
+Standardise $15.5$: $z=\frac{15.5-16}{\sqrt{8/45}}=-1.185854\ldots$. \\
+$P(\text{sample mean}>15.5)\approx P(Z>-1.185854\ldots)$ \\
+$=0.8821600433\ldots\approx0.882$.

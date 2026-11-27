@@ -1,0 +1,199 @@
+@paper FS1 Mock Set 3
+
+@q 1
+@topic Discrete expectation and variance
+@marks 11
+@question
+(a) Multiply each possible value of $X$ by its probability. \\
+$E(X)=(-a)(0.1)+0(0.25)+1(0.1)+a(0.3)+4(0.25)$. \\
+Collect like terms: $E(X)=-0.1a+0.1+0.3a+1$. \\
+$E(X)=0.2a+1.1=\frac{a}{5}+\frac{11}{10}$. \\
+(b)(i) First calculate the second moment. \\
+$E(X^2)=(-a)^2(0.1)+0^2(0.25)+1^2(0.1)+a^2(0.3)+4^2(0.25)$. \\
+$=0.4a^2+4.1$. \\
+Use $\mathrm{Var}(X)=E(X^2)-[E(X)]^2$. \\
+$4.04=0.4a^2+4.1-(0.2a+1.1)^2$. \\
+Expand the square: $(0.2a+1.1)^2=0.04a^2+0.44a+1.21$. \\
+Hence $4.04=0.36a^2-0.44a+2.89$. \\
+Subtract $4.04$ from both sides: $0=0.36a^2-0.44a-1.15$. \\
+Multiply by $100$: $36a^2-44a-115=0$, as required. \\
+(b)(ii) Factor the quadratic: \\
+$36a^2-44a-115=(2a-5)(18a+23)=0$. \\
+Thus $a=\frac{5}{2}$ or $a=-\frac{23}{18}$. \\
+Since $a>1$, $a=\frac{5}{2}=2.5$. \\
+(c) Adding $1$ does not change variance, and multiplying by $2$ multiplies variance by $2^2$. \\
+$\mathrm{Var}(2X+1)=2^2\mathrm{Var}(X)=4(4.04)=16.16$. \\
+(d) Solve the inequality first. \\
+$X^2+3X>10$ is $X^2+3X-10>0$. \\
+Factor: $(X+5)(X-2)>0$. \\
+Therefore $X<-5$ or $X>2$. \\
+With $a=2.5$, the possible values are $-2.5,0,1,2.5,4$. \\
+Only $2.5$ and $4$ satisfy the inequality. \\
+$P(X^2+3X>10)=P(X=2.5)+P(X=4)$. \\
+$=0.3+0.25=0.55$.
+
+@q 2
+@topic Poisson model and hypothesis test
+@marks 12
+@question
+(a) In 15 minutes the Poisson mean is $3(2.5)=7.5$. \\
+Let $X$ be the number of orders, so $X$ has Poisson mean $7.5$. \\
+(i) $P(X=6)=e^{-7.5}\frac{7.5^6}{6!}$. \\
+$=0.1367182434\ldots\approx0.137$. \\
+(ii) $P(X\leq8)=\sum_{k=0}^{8}e^{-7.5}\frac{7.5^k}{k!}$. \\
+$=0.6619671191\ldots\approx0.662$. \\
+(b) Orders must occur independently at a constant average rate. \\
+(c) Let $\lambda$ be the mean number of orders per 5 minutes after the campaign. \\
+$H_0:\lambda=2.5$ and $H_1:\lambda\neq2.5$. \\
+Equivalently, the 20-minute mean under $H_0$ is $4(2.5)=10$. \\
+(d) Let $Y$ be the number of orders in 20 minutes. Under $H_0$, $Y$ has Poisson mean $10$. \\
+This is a two-sided 5% test, so seek at most $0.025$ in each tail. \\
+Lower tail: $P(Y\leq3)=0.0103361\ldots\leq0.025$, but $P(Y\leq4)=0.0292527\ldots>0.025$. \\
+Upper tail: $P(Y\geq18)=0.0142776\ldots\leq0.025$, but $P(Y\geq17)=0.0270416\ldots>0.025$. \\
+The critical region is $Y\leq3$ or $Y\geq18$. \\
+(e) Its size is the probability of rejection when $H_0$ is true. \\
+$P(Y\leq3)+P(Y\geq18)$ \\
+$=0.0103360507\ldots+0.0142776136\ldots$ \\
+$=0.0246136643\ldots\approx0.0246$, or $2.46\%$. \\
+(f) Let $R$ be the number of returned orders. $R$ is binomial with $n=350$, $p=0.02$. \\
+Since $n$ is large and $p$ small, approximate by a Poisson distribution with mean $np=350(0.02)=7$. \\
+$P(R>6)\approx1-P(\mathrm{Po}(7)\leq6)$. \\
+$=1-\sum_{k=0}^{6}e^{-7}\frac{7^k}{k!}$. \\
+$=0.5502889442\ldots\approx0.550$.
+
+@q 3
+@topic Chi-squared binomial goodness of fit
+@marks 10
+@question
+(a) There are $50(8)=400$ recorded hours and $6(400)=2400$ people contacted. \\
+The number who respond is $0(33)+1(106)+2(132)+3(72)+4(38)+5(12)+6(7)$. \\
+$=106+264+216+152+60+42=840$. \\
+The estimated response probability is $p=\frac{840}{2400}=0.35$. \\
+(b) Under the proposed model, the hourly response count is binomial with $n=6$, $p=0.35$. \\
+For 400 hours, the expected frequency at count $k$ is $400(6Ck)(0.35)^k(0.65)^{6-k}$. \\
+$r=400(0.65)^6=30.16755625\ldots=30.17$. \\
+$s=400(6C4)(0.35)^4(0.65)^2$. \\
+$=38.04084375\ldots=38.04$. \\
+(c) $H_0$: the hourly counts follow a binomial distribution with $n=6$, $p=0.35$. \\
+$H_1$: they do not follow this distribution. \\
+The expected frequency for count $6$ is $0.73530625$, below $5$. \\
+Combine the $5$ and $6$ categories: observed $12+7=19$; expected $8.1934125+0.73530625=8.92871875$. \\
+The six grouped observed frequencies are $33,106,132,72,38,19$. \\
+The six grouped expected frequencies are $30.16756,97.46441,131.20209,94.19638,38.04084,8.92872$. \\
+Use test statistic $T=\sum\frac{(O-E)^2}{E}$. \\
+$T=\frac{(33-30.16756)^2}{30.16756}+\frac{(106-97.46441)^2}{97.46441}$ \\
+$+\frac{(132-131.20209)^2}{131.20209}+\frac{(72-94.19638)^2}{94.19638}$ \\
+$+\frac{(38-38.04084)^2}{38.04084}+\frac{(19-8.92872)^2}{8.92872}$. \\
+$=17.60874364\ldots\approx17.6$. \\
+One parameter, $p$, was estimated from these data. \\
+Degrees of freedom $=6-1-1=4$. \\
+The 5% upper critical value is $9.488$ for four degrees of freedom. \\
+Since $17.6>9.488$, reject $H_0$. \\
+There is evidence that Morgan's binomial model is not a good fit.
+
+@q 4
+@topic Geometric distribution and CLT
+@marks 7
+@question
+(a) On each selection, the probability of "Rocking Sums" is $p=\frac{1}{8}$. \\
+Let $X$ be the number of selections up to and including the first time it plays. \\
+$X$ has a geometric distribution with success probability $\frac{1}{8}$. \\
+$E(X)=\frac{1}{p}=8$. \\
+$\mathrm{Var}(X)=\frac{1-p}{p^2}=\frac{7/8}{(1/8)^2}=56$. \\
+For 60 independently selected days, let $M$ be the mean of the 60 counts. \\
+By the central limit theorem, $M$ is approximately normal with mean $8$. \\
+Its variance is $\frac{56}{60}=\frac{14}{15}$. \\
+Its standard deviation is $\sqrt{14/15}=0.9660918\ldots$. \\
+Standardise $8.9$: $z=\frac{8.9-8}{\sqrt{14/15}}=0.9315885\ldots$. \\
+$P(M>8.9)\approx P(Z>0.9315885\ldots)$. \\
+$=0.1757746130\ldots\approx0.176$. \\
+(b) The mean of geometric counts is discrete and is only approximately normal for a finite sample of 60 days; the central limit theorem gives an estimate.
+
+@q 5
+@topic Chi-squared association and fit
+@marks 12
+@question
+(a) Under independence, expected frequency $=\frac{\text{row total}\times\text{column total}}{\text{grand total}}$. \\
+(i) Card and Rural: $\frac{84(156)}{350}=\frac{13104}{350}=37.44$. \\
+(ii) Mobile payment and Urban: $\frac{147(100)}{350}=42$. \\
+(b) There are three row categories and three column categories. \\
+Degrees of freedom $=(3-1)(3-1)=4$. \\
+(c) $H_0$: location and method of payment are independent. \\
+At 10% with four degrees of freedom, the upper chi-squared critical value is $7.779$. \\
+The given statistic $12.7$ exceeds $7.779$, so reject $H_0$. \\
+There is evidence of an association between location and payment method. \\
+(d) This is a goodness-of-fit test on the three column totals. \\
+$H_0$: cash, card and mobile payment have probabilities $\frac{2}{10},\frac{5}{10},\frac{3}{10}$. \\
+$H_1$: their probabilities do not have this ratio. \\
+From 350 customers, expected counts are $350(\frac{2}{10})=70$, $350(\frac{5}{10})=175$, $350(\frac{3}{10})=105$. \\
+All expected counts exceed $5$. \\
+Observed counts are $94,156,100$. \\
+$T=\frac{(94-70)^2}{70}+\frac{(156-175)^2}{175}+\frac{(100-105)^2}{105}$. \\
+$=\frac{576}{70}+\frac{361}{175}+\frac{25}{105}$. \\
+$=8.2285714\ldots+2.0628571\ldots+0.2380952\ldots$. \\
+$=10.5295238\ldots\approx10.5$. \\
+There are $3-1=2$ degrees of freedom; no probability was estimated from the data. \\
+At 5%, the upper chi-squared critical value is $5.991$. \\
+Since $10.5>5.991$, reject $H_0$. \\
+The payment proportions are not in the ratio $2:5:3$.
+
+@q 6
+@topic Geometric negative binomial binomial
+@marks 10
+@question
+(a)(i) "For the 1st time after the 4th order" means the first four orders contain no pastry. \\
+Each no-pastry probability is $1-0.6=0.4$. \\
+$P(\text{first pastry after order }4)=0.4^4=0.0256$. \\
+(ii) To have the fifth pastry on order 14, exactly four of the first 13 orders include a pastry, and order 14 does too. \\
+$P=(13C4)(0.6)^4(0.4)^9(0.6)$. \\
+$=(13C4)(0.6)^5(0.4)^9$. \\
+$=0.01457478697\ldots\approx0.0146$. \\
+(iii) Choose the three pastry orders among 12. \\
+$P=(12C3)(0.6)^3(0.4)^9$. \\
+$=0.01245708288\ldots\approx0.0125$. \\
+(b) Independence gives probability $0.6p$ that one order includes both pastry and drink. \\
+The chance of no such order in seven independent orders is $(1-0.6p)^7$. \\
+Hence $P(\text{first such order within seven})=1-(1-0.6p)^7$. \\
+The given condition is $1-(1-0.6p)^7<0.9$. \\
+Subtract $1$: $-(1-0.6p)^7<-0.1$. \\
+Multiply by $-1$ and reverse the inequality: $(1-0.6p)^7>0.1$. \\
+Take the positive seventh root: $1-0.6p>0.1^{1/7}$. \\
+Rearrange: $p<\frac{1-0.1^{1/7}}{0.6}$. \\
+$p<0.467190544998\ldots$. \\
+As $p$ is a probability, the range is $0\leq p<0.467$ to 3 significant figures.
+
+@q 7
+@topic Probability generating function calculus
+@marks 13
+@question
+(a) Every probability generating function has $G_X(1)=1$. \\
+$G_X(1)=\frac{a}{b-1}=1$. \\
+Thus $a=b-1$, so $b=a+1$. \\
+(b) Differentiate $G_X(t)=at(b-t^3)^{-1}$ using the product and chain rules. \\
+$G_X'(t)=a(b-t^3)^{-1}+at[-1(b-t^3)^{-2}(-3t^2)]$. \\
+$=\frac{a}{b-t^3}+\frac{3at^3}{(b-t^3)^2}$. \\
+Put over a common denominator: $G_X'(t)=\frac{a(b-t^3)+3at^3}{(b-t^3)^2}$. \\
+$=\frac{a(b+2t^3)}{(b-t^3)^2}$. \\
+Since $E(X)=G_X'(1)=2.4$, substitute $t=1$ and $b-1=a$. \\
+$2.4=\frac{a(b+2)}{(b-1)^2}=\frac{b+2}{a}$. \\
+Since $b=a+1$, $2.4=\frac{a+3}{a}=1+\frac{3}{a}$. \\
+Therefore $1.4=\frac{3}{a}$, so $a=\frac{3}{1.4}=\frac{15}{7}$. \\
+$b=a+1=\frac{15}{7}+1=\frac{22}{7}$. \\
+(c) Differentiate $G_X'(t)=a(b+2t^3)(b-t^3)^{-2}$. \\
+$G_X''(t)=a[6t^2(b-t^3)^{-2}+(b+2t^3)(-2)(b-t^3)^{-3}(-3t^2)]$. \\
+$=\frac{6at^2}{(b-t^3)^2}+\frac{6at^2(b+2t^3)}{(b-t^3)^3}$. \\
+Combine: $G_X''(t)=\frac{6at^2[(b-t^3)+(b+2t^3)]}{(b-t^3)^3}$. \\
+$=\frac{6at^2(2b+t^3)}{(b-t^3)^3}$. \\
+$G_X''(1)=\frac{6a(2b+1)}{(b-1)^3}=\frac{6(2b+1)}{a^2}$. \\
+Substitute $a=\frac{15}{7}$ and $b=\frac{22}{7}$: \\
+$G_X''(1)=\frac{6(2(22/7)+1)}{(15/7)^2}=\frac{238}{25}=9.52$. \\
+Since $G_X''(1)=E[X(X-1)]$, use $\mathrm{Var}(X)=G_X''(1)+E(X)-[E(X)]^2$. \\
+$=\frac{238}{25}+\frac{12}{5}-\left(\frac{12}{5}\right)^2$. \\
+$=\frac{238+60-144}{25}=\frac{154}{25}=6.16$. \\
+(d) Expand the generating function as a geometric series near $t=0$. \\
+$G_X(t)=\frac{a}{b}t\frac{1}{1-t^3/b}$. \\
+$=\frac{a}{b}t\left[1+\frac{t^3}{b}+\frac{t^6}{b^2}+\cdots\right]$. \\
+$=\frac{a}{b}t+\frac{a}{b^2}t^4+\frac{a}{b^3}t^7+\cdots$. \\
+The coefficient of $t^7$ is $P(X=7)=\frac{a}{b^3}$. \\
+$=\frac{15/7}{(22/7)^3}=\frac{735}{10648}$. \\
+$=0.0690270473\ldots\approx0.0690$.

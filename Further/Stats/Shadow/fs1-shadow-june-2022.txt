@@ -1,0 +1,347 @@
+@paper FS1 Shadow June 2022
+@level A-Level
+
+@q 1
+@topic Binomial chi-square goodness of fit
+@marks 9
+@question
+A researcher is investigating the number of female cubs present in litters of size 5. He believes that the number of female cubs in a litter can be modelled by a binomial distribution with $n=5$, $p=0.5$. He randomly selects 200 litters each of size 5 and records the number of female cubs. The results are recorded in the table below. \\
+Number of female cubs: $0,1,2,3,4,5$. Observed number of litters: $11,22,60,72,19,16$. \\
+He calculated the expected frequencies as follows. \\
+Number of female cubs: $0,1,2,3,4,5$. Expected number of litters: $r,31.25,s,s,31.25,r$. \\
+(a) Find the value of $r$ and the value of $s$. (3) \\
+(b) Carry out a suitable test, at the 5% level of significance, to determine whether or not the number of female cubs in a litter can be modelled by binomial with $n=5$, $p=0.5$. You should clearly state your hypotheses and the critical value used. (6)
+@scheme
+(a) Under the model, expected frequency $=200(5Ck)(0.5)^5$. M1 3.4 \\
+$r=200(0.5)^5=6.25$. A1 1.1b \\
+$s=200(5C2)(0.5)^5=62.5$. A1 1.1b (3) \\
+(b) $H_0$: binomial with $n=5$, $p=0.5$ is suitable; $H_1$: it is not. B1 2.5 \\
+Statistic $=\sum\frac{(O_i-E_i)^2}{E_i}$ with expected values $6.25,31.25,62.5,62.5,31.25,6.25$. M1 1.1b \\
+$=27.904$, about $27.9$. A1 1.1b \\
+Degrees of freedom $=6-1=5$. B1 1.1b \\
+The 5% upper critical value is $11.070$. B1ft 1.1b \\
+$27.904>11.070$, so reject $H_0$; the proposed binomial model is unsuitable. A1 2.2b (6)
+@model
+(a) Under the proposed binomial model, each litter has five cubs and female probability $0.5$. \\
+For $k$ females, $P(X=k)=5Ck(0.5)^k(0.5)^{5-k}=5Ck(0.5)^5$. \\
+Multiply by 200 litters for expected frequencies. \\
+$r=200P(X=0)=200(5C0)(0.5)^5$. \\
+$=200/32=6.25$. \\
+$s=200P(X=2)=200(5C2)(0.5)^5$. \\
+$=200(10)/32=62.5$. \\
+Symmetry gives the same values for five and three females. \\
+(b) Under $H_0$, the binomial model with $n=5$, $p=0.5$ is suitable. \\
+Under $H_1$, it is unsuitable. \\
+The expected counts are $6.25,31.25,62.5,62.5,31.25,6.25$; all exceed five. \\
+Use the chi-square statistic $\sum\frac{(O-E)^2}{E}$. \\
+$=\frac{(11-6.25)^2}{6.25}+\frac{(22-31.25)^2}{31.25}$ \\
+$+\frac{(60-62.5)^2}{62.5}+\frac{(72-62.5)^2}{62.5}$ \\
+$+\frac{(19-31.25)^2}{31.25}+\frac{(16-6.25)^2}{6.25}$ \\
+$=3.61+2.738+0.1+1.444+4.802+15.21$ \\
+$=27.904$. \\
+There are six groups and no fitted parameter, so degrees of freedom $=6-1=5$. \\
+The 5% upper critical value is $11.070$. \\
+Since $27.904>11.070$, reject $H_0$. \\
+There is significant evidence at 5% that the proposed binomial model is unsuitable.
+
+@q 2
+@topic Discrete variance and quadratic inequality
+@marks 9
+@question
+The discrete random variable $X$ has probability distribution: $x=-7,-2,0,7,b$ with respective probabilities $0.4,0.15,0.2,0.15,0.1$, where $b$ is a constant and $b>7$. \\
+(a) Find $E(X)$ in terms of $b$. (1) \\
+Given that $\mathrm{Var}(X)=43.8875$, \\
+(b) find the value of $b$. (4) \\
+(c) Find $P(X^2<4-5X)$. (4)
+@scheme
+(a) $E(X)=(-7)(0.4)+(-2)(0.15)+7(0.15)+0.1b=0.1b-2.05$. B1 1.1b (1) \\
+(b) $E(X^2)=49(0.4)+4(0.15)+49(0.15)+0.1b^2=27.55+0.1b^2$. M1 1.1b \\
+Use $E(X^2)-[E(X)]^2=43.8875$. M1 3.1a \\
+$0.09b^2+0.41b-20.54=0$. M1 1.1b \\
+The roots are $13$ and $-158/9$; since $b>7$, $b=13$. A1 2.2a (4) \\
+(c) Test $X^2<4-5X$ at each possible $x$. M1 2.1 \\
+It holds for $x=-2$ and $x=0$, and fails for $-7,7,13$. A1ft 1.1b \\
+Thus $P(X^2<4-5X)=P(X=-2)+P(X=0)$. M1 2.2a \\
+$=0.15+0.2=0.35$. A1 1.1b (4)
+@model
+(a) Multiply each value by its probability. \\
+$E(X)=(-7)(0.4)+(-2)(0.15)+0(0.2)+7(0.15)+b(0.1)$. \\
+$=-2.8-0.3+1.05+0.1b$. \\
+$=0.1b-2.05$. \\
+(b) Use $E(X^2)=\sum x^2P(X=x)$. \\
+$E(X^2)=49(0.4)+4(0.15)+0+49(0.15)+0.1b^2$. \\
+$=19.6+0.6+7.35+0.1b^2$. \\
+$=27.55+0.1b^2$. \\
+Use $\mathrm{Var}(X)=E(X^2)-[E(X)]^2$. \\
+$43.8875=27.55+0.1b^2-(0.1b-2.05)^2$. \\
+Expand the square: $(0.1b-2.05)^2=0.01b^2-0.41b+4.2025$. \\
+Substitute and collect terms: \\
+$43.8875=23.3475+0.09b^2+0.41b$. \\
+Subtract $43.8875$: $0.09b^2+0.41b-20.54=0$. \\
+Multiply by 100: $9b^2+41b-2054=0$. \\
+Factor: $(b-13)(9b+158)=0$. \\
+Thus $b=13$ or $b=-158/9$. \\
+Reject the negative root because $b>7$. \\
+Hence $b=13$. \\
+(c) Rearrange $X^2<4-5X$ as $X^2+5X-4<0$. \\
+Check each support value. \\
+For $x=-7$, $49-35-4=10>0$: exclude. \\
+For $x=-2$, $4-10-4=-10<0$: include. \\
+For $x=0$, $-4<0$: include. \\
+For $x=7$, $49+35-4=80>0$: exclude. \\
+For $x=13$, $169+65-4=230>0$: exclude. \\
+Add the included probabilities: $P(X=-2)+P(X=0)=0.15+0.2=0.35$.
+
+@q 3
+@topic Independent Poisson processes
+@marks 14
+@question
+During the summer, mountain rescue team A receives calls for help randomly with a rate of 0.6 per day. \\
+(a) Find the probability that during the summer, mountain rescue team A receives at least 21 calls for help in 26 randomly selected days. (2) \\
+The leader of mountain rescue team A randomly selects 200 summer days from the last few years. She records the number of calls for help received on each of these days. \\
+(b) Using a Poisson approximation, estimate the probability of the leader finding at least 10 of these days when more than 2 calls for help was received by mountain rescue team A. (4) \\
+Mountain rescue team A believes that the number of calls for help per day is lower in the winter than in the summer. The number of calls for help received in 35 randomly selected winter days is 11. \\
+(c) Use a suitable test, at the 5% level of significance, to assess whether or not there is evidence that the number of calls for help per day is lower in the winter than in the summer. State your hypotheses clearly. (4) \\
+During the summer, mountain rescue team B receives calls for help randomly with a rate of 0.3 per day, independently of calls to mountain rescue team A. The random variable $C$ is the total number of calls for help received by mountain rescue teams A and B during a period of $n$ days in the summer. On a Monday in the summer, mountain rescue teams A and B each receive a call for help. \\
+Given that over the next $n$ days $P(C=0)<0.002$, \\
+(d) calculate the minimum value of $n$. (3) \\
+(e) Write down an assumption that needs to be made for the model to be appropriate. (1)
+@scheme
+(a) Over 26 days the Poisson mean is $26(0.6)=15.6$. M1 3.4 \\
+$P(X\geq21)=1-P(X\leq20)=0.1105899\ldots$, about $0.111$. A1 1.1b (2) \\
+(b) In one day, $P(S>2)$ for Poisson mean $0.6$ is $0.0231153\ldots$. B1 1.1b \\
+The count among 200 days is binomial with $n=200$, $p=0.0231153\ldots$. M1 3.3 \\
+Approximate by Poisson with mean $200p=4.6230576\ldots$. M1 3.4 \\
+$P(\text{count}\geq10)=1-P(\text{count}\leq9)=0.0201227\ldots$, about $0.0201$. A1 1.1b (4) \\
+(c) $H_0$: winter rate is $0.6$ per day; $H_1$: winter rate is below $0.6$ per day. B1 2.5 \\
+Under $H_0$, calls in 35 days have Poisson mean $21$. B1 3.3 \\
+$P(X\leq11)=0.0129048\ldots$. M1 1.1b \\
+This is below $0.05$; reject $H_0$. There is evidence at 5% of a lower winter call rate. A1 2.2b (4) \\
+(d) Independent rates add, so $C$ has Poisson mean $(0.6+0.3)n=0.9n$. M1 3.1b \\
+$P(C=0)=e^{-0.9n}<0.002$ gives $n>\frac{-\ln(0.002)}{0.9}=6.90512\ldots$. M1 1.1b \\
+The minimum integer is $n=7$. A1 1.1b (3) \\
+(e) The call rate is constant over days, or calls in disjoint periods are independent. B1 2.4 (1)
+@model
+(a) Let $X$ count calls to team A over 26 summer days. \\
+The Poisson mean is $26(0.6)=15.6$. \\
+$P(X\geq21)=1-P(X\leq20)$ \\
+$=0.1105898915\ldots\approx0.111$. \\
+(b) Let $S$ count calls to A in a single summer day, with Poisson mean $0.6$. \\
+The chance of more than two calls is $q=P(S>2)$. \\
+$=1-e^{-0.6}\left(1+0.6+\frac{0.6^2}{2!}\right)$ \\
+$=0.0231152878\ldots$. \\
+Let $D$ count these days among the 200 independent days. \\
+$D$ has a binomial distribution with $n=200$, $p=q$. \\
+Since $q$ is small, approximate $D$ by Poisson with mean $200q$. \\
+$=200(0.0231152878\ldots)=4.62305755\ldots$. \\
+$P(D\geq10)\approx1-P(D\leq9)$ \\
+$=0.0201226664\ldots\approx0.0201$. \\
+(c) Under $H_0$, the winter call rate remains $0.6$ per day. \\
+Under $H_1$, it is below $0.6$ per day. \\
+For 35 days under $H_0$, the Poisson mean is $35(0.6)=21$. \\
+The lower-tail probability of the observed 11 calls is $P(X\leq11)$. \\
+$=0.0129047670\ldots$. \\
+Since $0.0129047670\ldots<0.05$, reject $H_0$. \\
+There is significant evidence at 5% that team A receives fewer calls per day in winter. \\
+(d) Teams A and B have independent Poisson call processes. \\
+Their combined daily rate is $0.6+0.3=0.9$. \\
+Over the next $n$ days, $C$ has Poisson mean $0.9n$. \\
+The calls on the preceding Monday do not change the independent future count. \\
+$P(C=0)=e^{-0.9n}<0.002$. \\
+Take natural logs: $-0.9n<\ln(0.002)$. \\
+Divide by $-0.9$ and reverse the inequality: \\
+$n>\frac{-\ln(0.002)}{0.9}=6.905120\ldots$. \\
+The minimum whole number is $n=7$. \\
+(e) The rates of calls to each team must stay constant over the modelled days.
+
+@q 4
+@topic Geometric, binomial and negative binomial
+@marks 13
+@question
+In a game a spinner is spun repeatedly. When the spinner is spun, the probability of it landing on blue is 0.22. \\
+(a) Find the probability that the spinner lands on blue \\
+(i) for the first time on the 5th spin, (2) \\
+(ii) for the first time before the 5th spin, (2) \\
+(iii) exactly 3 times during the first 5 spins, (2) \\
+(iv) for the 3rd time on or before the 5th spin. (4) \\
+Zac and Izana play the game. They take turns to spin the spinner. The winner is the first one to have the spinner land on blue. Izana spins the spinner first. \\
+(b) Show that the probability of Zac winning is 0.438 to 3 significant figures. (3)
+@scheme
+(a)(i) For the first blue on spin 5, $P=(0.78)^4(0.22)=0.0814331\ldots$, about $0.0814$. M1 3.3, A1 1.1b (2) \\
+(ii) First blue before spin 5 means at least one blue in the first four: $P=1-(0.78)^4=0.629849\ldots$, about $0.630$. M1 3.1b, A1 1.1b (2) \\
+(iii) With binomial $n=5$, $p=0.22$, $P(X=3)=5C3(0.22)^3(0.78)^2=0.0647824\ldots$, about $0.0648$. M1 3.3, A1 1.1b (2) \\
+(iv) Let $Y$ be the spin of the third blue. $P(Y\leq5)=P(Y=3)+P(Y=4)+P(Y=5)$. M1 3.3, M1 3.1b \\
+$=(0.22)^3+3(0.22)^3(0.78)+6(0.22)^3(0.78)^2$. M1 3.4 \\
+$=0.0744338\ldots$, about $0.0744$. A1 1.1b (4) \\
+(b) Zac wins on spin $2,4,6,\ldots$, so $P=(0.78)(0.22)+(0.78)^3(0.22)+\cdots$. M1 3.1b \\
+Sum the geometric series: $P=\frac{0.78(0.22)}{1-(0.78)^2}$. M1 1.1b \\
+$=0.438202\ldots=0.438$ to 3 significant figures. A1* 2.1 (3) \\
+Note: The supplied scheme prints a fifth power of $0.78$ in part (a)(i), but its numerical answer is calculated with the fourth power. Four initial non-blue spins are required.
+@model
+(a)(i) First blue on spin 5 means four non-blue spins, then blue. \\
+Non-blue probability is $1-0.22=0.78$. \\
+$P=(0.78)^4(0.22)$ \\
+$=0.0814331232\ldots\approx0.0814$. \\
+(ii) "Before the 5th" means within spins 1 to 4. \\
+Use the complement of four non-blue spins: \\
+$P=1-(0.78)^4$ \\
+$=0.62984944\ldots\approx0.630$. \\
+(iii) Let $X$ count blues among the first five spins. \\
+$X$ has a binomial distribution with $n=5$, $p=0.22$. \\
+$P(X=3)=5C3(0.22)^3(0.78)^2$ \\
+$=10(0.22)^3(0.78)^2$ \\
+$=0.064782432\ldots\approx0.0648$. \\
+(iv) Let $Y$ be the spin number of the third blue. \\
+The third blue can occur on spin 3, 4 or 5. \\
+$P(Y=3)=(0.22)^3$. \\
+$P(Y=4)=3C2(0.22)^3(0.78)$. \\
+$P(Y=5)=4C2(0.22)^3(0.78)^2$. \\
+Add the disjoint cases: \\
+$P(Y\leq5)=(0.22)^3+3(0.22)^3(0.78)+6(0.22)^3(0.78)^2$ \\
+$=0.0744337792\ldots\approx0.0744$. \\
+(b) Izana must miss, then Zac hit, for Zac to win in the first pair of turns. \\
+That has probability $(0.78)(0.22)$. \\
+For each later pair, both players must miss first, adding a factor $(0.78)^2$. \\
+$P(\text{Zac wins})=(0.78)(0.22)[1+(0.78)^2+(0.78)^4+\cdots]$. \\
+The bracket is an infinite geometric series with ratio $(0.78)^2$. \\
+$P(\text{Zac wins})=\frac{(0.78)(0.22)}{1-(0.78)^2}$ \\
+$=0.4382022472\ldots$ \\
+$=0.438$ to 3 significant figures, as required.
+
+@q 5
+@topic Geometric sample mean approximation
+@marks 5
+@question
+A random sample of 250 observations is taken from a geometric distribution with parameter 0.4. Estimate the probability that the mean of the sample is less than 2.65. (5)
+@scheme
+Geometric mean $=\frac{1}{0.4}=2.5$. B1 1.1b \\
+Geometric variance $=\frac{1-0.4}{0.4^2}=3.75$. B1 1.1b \\
+By the central limit theorem, the sample mean is approximately normal with mean $2.5$. M1 2.1 \\
+Its variance is $3.75/250=0.015$; standardise $2.65$. M1 3.4 \\
+$P(\text{sample mean}<2.65)=0.889664\ldots$, about $0.890$. A1 1.1b (5)
+@model
+For a geometric variable with $p=0.4$, use $E(X)=\frac{1}{p}$. \\
+$E(X)=\frac{1}{0.4}=2.5$. \\
+Use $\mathrm{Var}(X)=\frac{1-p}{p^2}$. \\
+$=\frac{0.6}{(0.4)^2}$ \\
+$=\frac{0.6}{0.16}=3.75$. \\
+For 250 independent observations, use the central limit theorem. \\
+The sample mean is approximately normal with mean $2.5$. \\
+Its variance is $\frac{3.75}{250}=0.015$. \\
+Its standard deviation is $\sqrt{0.015}=0.122474\ldots$. \\
+Standardise $2.65$: $z=\frac{2.65-2.5}{\sqrt{0.015}}$. \\
+$=\frac{0.15}{0.122474\ldots}=1.224745\ldots$. \\
+$P(\text{sample mean}<2.65)\approx P(Z<1.224745\ldots)$ \\
+$=0.8896643190\ldots\approx0.890$.
+
+@q 6
+@topic Generating functions and binomial moments
+@marks 14
+@question
+The discrete random variable $V$ has probability distribution: $v=4,5,6$ with respective probabilities $\frac{36}{121},\frac{60}{121},\frac{25}{121}$. \\
+(a) Show that the probability generating function of $V$ is $G_V(t)=t^4\left(\frac{5}{11}t+\frac{6}{11}\right)^2$. (2) \\
+The discrete random variable $W$ has probability generating function $G_W(t)=t\left(\frac{5}{11}t+\frac{6}{11}\right)^{11}$. \\
+(b)(i) Use calculus to find $E(W)$. (2) \\
+(ii) Find $\mathrm{Var}(W)$. (4) \\
+Given that $V$ and $W$ are independent, \\
+(c) find the probability generating function of $X=V+W$ in its simplest form. (2) \\
+The discrete random variable $Y=4X+5$. \\
+(d) Find the probability generating function of $Y$. (2) \\
+(e) Find $P(Y=33)$. (2)
+@scheme
+(a) $G_V(t)=\frac{36}{121}t^4+\frac{60}{121}t^5+\frac{25}{121}t^6$. M1 1.1b \\
+$=t^4\left(\frac{6}{11}+\frac{5}{11}t\right)^2$. A1* 2.1 (2) \\
+(b)(i) Differentiate $G_W(t)=t\left(\frac{5}{11}t+\frac{6}{11}\right)^{11}$. M1 2.1 \\
+$E(W)=G'_W(1)=6$. A1 1.1b (2) \\
+(ii) Differentiate again to find $G''_W(1)=\frac{360}{11}$. M1 2.1, A1 1.1b \\
+$\mathrm{Var}(W)=G''_W(1)+G'_W(1)-[G'_W(1)]^2$. M1 2.1 \\
+$=\frac{360}{11}+6-36=\frac{30}{11}$. A1 1.1b (4) \\
+(c) By independence, $G_X(t)=G_V(t)G_W(t)$. M1 3.1a \\
+$=t^5\left(\frac{5}{11}t+\frac{6}{11}\right)^{13}$. A1 1.1b (2) \\
+(d) $G_Y(t)=t^5G_X(t^4)$. M1 3.1a \\
+$=t^{25}\left(\frac{5}{11}t^4+\frac{6}{11}\right)^{13}$. A1 1.1b (2) \\
+(e) $P(Y=33)$ is the coefficient of $t^{33}$, requiring two $t^4$ factors. M1 1.1b \\
+$=13C2\left(\frac{5}{11}\right)^2\left(\frac{6}{11}\right)^{11}=0.0204924\ldots$. A1 1.1b (2)
+@model
+(a) A generating function sums each probability times $t$ to its value. \\
+$G_V(t)=\frac{36}{121}t^4+\frac{60}{121}t^5+\frac{25}{121}t^6$. \\
+Factor out $t^4$: \\
+$=t^4\left(\frac{36}{121}+\frac{60}{121}t+\frac{25}{121}t^2\right)$. \\
+The bracket is a perfect square: \\
+$=t^4\left(\frac{6}{11}+\frac{5}{11}t\right)^2$, as required. \\
+(b)(i) Let $u=\frac{5}{11}t+\frac{6}{11}$. \\
+Then $G_W(t)=tu^{11}$ and $u'=\frac{5}{11}$. \\
+Use the product and chain rules: \\
+$G'_W(t)=u^{11}+t(11u^{10})\frac{5}{11}$. \\
+$=u^{11}+5tu^{10}$. \\
+At $t=1$, $u=1$, so $E(W)=G'_W(1)=1+5=6$. \\
+(ii) Differentiate $G'_W(t)=u^{11}+5tu^{10}$: \\
+$G''_W(t)=11u^{10}\frac{5}{11}+5u^{10}+5t(10u^9)\frac{5}{11}$. \\
+$=10u^{10}+\frac{250t}{11}u^9$. \\
+At $t=1$, $G''_W(1)=10+\frac{250}{11}=\frac{360}{11}$. \\
+Use $\mathrm{Var}(W)=G''_W(1)+G'_W(1)-[G'_W(1)]^2$. \\
+$=\frac{360}{11}+6-6^2$ \\
+$=\frac{360}{11}-30$ \\
+$=\frac{30}{11}$. \\
+(c) Independence makes the generating functions multiply. \\
+$G_X(t)=t^4u^2\cdot tu^{11}$ \\
+$=t^5u^{13}$ \\
+$=t^5\left(\frac{5}{11}t+\frac{6}{11}\right)^{13}$. \\
+(d) Use $Y=4X+5$: \\
+$G_Y(t)=E(t^{4X+5})$ \\
+$=t^5G_X(t^4)$ \\
+$=t^5(t^4)^5\left(\frac{5}{11}t^4+\frac{6}{11}\right)^{13}$ \\
+$=t^{25}\left(\frac{5}{11}t^4+\frac{6}{11}\right)^{13}$. \\
+(e) To get $t^{33}$ from $t^{25}$, choose two of the thirteen $t^4$ factors. \\
+$P(Y=33)=13C2\left(\frac{5}{11}\right)^2\left(\frac{6}{11}\right)^{11}$ \\
+$=0.0204924299\ldots\approx0.0205$.
+
+@q 7
+@topic Normal mean test and Type II error
+@marks 11
+@question
+A machine fills bags with flour. The weight of flour delivered by the machine into a bag, $X$ grams, is normally distributed with mean $\mu$ grams and standard deviation 40 grams. To check if there is any change to the mean weight of flour delivered by the machine into each bag, Olaf takes a random sample of 20 bags. The weight of flour, $x$ grams, in each bag is recorded and the sample mean is 920. \\
+(a) Test, at the 10% level of significance, $H_0:\mu=900$ against $H_1:\mu\neq900$. (4) \\
+Olaf decides to alter the test so that the hypotheses are $H_0:\mu=900$ and $H_1:\mu>900$ but keeps the level of significance at 10%. He takes a second sample of size $n$ and finds the critical region, sample mean $>c$. \\
+(b) Find an equation for $c$ in terms of $n$. (2) \\
+When the true value of $\mu$ is 920 grams, the probability of making a Type II error is 0.0010, to 2 significant figures. \\
+(c) Calculate the value of $n$ and the value of $c$. (5)
+@scheme
+(a) Under $H_0$, the sample mean is normal with mean $900$ and variance $\frac{40^2}{20}=80$. M1 3.3 \\
+$P(\text{sample mean}>920)=0.0126737\ldots$. A1 3.4 \\
+The upper-tail allocation is $0.05$ for a two-sided 10% test, so $0.0126737\ldots<0.05$; reject $H_0$. M1 1.1b \\
+There is evidence of a change in mean bag weight from 900 grams. A1 2.2b (4) \\
+(b) Under $H_0$, the sample mean has mean $900$ and standard deviation $40/\sqrt{n}$. M1 3.4 \\
+For a 10% upper tail, $\frac{c-900}{40/\sqrt{n}}=1.2815516\ldots$, hence $c=900+\frac{51.2621\ldots}{\sqrt{n}}$. A1 1.1b (2) \\
+(c) At true mean $920$, Type II error $=P(\text{sample mean}\leq c)=0.0010$ to 2 significant figures. M1 3.4, A1ft 1.1b \\
+Use $\frac{c-920}{40/\sqrt{n}}\approx-3.09023$, giving $n\approx76.45$ before integer rounding. dM1 1.1b \\
+For $n=76$, the error is $0.00104426\ldots$, which rounds to $0.0010$; $c=905.880\ldots$ grams. A1 2.1, A1 1.1b (5)
+@model
+(a) Under $H_0$, each bag has mean $900$ grams and standard deviation $40$ grams. \\
+For $20$ independent bags, the sample mean has mean $900$. \\
+Its variance is $\frac{40^2}{20}=80$ and standard deviation $\sqrt{80}=8.944272\ldots$. \\
+Standardise the observed sample mean $920$: \\
+$z=\frac{920-900}{\sqrt{80}}=2.236068\ldots$. \\
+The upper-tail probability is $P(Z>2.236068\ldots)=0.0126736593\ldots$. \\
+For a two-sided 10% test, compare this with $0.05$ in the upper tail. \\
+Since $0.0126736593\ldots<0.05$, reject $H_0$. \\
+There is evidence at 10% that the mean bag weight differs from 900 grams. \\
+(b) Under $H_0$, the second sample mean has standard deviation $40/\sqrt{n}$. \\
+An upper 10% region starts at standard normal $z=1.2815516\ldots$. \\
+Thus $\frac{c-900}{40/\sqrt{n}}=1.2815516\ldots$. \\
+Multiply through: $c-900=\frac{40(1.2815516\ldots)}{\sqrt{n}}$. \\
+$c=900+\frac{51.2620626\ldots}{\sqrt{n}}$. \\
+(c) At the true mean $920$, Type II error means sample mean $\leq c$. \\
+To have lower-tail probability about $0.0010$, its standard normal value is $-3.0902323\ldots$. \\
+$\frac{c-920}{40/\sqrt{n}}\approx-3.0902323\ldots$. \\
+Substitute the expression for $c$: \\
+$\frac{-20+51.2620626\ldots/\sqrt{n}}{40/\sqrt{n}}\approx-3.0902323\ldots$. \\
+Multiply by $40$: $-20\sqrt{n}+51.2620626\ldots\approx-123.609292\ldots$. \\
+$20\sqrt{n}\approx174.871355\ldots$. \\
+$\sqrt{n}\approx8.743568\ldots$, so $n\approx76.45$. \\
+Check the nearby integer sample sizes against the required 2 significant figures. \\
+For $n=75$, the Type II probability is $0.00114965\ldots$, or $0.0011$ to 2 significant figures. \\
+For $n=76$, it is $0.00104426\ldots$, or $0.0010$ to 2 significant figures. \\
+Therefore use $n=76$. \\
+$c=900+\frac{51.2620626\ldots}{\sqrt{76}}$ \\
+$=905.880162\ldots$ grams, about $905.88$ grams.
